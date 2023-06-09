@@ -18,8 +18,10 @@
         </head>
         <body style="margin:0">
 
+            <!--            header-->
         <%@ include file="header.jsp" %>
 
+        <!--            body-->
         <div class="home-container">
             <section class="section-head">
                 <img src="img/image 7.png" alt="" />
@@ -284,7 +286,7 @@
                                 <div>
                                     <img src="data:image/png;base64,${i.picture}">
                                     <div class="desc">
-                                        <div>${i.fullname}</div>
+                                        <h1>${i.fullname}</h1>
                                         <div class="desc-container">
                                             <p>${i.comments}</p>
                                         </div>
@@ -323,6 +325,8 @@
                 </div>
             </section>
         </div>
+
+        <!--        footer-->
         <%@ include file="footer.jsp" %>
     </body>
 </html>

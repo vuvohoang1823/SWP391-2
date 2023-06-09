@@ -68,7 +68,8 @@
 .home-container .section-course .image-container .image-slider .desc-container {
     display: flex;
     flex-direction: column;
-    text-align: justify; }
+    text-align: justify;
+}
 .home-container .section-course .image-container .image-slider .coursename-container {
     font-size: 1.5rem;
     height: 3.25rem;
@@ -233,12 +234,14 @@
     object-fit: contain;
     object-position: center; }
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc h1 {
-    margin-top: 7%; }
+    margin-top: 7%;
+    font-size: 2rem;
+}
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc .desc-container {
     margin-top: 10%;
     display: flex;
     justify-content: center; }
-.home-container .section-testimonial .image-container .image-slider .image-wrapper .desc .desc-container div {
+.home-container .section-testimonial .image-container .image-slider .image-wrapper .desc .desc-container p {
     width: 90%; }
 
 
