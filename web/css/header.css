@@ -1,0 +1,131 @@
+.html {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.header-container {
+    z-index: 1000;
+    position: relative;
+    background-color: #dde6f1;
+    height: 7vh;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header-container .nav-link.active {
+    color: #80957c;
+}
+.header-container .logo-text, .header-container .nav-link, .header-container .nav-logo {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.header-container .logo-container {
+    display: flex;
+}
+.header-container .logo-container .logo-image img {
+    height: 100%;
+    width: 5rem;
+    object-fit: contain;
+    object-position: center;
+}
+.header-container .nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-container .nav-container .nav {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-container .nav-container .nav li {
+    position: relative;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: background-color 0.1s linear;
+}
+.header-container .nav-container .nav li:hover .nav-link {
+    color: #4d6144;
+}
+.header-container .nav-container .nav li:hover .subnav {
+    display: block;
+}
+.header-container .nav-container .nav li .nav-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.header-container .nav-container .nav li .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 10px grey;
+    line-height: 200%;
+}
+.header-container .nav-container .nav li .subnav li {
+    padding: 0;
+    padding-left: 7%;
+    background-color: white;
+    width: 100%;
+}
+.header-container .nav-container .nav li .subnav li:hover {
+    background-color: #468847;
+}
+.header-container .nav-container .nav li .subnav li:hover .subnav {
+    display: flex;
+}
+.header-container .nav-container .nav li .subnav .nav-link {
+    color: black;
+    cursor: pointer;
+}
+.header-container .button-container {
+    width: 25%;
+    padding-right: 5%;
+}
+.header-container .button-container .signin-button {
+    float: right;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    min-width: 100px;
+    height: 35px;
+    font-size: 1.1em;
+    color: #80957c;
+    cursor: pointer;
+}
+.header-container .button-container .signin-button:hover {
+    color: #617a55;
+}
+@media screen and (max-width: 500px) {
+    .header-container .button-container .signin-button {
+        right: 15px;
+    }
+}
+.header-container .button-container .signup-button {
+    float: right;
+    background-color: #617a55;
+    border-radius: 30px;
+    min-width: 100px;
+    height: 35px;
+    font-size: 1.1em;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+.header-container .button-container .signup-button:hover {
+    background-color: #468847;
+}
+@media screen and (max-width: 500px) {
+    .header-container .button-container .signup-button {
+        right: 15px;
+    }
+}
