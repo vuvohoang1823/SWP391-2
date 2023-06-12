@@ -100,8 +100,8 @@ section .heading h2 {
     margin-left: auto;
 }
 .birdCourse-container .section-course .foot-button {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
     display: flex;
     justify-content: center;
 }
@@ -111,9 +111,9 @@ section .heading h2 {
     border-radius: 30px;
     color: white;
     background-color: #617a55;
-    padding: 0.7rem 0.7rem;
+    padding: 1.12rem 1.12rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .onlineCourse-container .section-course {
@@ -191,8 +191,8 @@ section .heading h2 {
     margin-left: auto;
 }
 .onlineCourse-container .section-course .foot-button {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
     display: flex;
     justify-content: center;
 }
@@ -202,9 +202,9 @@ section .heading h2 {
     border-radius: 30px;
     color: white;
     background-color: #617a55;
-    padding: 0.7rem 0.7rem;
+    padding: 1.12rem 1.12rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 
 .workshops-container .section-workshops .row {
@@ -226,22 +226,22 @@ section .heading h2 {
     line-height: 150%;
 }
 .workshops-container .section-workshops .row .card .card-body .card-title {
-    font-size: 2rem;
+    font-size: 3.2rem;
     width: 70%;
     font-weight: bold;
     color: #617a55;
 }
 .workshops-container .section-workshops .row .card .card-body .desc-text {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1.92rem;
+    line-height: 2.4rem;
 }
 .workshops-container .section-workshops .row .card .card-body .card-text {
-    padding-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.8rem;
+    padding-top: 1.6rem;
+    font-size: 1.6rem;
+    line-height: 2.88rem;
 }
 .workshops-container .section-workshops .row .card .card-body .extra-price {
-    padding-top: 1.5rem;
+    padding-top: 2.4rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -256,7 +256,7 @@ section .heading h2 {
     border-radius: 15px;
     background-color: #f69c14;
     color: white;
-    padding: 1rem 5rem;
+    padding: 1.6rem 8rem;
 }
 .workshops-container .section-workshops .row .card .card-body .extra-price p {
     display: flex;
@@ -267,7 +267,7 @@ section .heading h2 {
     color: #617a55;
 }
 .workshops-container .section-workshops .foot-button {
-    padding-top: 3rem;
+    padding-top: 4.8rem;
     display: flex;
     justify-content: center;
 }
@@ -277,7 +277,7 @@ section .heading h2 {
     border-radius: 30px;
     color: white;
     background-color: #617a55;
-    padding: 0.7rem 0.7rem;
+    padding: 1.12rem 1.12rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }/*# sourceMappingURL=body.css.map */

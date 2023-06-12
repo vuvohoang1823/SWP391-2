@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="nav-container" style="width: 50vw">
-                <ul class="navBar" style="list-style: none ; font-size:20px">
+                <ul class="navBar1" style="list-style: none ; font-size:20px">
                     <li>
                         <a href="homepage.jsp"  class="nav-link">
                             Home
@@ -55,23 +55,23 @@
                         <div class="triangle"></div>
                         <ul class="subnav" style='list-style: none' >
                             <li>
-                                <a href="private_consultation.jsp"  class="nav-link">
-                                    Consultations
-                                </a>
-                            </li>
-                            <li>
                                 <a href="workshop.jsp"  class="nav-link">
-                                    Workshop
+                                    Workshops
+                                </a>
+                            </li>
+                            <li>
+                                <a href="private_consultation.jsp"  class="nav-link">
+                                    Private Consultant
                                 </a>
                             </li>
                             <li>
                                 <a href="online_course.jsp"  class="nav-link">
+                                    Online Course
+                                </a>
+                            </li>
+                            <li>
+                                <a href="course.jsp"  class="nav-link">
                                     Bird Course
-                                </a>
-                            </li>
-                            <li>
-                                <a href="online_course.jsp"  class="nav-link">
-                                    Course Online
                                 </a>
                             </li>
                         </ul>

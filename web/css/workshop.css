@@ -1,298 +1,203 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Jun 5, 2023, 10:43:46 AM
-    Author     : LAPTOP
-*/
+html {
+    font-size: 10px !important;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-.header-container {
-  z-index: 1000;
-  position: relative;
-  background-color: #dde6f1;
-  height: 7vh;
-  min-height: 70px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.header-container .nav-link.active {
-  color: #80957c;
-}
-.header-container .logo-text,
-.header-container .nav-link,
-.header-container .nav-logo {
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-.header-container .logo-container {
-  display: flex;
-  width: 20%;
-}
-.header-container .logo-container .logo-image {
-  flex: 0 0 100%;
-}
-.header-container .logo-container .logo-image img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-}
-.header-container .nav-container {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.header-container .nav-container .nav {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header-container .nav-container .nav li {
-  position: relative;
-  height: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
-  height: 100%;
-  transition: background-color 0.1s linear;
-}
-.header-container .nav-container .nav li:hover .nav-link {
-  color: #4d6144;
-}
-.header-container .nav-container .nav li:hover .subnav {
-  display: block;
-}
-.header-container .nav-container .nav li .nav-link {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.header-container .nav-container .nav li .subnav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 0 10px grey;
-  line-height: 200%;
-}
-.header-container .nav-container .nav li .subnav li {
-  padding: 0;
-  padding-left: 7%;
-  background-color: white;
-  width: 100%;
-}
-.header-container .nav-container .nav li .subnav li:hover {
-  background-color: #468847;
-}
-.header-container .nav-container .nav li .subnav li:hover .subnav {
-  display: flex;
-}
-.header-container .nav-container .nav li .subnav .nav-link {
-  color: black;
-  cursor: pointer;
-}
-.header-container .button-container {
-  width: 25%;
-  padding-right: 5%;
-}
-.header-container .button-container .signin-button {
-  float: right;
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  min-width: 100px;
-  height: 35px;
-  font-size: 1.1em;
-  color: #80957c;
-  cursor: pointer;
-}
-.header-container .button-container .signin-button:hover {
-  color: #617a55;
-}
-@media screen and (max-width: 500px) {
-  .header-container .button-container .signin-button {
-    right: 15px;
-  }
-}
-.header-container .button-container .signup-button {
-  float: right;
-  background-color: #617a55;
-  border-radius: 30px;
-  min-width: 100px;
-  height: 35px;
-  font-size: 1.1em;
-  color: white;
-  border: 0;
-  cursor: pointer;
-}
-.header-container .button-container .signup-button:hover {
-  background-color: #468847;
-}
-@media screen and (max-width: 500px) {
-  .header-container .button-container .signup-button {
-    right: 15px;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 .body-container section .heading {
-  text-align: center;
+    text-align: center;
 }
 .body-container section .heading div {
-  margin-top: 2%;
-  display: flex;
-  justify-content: center;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
 }
 .body-container section .heading div h1 {
-  color: black;
-  font-weight: bolder;
-  font-size: 90px;
-  font-weight: bolder;
-  width: 70%;
+    color: black;
+    font-weight: bolder;
+    font-size: 5rem;
+    font-weight: bolder;
+    width: 70%;
 }
 .body-container section .heading h2 {
-  margin-top: 4%;
-  font-size: 20px;
-  font-weight: bold;
-  color: #617a55;
+    margin-top: 4%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #617a55;
 }
 .body-container .section-head {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #b8c6c2;
-  padding-bottom: 2%;
-}
-.body-container .section-head .img-container {
-  width: 50%;
-  margin-right: 3%;
-  display: flex;
-}
-.body-container .section-head .img-container img {
-  margin-right: 5%;
-  border-radius: 4%;
-  width: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #b8c6c2;
 }
 .body-container .section-head .desc-container {
-  width: 50%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-left: 3%;
+    width: 50vw;
+    padding: 4rem 5rem 4rem 4rem;
 }
 .body-container .section-head .desc-container h2 {
-  color: #4d6144;
-  font-weight: bold;
-  font-size: 40px;
+    color: #4d6144;
+    font-weight: bold;
+    font-size: 2rem;
 }
 .body-container .section-head .desc-container h1 {
-  color: black;
-  font-weight: bolder;
-  font-size: 80px;
+    color: black;
+    font-weight: bolder;
+    font-size: 4rem;
 }
 .body-container .section-head .desc-container p {
-  width: 70%;
-  margin-top: 3%;
-  font-size: 20px;
+    line-height: 3rem;
+    margin-top: 3%;
+    font-size: 20px;
 }
 .body-container .section-head .desc-container .button-container {
-  font-weight: bold;
-  margin-top: 7%;
-  font-size: 28px;
+    padding-top: 3rem;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 .body-container .section-head .desc-container .button-container button {
-  border: 0px;
-  border-radius: 50px;
-  background-color: #617a55;
-  color: white;
-  padding: 20px;
-  width: 40%;
+    border: 0px;
+    border-radius: 50px;
+    background-color: #617a55;
+    color: white;
+    padding: 1rem 1rem;
+    width: 50%;
 }
-.body-container .section-body .container {
-  margin-top: 1%;
+.body-container .section-head .img-container {
+    max-height: 50rem;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
 }
-.body-container .section-body .container .dropdown {
-  line-height: 150%;
+.body-container .section-head .img-container .image1 {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-right: 10%;
+}
+.body-container .section-head .img-container .image1 img {
+    border-radius: 20px;
+    height: 100%;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+}
+.body-container .section-head .img-container .image2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 4rem;
+}
+.body-container .section-head .img-container .image2 img {
+    border-radius: 20px;
+    height: 100%;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+}
+.body-container .section-body .searchbar-container {
+    padding: 0;
+    padding-top: 2rem;
+}
+.body-container .section-body .searchbar-container .input-group {
+    height: 4rem;
+}
+.body-container .section-body .searchbar-container .input-group input {
+    font-size: 2rem;
+    height: 100%;
+}
+.body-container .section-body .searchbar-container .dropdown {
+    height: 4rem;
+    line-height: 2.5rem;
+}
+.body-container .section-body .searchbar-container .dropdown button {
+    font-size: 2rem;
+    height: 100%;
+}
+.body-container .section-body .searchbar-container .dropdown .dropdown-menu {
+    font-size: 1.5rem;
 }
 .body-container .section-workshops .row {
-  justify-content: center;
+    justify-content: center;
 }
 .body-container .section-workshops .row .card {
-  border-radius: 15px;
-  margin-top: 5%;
-  padding: 3%;
+    border-radius: 15px;
+    margin-top: 5%;
+    padding: 3%;
 }
 .body-container .section-workshops .row .card .card-img {
-  border-radius: 7%;
+    border-radius: 7%;
 }
 .body-container .section-workshops .row .card .card-body {
-  position: relative;
-  padding-top: 0;
-  padding-bottom: 0;
-  height: 100%;
-  line-height: 150%;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    line-height: 150%;
 }
 .body-container .section-workshops .row .card .card-body .card-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #617a55;
+    font-size: 3rem;
+    width: 70%;
+    font-weight: bold;
+    color: #617a55;
+}
+.body-container .section-workshops .row .card .card-body .desc-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.body-container .section-workshops .row .card .card-body .card-text {
+    padding-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
 .body-container .section-workshops .row .card .card-body .extra-price {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 .body-container .section-workshops .row .card .card-body .extra-price .button-container {
-  width: 80%;
-  font-weight: bold;
-  font-size: 18px;
+    width: 40%;
+    font-weight: bold;
+    font-size: 18px;
 }
 .body-container .section-workshops .row .card .card-body .extra-price .button-container button {
-  border: 0px;
-  border-radius: 10px;
-  background-color: #f69c14;
-  color: white;
-  padding: 5px;
-  width: 50%;
+    border: 0px;
+    border-radius: 15px;
+    background-color: #f69c14;
+    color: white;
+    padding: 1.5rem 5rem;
 }
 .body-container .section-workshops .row .card .card-body .extra-price p {
-  display: flex;
-  align-items: center;
-  margin-right: 10%;
-  font-size: 20px;
-  font-weight: bold;
-  color: #617a55;
+    display: flex;
+    align-items: center;
+    margin-right: 10%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #617a55;
 }
-
-.footer {
-  margin-top: 5%;
+.body-container .section-workshops .foot-button {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
 }
-.footer .container {
-  padding-top: 1%;
-  padding-bottom: 1%;
-}
-.footer .row {
-  margin-top: 1%;
-}
-.footer .row div {
-  color: white;
+.body-container .section-workshops .foot-button button {
+    width: 90%;
+    border: 0;
+    border-radius: 30px;
+    color: white;
+    background-color: #617a55;
+    padding: 0.7rem 0.7rem;
+    font-weight: bold;
+    font-size: 3rem;
 }/*# sourceMappingURL=Workshops.css.map */

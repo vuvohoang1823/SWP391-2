@@ -15,6 +15,7 @@
     </head>
     <body>
         <section class="section-contactUs">
+            <!--left side-->
             <div class="left" style="background-image: url(./img/homeContactBackground.png);">
                 <div class="heading1">
                     <h1>CONTACT US</h1>
@@ -82,6 +83,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- right side -->
             <div class="right">
                 <div class="form-container">

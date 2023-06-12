@@ -1,8 +1,3 @@
-.html {
-    font-size: 10px;
-    font-family: 'Inter', sans-serif;
-}
-
 .home-container {
     background-color: #dde6f1; }
 .home-container section .heading {
@@ -71,9 +66,9 @@
     text-align: justify;
 }
 .home-container .section-course .image-container .image-slider .coursename-container {
-    font-size: 1.5rem;
-    height: 3.25rem;
-    width: 23rem;
+    font-size: 2.4rem;
+    height: 5.2rem;
+    width: 36.8rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: initial; /* Allow text to wrap */
@@ -85,10 +80,10 @@
 }
 
 .service-container .service-body {
-    padding-top: 2rem;
+    padding-top: 3.2rem;
 }
 .service-container .service-body .row .image-container {
-    max-height: 25.6rem;
+    max-height: 40.96rem;
     overflow: hidden;
     padding: 0;
 }
@@ -103,30 +98,30 @@
     background-color: #b8c6c2;
 }
 .service-container .service-body .row .description-container .header {
-    padding-top: 5rem;
+    padding-top: 8rem;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2.4rem;
 }
 .service-container .service-body .row .description-container .description {
-    font-size: 1rem;
-    padding: 2rem 1.75rem;
+    font-size: 1.6rem;
+    padding: 3.2rem 2.8rem;
 }
 .service-container .service-body .row .description-container .button-container {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
 }
 .service-container .service-body .row .description-container .button-container button {
-    font-size: 1.25rem;
+    font-size: 2rem;
     border: 0;
     border-radius: 30px;
     background-color: #617a55;
     color: white;
-    padding: 1rem 3rem;
+    padding: 1.6rem 4.8rem;
 }/*# sourceMappingURL=body.css.map */
 
 
 .service2-container .bottom-half-container {
-    margin-top: 3rem;
+    margin-top: 4.8rem;
     background-color: #b8c6c2;
     display: flex;
 }
@@ -158,6 +153,7 @@
     font-weight: bolder;
 }
 .service2-container .bottom-half-container .right-side .desc-container {
+    font-size: 1.6rem;
     margin-top: 5%;
     width: 90%;
 }
@@ -165,6 +161,7 @@
     margin-top: 5%;
 }
 .service2-container .bottom-half-container .right-side .checkmark-container div {
+    font-size: 1.6rem;
     margin-top: 5%;
     display: flex;
     align-items: center;
@@ -178,13 +175,14 @@
 
 
 .home-container .section-results .results-container {
+    font-size: 1.6rem;
     margin-top: 3%;
     display: flex;
     justify-content: space-evenly; }
 .home-container .section-results .results-container .result-container {
     aspect-ratio: 1/1;
     width: 15vw;
-    max-height: 20rem;
+    max-height: 32rem;
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -219,9 +217,10 @@
     object-position: center; }
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc h1 {
     margin-top: 7%;
-    font-size: 2rem;
+    font-size: 3.2rem;
 }
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc .desc-container {
+    font-size: 1.6rem;
     margin-top: 10%;
     display: flex;
     justify-content: center; }
@@ -235,11 +234,13 @@
     justify-content: center;
     text-align: center; }
 .home-container .section-foot .desc-container div {
+    font-size: 1.6rem;
     width: 50%; }
 .home-container .section-foot .button-container {
     display: flex;
     justify-content: center; }
 .home-container .section-foot .button-container button {
+    font-size: 1.6rem;
     margin-top: 2%;
     margin-bottom: 5%;
     border: 0px;
