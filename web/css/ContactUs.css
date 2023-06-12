@@ -1,0 +1,167 @@
+html {
+    font-size: 5px;
+}
+
+.section-contactUs {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+.section-contactUs * {
+    box-sizing: border-box;
+}
+.section-contactUs .left {
+    background-size: cover;
+    /*filter: brightness(50%);*/
+    color: white;
+    width: 50vw;
+}
+
+.section-contactUs .left .heading1 {
+    display: flex;
+    flex-direction: column;
+}
+.section-contactUs .left .heading1 h1 {
+    padding-top: 3rem;
+    align-self: center;
+    font-size: 3.5rem;
+}
+.section-contactUs .left .heading1 hr {
+    margin-top: 1rem;
+    width: 50%;
+}
+.section-contactUs .left .icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+.section-contactUs .left .icons span {
+    padding: 0.5rem 0.5rem;
+}
+.section-contactUs .left .icons span svg {
+    width: 3rem;
+    height: 3rem;
+}
+.section-contactUs .left .content {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+}
+.section-contactUs .left .content div {
+    font-size: 1.5rem;
+    align-self: center;
+}
+.section-contactUs .left .card {
+    width: 24rem;
+    margin: 5rem auto 1.5rem auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.section-contactUs .left .card .image-container {
+    padding: 1rem;
+}
+.section-contactUs .left .card .image-container img {
+    width: 100%;
+    height: 15rem;
+    border-radius: 4px 4px 0 0;
+}
+.section-contactUs .left .card .card-body {
+    border-radius: 1rem;
+    display: flex;
+    padding: 0 1rem 1rem 1rem;
+}
+.section-contactUs .left .card .card-body .text-field {
+    flex: 1;
+    padding: 8px;
+    height: 3.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 70%;
+}
+.section-contactUs .left .card .card-body .button {
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 1rem;
+    width: 30%;
+    padding: 8px 16px;
+    background-color: #f69c14;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.section-contactUs .right {
+    border-top: 2px solid #617255;
+    border-bottom: 2px solid #617255;
+    width: 50vw;
+    background-color: #b8c6c2;
+    padding: 3rem 2.5rem;
+}
+.section-contactUs .right .form-container {
+    border: 0.15rem solid white;
+    padding-bottom: 3.5rem;
+}
+.section-contactUs .right .form-container .heading1 {
+    padding: 2rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.section-contactUs .right .form-container .heading1 .logo-container {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.section-contactUs .right .form-container .heading1 .logo-container .logo-image {
+    padding: 0 1rem;
+}
+.section-contactUs .right .form-container .heading1 .logo-container .logo-image img {
+    width: 7.5rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+}
+.section-contactUs .right .form-container .heading1 .logo-container .logo-text {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.65rem;
+}
+.section-contactUs .right .form-container .heading1 h1 {
+    padding-top: 1.25rem;
+    color: #617a55;
+    align-self: center;
+    font-size: 3rem;
+}
+.section-contactUs .right .form-container .content {
+    padding: 0 15%;
+}
+.section-contactUs .right .form-container .content .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.section-contactUs .right .form-container .content .row input,
+.section-contactUs .right .form-container .content .row textarea {
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 0.9rem 0.75rem;
+    width: 100%;
+}
+.section-contactUs .right .form-container .button-container {
+    display: flex;
+    justify-content: center;
+}
+.section-contactUs .right .form-container .button-container button {
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 0.35rem;
+    background-color: #617a55;
+    color: white;
+    padding: 1rem 2.5rem;
+}/*# sourceMappingURL=homepage.css.map */

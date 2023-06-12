@@ -31,7 +31,7 @@
                 </a>
             </div>
             <div class="nav-container" style="width: 50vw">
-                <ul class="nav" style="list-style: none ; font-size:20px">
+                <ul class="navBar" style="list-style: none ; font-size:20px">
                     <li>
                         <a href="homepage.jsp"  class="nav-link">
                             Home

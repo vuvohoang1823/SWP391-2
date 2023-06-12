@@ -36,21 +36,21 @@
     display: flex;
     align-items: center;
 }
-.header-container .nav-container .nav {
+.header-container .nav-container .navBar {
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.header-container .nav-container .nav li {
+.header-container .nav-container .navBar li {
     position: relative;
     height: 100%;
     padding-left: 5%;
     padding-right: 5%;
     transition: background-color 0.1s linear;
 }
-.header-container .nav-container .nav li:hover .nav-link {
+.header-container .nav-container .navBar li:hover .nav-link {
     color: #4d6144;
 }
 .triangle{
@@ -65,20 +65,20 @@
     border-right: 1rem solid transparent;
     border-bottom: 1rem solid white;
 }
-.header-container .nav-container .nav li:hover .triangle{
+.header-container .nav-container .navBar li:hover .triangle{
     display: block
 }
-.header-container .nav-container .nav li:hover .subnav {
+.header-container .nav-container .navBar li:hover .subnav {
     display: block;
 }
-.header-container .nav-container .nav li .nav-link {
+.header-container .nav-container .navBar li .nav-link {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     white-space: nowrap;
 }
-.header-container .nav-container .nav li .subnav {
+.header-container .nav-container .navBar li .subnav {
     background-color: white;
     border-radius: 0.7rem;
     padding: 1rem;
@@ -90,16 +90,16 @@
     box-shadow: 0 0 10px grey;
     line-height: 200%;
 }
-.header-container .nav-container .nav li .subnav li {
+.header-container .nav-container .navBar li .subnav li {
     background-color: white;
 }
-.header-container .nav-container .nav li .subnav li:hover {
+.header-container .nav-container .navBar li .subnav li:hover {
     background-color: #f2f2f2;
 }
-.header-container .nav-container .nav li .subnav li:hover .subnav {
+.header-container .nav-container .navBar li .subnav li:hover .subnav {
     display: flex;
 }
-.header-container .nav-container .nav li .subnav .nav-link {
+.header-container .nav-container .navBar li .subnav .nav-link {
     color: black;
     cursor: pointer;
 }

@@ -35,161 +35,191 @@
                     </p>
                 </div>
             </section>
-            <section class="section-course">
-                <div class="heading">
-                    <h2>OUR COURSE</h2>
-                    <div>
-                        <h1>OUR BEST COURSE FOR YOUR BIRDS</h1>
-                    </div>
-                </div>
-                <div class="image-container">
-                    <div class="image-slider">
-                        <c:forEach items="${i.courseList}" var="course">
-                            <div
-                                style=" margin-left:  3%"
-                                class="image-wrapper"
-                                >
+            <!--            <section class="section-course">
+                            <div class="heading">
+                                <h2>OUR COURSE</h2>
                                 <div>
-                                    <img src="data:img/blogs/jpg;base64,${course.thumbnail}">
-                                    <div class="desc">
-                                        <h1 class="coursename-container">${course.name}</h1>
-                                        <div class="desc-container">
-                                            <div
-                                                style="
-                                                display: flex;
-                                                flex-direction:  column;
-                                                font-size:  90%;
-                                                padding-top: 1rem;
-                                                "
-                                                >
-                                                <div
-                                                    style="
-                                                    display: flex;
-                                                    flex-direction:  row;
-                                                    justify-content:  space-between;
-                                                    "
-                                                    >
-                                                    <div style=" margin-left: 10% ">Service:</div>
-                                                    <div style="
-                                                         display: flex;
-                                                         align-items:  center;
-                                                         margin-right : 15%;
-                                                         "
-                                                         >
-                                                        <b style=" margin-left:  5px" >
-                                                            ${course.service}
-                                                        </b>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    style="
-                                                    display: flex;
-                                                    flex-direction:  row;
-                                                    justify-content:  space-between;
-                                                    margin-top:  5%
-                                                    "
-                                                    >
-                                                    <div style=" margin-left: 10% ">
-                                                        Price:
-                                                    </div>
-                                                    <div
-                                                        style="
-                                                        display: flex;
-                                                        align-items:  center;
-                                                        margin-right : 15%;
-                                                        "
-                                                        >
-                                                        <img src='./img/logo_black.png' alt="" style=" width: 25px" />
-                                                        <b style=" margin-left:  5px" >
-                                                            ${course.price}
-                                                        </b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                style="
-                                                display: flex;
-                                                justify-content:  space-around;
-                                                margin-top:  5%;
-                                                "
-                                                >
-                                                <p
-                                                    style="
-                                                    color: #617a55;
-                                                    font-weight:  bolder;
-                                                    margin-right:  10%;
-                                                    "
-                                                    >
-                                                    Price tag
-                                                </p>
-                                                <button
-                                                    style="
-                                                    border: 0px;
-                                                    border-radius:  20px;
-                                                    background-color:  #617a55;
-                                                    padding: 6px;
-                                                    width: 100px;
-                                                    "
-                                                    ><a href='course.jsp' alt='' style="text-decoration: none;color: white;">Explore more</a>
-
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h1>OUR BEST COURSE FOR YOUR BIRDS</h1>
                                 </div>
                             </div>
+                            <div class="image-container">
+                                <div class="image-slider">
+            <c:forEach items="${i.courseList}" var="course">
+                <div
+                    style=" margin-left:  3%"
+                    class="image-wrapper"
+                    >
+                    <div>
+                        <img src="data:img/blogs/jpg;base64,${course.thumbnail}">
+                        <div class="desc">
+                            <h1 class="coursename-container">${course.name}</h1>
+                            <div class="desc-container">
+                                <div
+                                    style="
+                                    display: flex;
+                                    flex-direction:  column;
+                                    font-size:  90%;
+                                    padding-top: 1rem;
+                                    "
+                                    >
+                                    <div
+                                        style="
+                                        display: flex;
+                                        flex-direction:  row;
+                                        justify-content:  space-between;
+                                        "
+                                        >
+                                        <div style=" margin-left: 10% ">Service:</div>
+                                        <div style="
+                                             display: flex;
+                                             align-items:  center;
+                                             margin-right : 15%;
+                                             "
+                                             >
+                                            <b style=" margin-left:  5px" >
+                ${course.service}
+            </b>
+        </div>
+    </div>
+    <div
+        style="
+        display: flex;
+        flex-direction:  row;
+        justify-content:  space-between;
+        margin-top:  5%
+        "
+        >
+        <div style=" margin-left: 10% ">
+            Price:
+        </div>
+        <div
+            style="
+            display: flex;
+            align-items:  center;
+            margin-right : 15%;
+            "
+            >
+            <img src='./img/logo_black.png' alt="" style=" width: 25px" />
+            <b style=" margin-left:  5px" >
+                ${course.price}
+            </b>
+        </div>
+    </div>
+</div>
+<div
+    style="
+    display: flex;
+    justify-content:  space-around;
+    margin-top:  5%;
+    "
+    >
+    <p
+        style="
+        color: #617a55;
+        font-weight:  bolder;
+        margin-right:  10%;
+        "
+        >
+        Price tag
+    </p>
+    <button
+        style="
+        border: 0px;
+        border-radius:  20px;
+        background-color:  #617a55;
+        padding: 6px;
+        width: 100px;
+        "
+        ><a href='course.jsp' alt='' style="text-decoration: none;color: white;">Explore more</a>
 
-                        </c:forEach>
+    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+            </c:forEach>
+
+        </div>
+    </div>
+</section>-->
+            <%@ include file="Home_TopCourse.jsp" %>
+
+            <section class="service-container">
+                <div class="heading">
+                    <h2>OUR AVAILABLE SERVICE</h2>
+                    <div>
+                        <h1>AREAS OF EXPERTISE</h1>
+                    </div>
+                </div>
+                <div class="service-body">
+                    <div class="row">
+                        <div class="col-lg-3 image-container">
+                            <img src="img/homeBirdCourse.png" alt="" />
+                        </div>
+                        <div class="col-lg-3 description-container">
+                            <div class="header">BIRD COURSE</div>
+                            <div class="description">
+                                On-demand, self paced courses and webinars on parrot training,
+                                behaviour, husbandry, enrichment and more.
+                            </div>
+                            <div class="button-container">
+                                <button>LEARN MORE</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 image-container">
+                            <img src="img/homeWorkshops.png" alt="" />
+                        </div>
+                        <div class="col-lg-3 description-container">
+                            <div class="header">WORKSHOPS</div>
+                            <div class="description">
+                                Our unique Parrot Training Academy workshop series aimed at parrot
+                                enthusiasts of all skill levels and knowledge! In-person, Virtual
+                                and On Demand!
+                            </div>
+                            <div class="button-container">
+                                <button>LEARN MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 description-container">
+                            <div class="header">ONLINE COURSE</div>
+                            <div class="description">
+                                Customised workshops/presentations or consulting services for
+                                professional organisations such as vets, rescues, shelters, zoos
+                                and other animal related businesses.
+                            </div>
+                            <div class="button-container">
+                                <button>LEARN MORE</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 image-container">
+                            <img src="img/homeOnlineCourse.png" alt="" />
+                        </div>
+                        <div class="col-lg-3 description-container">
+                            <div class="header">PRIVATE CONSULTANT</div>
+                            <div class="description">
+                                In-home and Online Consultations for all of your parrot related
+                                questions or concerns including foundations, behaviour problems,
+                                enrichment and more!
+                            </div>
+                            <div class="button-container">
+                                <button>LEARN MORE</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 image-container">
+                            <img src="img/homePrivateConsultant.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="section-service">
+            <section class="service2-container">
                 <div class="heading">
-                    <h2>OUR SERVICE</h2>
+                    <h2>OUR AVAILABLE SERVICE</h2>
                     <div>
-                        <h1>Areas of Expertise</h1>
-                    </div>
-                </div>
-                <div class="top-half-container">
-                    <div class="column-1">
-                        <img src="./img/Rectangle 106.png" alt="" />
-                    </div>
-                    <div class="column column-2">
-                        <div class="card1">
-                            <img src="img/workshop.png" alt="" />
-                            <div style=" font-weight: bolder ">Workshops</div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                                est!
-                            </p>
-                        </div>
-                        <div class="card2">
-                            <img src="img/In_home.png" alt="" />
-                            <div style=" font-weight: bolder" >In-home training</div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                Exercitationem, tempore!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="column column-3">
-                        <div class="card3">
-                            <img src="img/private_lesson.png" alt="" />
-                            <div style=" font-weight: bolder" >Private Lessons</div>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Perspiciatis, cum.
-                            </p>
-                        </div>
-                        <div class="card4">
-                            <img src="img/bird_class.png" alt="" />
-                            <div style=" font-weight: bolder" >Bird classes</div>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim,
-                                unde.
-                            </p>
-                        </div>
+                        <h1>Building Lasting Bonds, Together</h1>
                     </div>
                 </div>
                 <div class="bottom-half-container">
@@ -239,7 +269,7 @@
                         <div
                             style="
                             color: #e39c46;
-                            fontWeight: bold;
+                            font-weight: bold;
                             "
                             class="statistic"
                             >
@@ -324,6 +354,7 @@
                     <button>Let's Talk</button>
                 </div>
             </section>
+            <%@ include file="Home_ContactUs.jsp" %>
         </div>
 
         <!--        footer-->
