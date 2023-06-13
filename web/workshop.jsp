@@ -58,87 +58,72 @@
                     </div>
                 </div>
                 <div class="container searchbar-container">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="input-group">
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="Search for Bird Course"
-                                    />
-                                <div class="input-group-append">
-                                    <span class="input-group-text" style="height: 100%">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            fill="currentColor"
-                                            class="bi bi-search"
-                                            viewBox="0 0 16 16"
-                                            >
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                                            />
-                                        </svg>
-                                    </span>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="Search for Bird Course"
+                                        />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" style="height: 100%">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                                class="bi bi-search"
+                                                viewBox="0 0 16 16"
+                                                >
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="input-group">
-                                <input
-                                    type="text"
-                                    class="form-control datepicker"
-                                    placeholder="Select date"
-                                    />
-                                <div class="input-group-append">
-                                    <span class="input-group-text" style="height: 100%">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="16"
-                                            height="16"
-                                            fill="currentColor"
-                                            class="bi bi-calendar4-week"
-                                            viewBox="0 0 16 16"
-                                            >
-                                        <path
-                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
-                                            />
-                                        <path
-                                            d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
-                                            />
-                                        </svg>
-                                    </span>
+                            <div class="col-lg-5">
+                                <div class="input-group">
+                                    <input
+                                        type="text"
+                                        class="form-control datepicker"
+                                        placeholder="Select date"
+                                        />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" style="height: 100%">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                                class="bi bi-calendar4-week"
+                                                viewBox="0 0 16 16"
+                                                >
+                                            <path
+                                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                                                />
+                                            <path
+                                                d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="dropdown">
-                                <button
-                                    class="btn dropdown-toggle"
-                                    type="button"
-                                    data-toggle="dropdown"
-                                    style="background-color: white"
-                                    >
-                                    Other filter
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/workshop"
-                                       >Price (low to high)</a
-                                    >
-                                    <a class="dropdown-item" href="/private-consultant"
-                                       >Price (high to low)</a
-                                    >
-                                    <a class="dropdown-item" href="/course-online"
-                                       >Duration (long to short)</a
-                                    >
-                                    <a class="dropdown-item" href="/bird-course"
-                                       >Duration (short to long)</a
-                                    >
-                                </div>
+                            <div class="col-lg-2">
+                                <select class="custom-select">
+                                    <option selected hidden value="1">Other filter</option>
+                                    <option value="1">Price (low to high)</option>
+                                    <option value="2">Price (high to low)</option>
+                                    <option value="3">Duration (long to short)</option>
+                                    <option value="4">Duration (short to long)</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </section>
             <section class="section-workshops">
