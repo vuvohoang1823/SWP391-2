@@ -116,6 +116,10 @@ html {
     font-size: 2rem;
     height: 100%;
 }
+.body-container .section-body .searchbar-container .input-group .input-group-append button {
+    height: 100%;
+    border: 0;
+}
 .body-container .section-body .searchbar-container .custom-select {
     border: 0;
     border-radius: 3px;

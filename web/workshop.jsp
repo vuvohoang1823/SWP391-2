@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="container searchbar-container">
-                    <form>
+                    <form id="searchForm" action="/SWP391_MiniCapstone/workshop.jsp?">
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="input-group">
@@ -68,20 +68,22 @@
                                         placeholder="Search for Bird Course"
                                         />
                                     <div class="input-group-append">
-                                        <span class="input-group-text" style="height: 100%">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="16"
-                                                height="16"
-                                                fill="currentColor"
-                                                class="bi bi-search"
-                                                viewBox="0 0 16 16"
-                                                >
-                                            <path
-                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                                                />
-                                            </svg>
-                                        </span>
+                                        <button>
+                                            <span class="input-group-text" style="height: 100%">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    class="bi bi-search"
+                                                    viewBox="0 0 16 16"
+                                                    >
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -93,33 +95,35 @@
                                         placeholder="Select date"
                                         />
                                     <div class="input-group-append">
-                                        <span class="input-group-text" style="height: 100%">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="16"
-                                                height="16"
-                                                fill="currentColor"
-                                                class="bi bi-calendar4-week"
-                                                viewBox="0 0 16 16"
-                                                >
-                                            <path
-                                                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
-                                                />
-                                            <path
-                                                d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
-                                                />
-                                            </svg>
-                                        </span>
+                                        <button>
+                                            <span class="input-group-text" style="height: 100%">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    class="bi bi-calendar4-week"
+                                                    viewBox="0 0 16 16"
+                                                    >
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"
+                                                    />
+                                                <path
+                                                    d="M11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-2 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-2">
-                                <select class="custom-select">
-                                    <option selected hidden value="1">Other filter</option>
-                                    <option value="1">Price (low to high)</option>
-                                    <option value="2">Price (high to low)</option>
-                                    <option value="3">Duration (long to short)</option>
-                                    <option value="4">Duration (short to long)</option>
+                                <select class="custom-select" onchange="submitForm()" name="filterChose">
+                                    <option hidden value="1" ${!filterChose ? "selected" : ""}>Other filter</option>
+                                    <option value="1" ${filterChose eq "1" ? "selected" : ""}>Price (low to high)</option>
+                                    <option value="2" ${filterChose eq "2" ? "selected" : ""}>Price (high to low)</option>
+                                    <option value="3" ${filterChose eq "3" ? "selected" : ""}>Duration (long to short)</option>
+                                    <option value="4" ${filterChose eq "4" ? "selected" : ""}>Duration (short to long)</option>
                                 </select>
                             </div>
                         </div>
@@ -184,12 +188,17 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $(".datepicker").datepicker({
-                    format: "yyyy-mm-dd",
-                    autoclose: true,
-                });
-            });
+                                    $(document).ready(function () {
+                                        $(".datepicker").datepicker({
+                                            format: "yyyy-mm-dd",
+                                            autoclose: true,
+                                        });
+                                    });
+        </script>
+        <script>
+            function submitForm() {
+                document.getElementById("searchForm").submit();
+            }
         </script>
     </body>
 </html>
