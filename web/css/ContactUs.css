@@ -69,6 +69,7 @@
     border-radius: 4px 4px 0 0;
 }
 .section-contactUs .left .card .card-body {
+    font-size: 2rem;
     border-radius: 1.6rem;
     display: flex;
     padding: 0 1.6rem 1.6rem 1.6rem;
@@ -138,6 +139,7 @@
     font-size: 4.8rem;
 }
 .section-contactUs .right .form-container .content {
+    font-size: 2rem;
     padding: 0 15%;
 }
 .section-contactUs .right .form-container .content .row {
