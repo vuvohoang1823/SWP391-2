@@ -92,7 +92,7 @@
                                     <div class="card-body">
                                         <div class="extra-price">
                                             <div class="button-container">
-                                                <button class="btn btn-primary">Enroll</button>
+                                                <button class="btn btn-primary"><a href="onlinecoursedetail.jsp" style="text-decoration: none;color: white">Enroll</a></button>
                                             </div>
                                             <p>£120.00</p>
                                         </div>
