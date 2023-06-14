@@ -5,22 +5,28 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- bootstrap@4.5.2 -->
+        <!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+                      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                 bootstrap@4.5.2
+                <link
+                    rel="stylesheet"
+                    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                    />-->
         <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
             />
         <link rel="stylesheet" href="css/aboutUs.css">
         <title>Document</title>
     </head>
 
     <body>
+        <!--        header-->
+        <%@ include file="header.jsp" %>
+        <!--        body-->
         <div class="container-fluid">
-            <!--        header-->
-            <%@ include file="header.jsp" %>
-            <!--        body-->
             <div class="row body-intro">
                 <div class="col-lg-5 img-section">
                     <img src="img/trainer1.jpg" alt="" class="img1">
@@ -108,7 +114,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 why-images">
-                    <img src="assets/trainer2.jpg" alt="">
+                    <img src="./img/trainer2.jpg" alt="">
                     <div class="commitment">
                         <div class="check">
                             <img src="img/check.jpg" alt="">
@@ -147,8 +153,8 @@
                     <div class="desc">MONTHLY TRAINING</div>
                 </div>
             </div>
-            <%@ include file="footer.jsp" %>
         </div>
+        <%@ include file="footer.jsp" %>
         <script src="js/about_us.js"></script>
     </body>
 

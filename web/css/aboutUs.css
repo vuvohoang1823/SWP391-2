@@ -1,123 +1,12 @@
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #DDE6F1;
-}
-.header{
-    padding-top: 26px;
-}
-.logo-section{
-    display: flex;
-    align-items: center;
-}
-.logo-section img{
-    width: 102px;
-    height: 64px;
-    margin-left: 41px;
-}
-.logo-section p{
-    margin-bottom: 0;
-    margin-left: 10px;
-    font-size: 20px;
-    font-weight: 800;
-}
-.memu-section{
-}
-.menu-section .menu-content{
-    padding-left: 0;
-    margin-bottom: 0;
-    margin-top: 29px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu-content > li{
-    list-style-type: none;
-    font-size: 20px;
-    font-weight: 700;
-}
-.menu-content li a{
-    color: #000000;
-    text-decoration: none;
-}
-.menu-content li a img{
-    width: 21px;
-    height: 18px
-}
-.menu-content > li:nth-child(2) a{
-    color: #617A55
-}
-.menu-content > li:not(:nth-child(1)){
-    padding-left: 60px
-}
-.triangle{
-    display: none;
-    width: 0; 
-    height: 0; 
-    border-left: 17px solid transparent;
-    border-right: 17px solid transparent;
-    border-bottom: 17px solid white;
-    position: absolute;
-    top: 70px;
-    z-index: 2;
-    left: 415px
-}
-.menu-content .subnav{
-    display: none;
-    z-index: 1;
-    position: absolute;
-    top: 80px;
-    background-color: #fff;
-    padding: 10px 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.subnav > li{
-    list-style-type: none;
-    padding: 15px 16px;
-    width: 100%
-}
-.subnav > li:hover{
-    background-color: #E9E6E6;
-}
-.auth-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.auth-section .login{
-    border-style: none;
-    background-color: #DDE6F1;
-    font-weight: 700;
-    font-size: 25px;
-    color:#617A55;
-    outline: none;
-}
-.auth-section .signup{
-    border-radius: 50px;
-    padding: 16px 47px;
-    margin-left: 38px;
-    font-weight: 700;
-    color: white;
-    font-size: 25px;
-    border-color: #617A55;
-    background-color: #617A55;
-    border-style: none;
-    outline: #617A55;
-}
-.auth-section .signup:focus{
-    border-color: #617A55;
-    background-color: #617A55;
-}
 .body-intro{
-    margin-top: 20px;
     background: rgba(97, 122, 85, 0.3);
     height: calc(36em + 120px)
 }
 .body-intro .img-section{
     display: flex;
     justify-content: center;
-    
+
 }
 .img-section .img1{
     margin-top: 30px;
@@ -131,7 +20,7 @@ body {
     height: 28em;
 }
 .content-section{
-    margin-top: 66px
+    /*margin-top: 66px*/
 }
 .content-section .title{
     margin-bottom: 0;
@@ -206,7 +95,7 @@ body {
 .trainer > .name{
     font-weight: 700;
     font-size: 40px;
-    margin: 0 
+    margin: 0
 }
 .trainer:nth-child(1) > .name{
     font-weight: 700;
@@ -302,7 +191,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    
+
 }
 .why-images img{
     width: 568px;
