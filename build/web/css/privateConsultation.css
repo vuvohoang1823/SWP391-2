@@ -1,8 +1,3 @@
-
-html {
-    font-size: 10px;
-    font-family: 'Inter', sans-serif;
-}
 * {
     margin: 0;
     padding: 0;
@@ -10,39 +5,9 @@ html {
     text-decoration: none;
     list-style: none;
 }
-.auth-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.auth-section .login{
-    border-style: none;
-    background-color: #DDE6F1;
-    font-weight: 700;
-    font-size: 25px;
-    color:#617A55;
-    outline: none;
-}
-.auth-section .signup{
-    border-radius: 50px;
-    padding: 16px 47px;
-    margin-left: 38px;
-    font-weight: 700;
-    color: white;
-    font-size: 25px;
-    border-color: #617A55;
-    background-color: #617A55;
-    border-style: none;
-    outline: #617A55;
-}
-.auth-section .signup:focus{
-    border-color: #617A55;
-    background-color: #617A55;
-}
 /*END OF HEADER*/
 .body-cst{
-    margin-top: 1.5625em;    ;
-    background-color: rgba(184, 198, 194, 0.69);
+    background-color: #b8c6c2;
     padding-bottom: 75px;
 }
 .body-content{

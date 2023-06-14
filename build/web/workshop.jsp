@@ -166,7 +166,7 @@
                                             </div>
                                             <div class="extra-price">
                                                 <div class="button-container">
-                                                    <button><b>More Information</b></button>
+                                                    <a href="workshopdetail.jsp"><button><b>More Information</b></button></a>
                                                 </div>
                                                 <p>£120.00</p>
                                             </div>
