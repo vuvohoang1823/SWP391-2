@@ -11,11 +11,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/reset.css" type="text/css"
-        <link rel="stylesheet" href="../css/account_css/signin.css" type="text/css">
+        <link rel="stylesheet" href="css/reset.css" type="text/css">
+       
         <title>JSP Page</title>
         <style>
-            html {
+html {
     font-size: 10px;
     font-family: 'Inter', sans-serif;
 }
@@ -35,6 +35,10 @@ body {
     background-color: rgb(165, 185, 161);
     cursor: pointer;
     color: #617A55;
+}
+.picture button a{
+    text-decoration: none;
+    color: black;
 }
 .picture img {
     width: 50vw;
@@ -73,7 +77,7 @@ body {
 .form-container .login{
     font-size: 2.5rem;
     font-weight: bolder;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
 }
 .form-container .login button{
     width: 30rem;
@@ -115,9 +119,9 @@ body {
 <body>
     <div class="picture">
         <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+            <a href="../homepage.jsp"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
-            </svg>
+                </svg></a>
         </button>
         <img src="../img/Untitled (1).png" alt="" width="613" height="718" />
     </div>

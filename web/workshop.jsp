@@ -166,7 +166,7 @@
                                             </div>
                                             <div class="extra-price">
                                                 <div class="button-container">
-                                                    <button>More Information</button>
+                                                    <button><b>More Information</b></button>
                                                 </div>
                                                 <p>£120.00</p>
                                             </div>

@@ -70,7 +70,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="course.jsp"  class="nav-link">
+                                <a href="birdcourse.jsp"  class="nav-link">
                                     Bird Course
                                 </a>
                             </li>
@@ -94,7 +94,7 @@
                     Sign Up
                 </button>
                 <button class="signin-button">
-                    <a href="Signin_jsp.jsp" >Log In</a>
+                    <a href="account_jsp/signin.jsp" >Log In</a>
                 </button>
             </div>
                         <!--<c:if test="${'Guest' == sessionScope.user.role}">-->
