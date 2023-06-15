@@ -5,8 +5,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+            />
         <link rel="stylesheet" href="css/reset.css" type="text/css">
         <link rel="stylesheet" href="css/privateConsultation.css" type="text/css">
         <title>Document</title>
@@ -187,60 +191,60 @@
         </div>
         <%@include file="privateconsultationform.jsp" %>
         <%@include file="footer.jsp" %>
-    <script>
+        <script>
 
-        // Wait for the document to load
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get the carousel element
-            var carousel = document.getElementById("myCarousel");
+            // Wait for the document to load
+            document.addEventListener("DOMContentLoaded", function () {
+                // Get the carousel element
+                var carousel = document.getElementById("myCarousel");
 
-            // Get the carousel inner element
-            var carouselInner = carousel.querySelector(".carousel-inner");
+                // Get the carousel inner element
+                var carouselInner = carousel.querySelector(".carousel-inner");
 
-            // Get the carousel items
-            var carouselItems = carouselInner.querySelectorAll(".carousel-item");
+                // Get the carousel items
+                var carouselItems = carouselInner.querySelectorAll(".carousel-item");
 
-            // Get the previous and next buttons
-            var prevButton = document.querySelector(".carousel-control-prev");
-            var nextButton = document.querySelector(".carousel-control-next");
+                // Get the previous and next buttons
+                var prevButton = document.querySelector(".carousel-control-prev");
+                var nextButton = document.querySelector(".carousel-control-next");
 
-            // Set initial slide index
-            var currentSlide = 0;
+                // Set initial slide index
+                var currentSlide = 0;
 
-            // Handle the click event on the previous button
-            prevButton.addEventListener("click", function (event) {
-                event.preventDefault();
-                currentSlide--;
-                if (currentSlide < 0) {
-                    currentSlide = carouselItems.length - 1;
-                }
-                updateSlide();
-            });
+                // Handle the click event on the previous button
+                prevButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    currentSlide--;
+                    if (currentSlide < 0) {
+                        currentSlide = carouselItems.length - 1;
+                    }
+                    updateSlide();
+                });
 
-            // Handle the click event on the next button
-            nextButton.addEventListener("click", function (event) {
-                event.preventDefault();
-                currentSlide++;
-                if (currentSlide >= carouselItems.length) {
-                    currentSlide = 0;
-                }
-                updateSlide();
-            });
+                // Handle the click event on the next button
+                nextButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    currentSlide++;
+                    if (currentSlide >= carouselItems.length) {
+                        currentSlide = 0;
+                    }
+                    updateSlide();
+                });
 
-            // Function to update the active slide
-            function updateSlide() {
-                for (var i = 0; i < carouselItems.length; i++) {
-                    if (i === currentSlide) {
-                        carouselItems[i].classList.add("active");
-                    } else {
-                        carouselItems[i].classList.remove("active");
+                // Function to update the active slide
+                function updateSlide() {
+                    for (var i = 0; i < carouselItems.length; i++) {
+                        if (i === currentSlide) {
+                            carouselItems[i].classList.add("active");
+                        } else {
+                            carouselItems[i].classList.remove("active");
+                        }
                     }
                 }
-            }
-        });
+            });
 
 
-    </script>
-</body>
+        </script>
+    </body>
 
 </html>

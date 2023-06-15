@@ -152,3 +152,45 @@ html {
         right: 15px;
     }
 }
+
+/*.auth-section .triangle{
+    margin-right: 20rem;
+    width:0;
+    height: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid transparent
+}
+.auth-section .subnav{
+     display: none;
+    width:26rem;
+     z-index: 1;
+     position: absolute;
+    background-color: #fff;
+    padding: 1rem 1rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
+    border-radius: 1rem
+}
+.auth-section .sub{
+    display: none;
+    position: absolute;
+    right: 3rem;
+    z-index: 1;
+}
+.auth-section li:hover .sub{
+    display: block
+}
+.auth-section .subnav > li{
+    list-style-type: none;
+    padding: 1.5rem 1.6rem;
+    width: 100%
+}
+.auth-section .subnav li a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.auth-section .subnav > li:hover{
+    background-color: #E9E6E6;
+}*/

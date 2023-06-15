@@ -40,7 +40,7 @@
                                 <div class="card-body">
                                     <div class="extra-price">
                                         <div class="button-container">
-                                            <button class="btn btn-primary">Enroll</button>
+                                            <a href="birdcoursedetail.jsp"><button class="btn btn-primary">Enroll</button></a>
                                         </div>
                                         <p>£120.00</p>
                                     </div>
@@ -237,7 +237,7 @@
                     </div>
                     <div class="row" style="display: flex; justify-content: center">
                         <div class="col-lg-4 foot-button">
-                            <button>Click here to see more</button>
+                            <a href="birdcourse.jsp"><button>Click here to see more</button></a>
                         </div>
                     </div>
                 </div>
@@ -465,7 +465,7 @@
                     </div>
                     <div class="row" style="display: flex; justify-content: center">
                         <div class="col-lg-4 foot-button">
-                            <button>Click here to see more</button>
+                            <a href="online_course.jsp"><button>Click here to see more</button></a>
                         </div>
                     </div>
                 </div>
@@ -513,7 +513,7 @@
                                             </div>
                                             <div class="extra-price">
                                                 <div class="button-container">
-                                                    <button>More Information</button>
+                                                    <a href="workshopdetail.jsp"><button>More Information</button></a>
                                                 </div>
                                                 <p>£120.00</p>
                                             </div>
@@ -526,7 +526,7 @@
                 </div>
                 <div class="row" style="display: flex; justify-content: center">
                     <div class="col-lg-4 foot-button">
-                        <button>Click here to see more</button>
+                        <a href="workshop.jsp"><button>Click here to see more</button></a>
                     </div>
                 </div>
             </div>
