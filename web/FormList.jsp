@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
         <!-- css -->
         <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/formList.css" />
+        <link rel="stylesheet" href="css/FormList.css" />
     </head>
     <body>
         <!--            header-->
@@ -65,8 +65,8 @@
                 <td class="title">Basic Consultation Request</td>
                 <td class="customer">Namvippro</td>
                 <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus offline">Offline</div>
-                    <button class="viewStatus">View Detail</button>
+                    <div class="offline">Offline</div>
+                    <a href="FormDetail.jsp"><button class="viewStatus">View Detail</button></a>
                 </td>
             </tr>
             <tr>
@@ -74,8 +74,8 @@
                 <td class="title">Basic Consultation Request</td>
                 <td class="customer">Namvippro</td>
                 <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus online">Online</div>
-                    <button class="viewStatus">View Detail</button>
+                    <div class="online">Online</div>
+                    <a href="FormDetail.jsp"><button class="viewStatus">View Detail</button></a>
                 </td>
             </tr>
             <tr>
@@ -83,8 +83,8 @@
                 <td class="title">Basic Consultation Request</td>
                 <td class="customer">Namvippro</td>
                 <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus online">Online</div>
-                    <button class="viewStatus">View Detail</button>
+                    <div class="online">Online</div>
+                    <a href="FormDetail.jsp"><button class="viewStatus">View Detail</button></a>
                 </td>
             </tr>
         </table>

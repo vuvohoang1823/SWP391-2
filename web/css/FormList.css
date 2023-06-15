@@ -29,20 +29,24 @@
 .table-form .type {
     font-weight: bold;
 }
-.table-form .type .onlineStatus {
+.table-form .type .online {
     color: white;
     border-radius: 3px;
     padding: 0.5rem 2rem;
-}
-.table-form .type .online {
-    background-color: #308209;
+    background-color: #ef7b6b;
 }
 .table-form .type .offline {
+    color: white;
+    border-radius: 3px;
+    padding: 0.5rem 2rem;
     background-color: #f69c14;
 }
+.table-form .type a {
+    padding: 0 2rem;
+}/*# sourceMappingURL=formList.css.map */
 .table-form .type .viewStatus {
     border-radius: 5px;
     background-color: white;
     color: black;
-    padding: 0 2rem;
+    padding: 0.25rem 2rem;
 }/*# sourceMappingURL=formList.css.map */
