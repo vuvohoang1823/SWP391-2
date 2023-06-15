@@ -18,8 +18,8 @@
 
     <body>
         <%@include file="header.jsp" %>
-        <div class="container-fluid">
-            <div class="row body-cst">
+        <div class="container-fluid" style="margin-top: -2rem">
+            <div class="row body-cst" style="background-color: #B8C6C2">
                 <div class="col-lg-7 body-content">
                     <p class="title">PRIVATE CONSULTANT</p>
                     <p class="subtitle">Expert Guidance for Personal and Professional Success</p>
@@ -189,7 +189,7 @@
 
 
         </div>
-        <%@include file="Home_ContactUs.jsp" %>
+        <%@include file="privateconsultationform.jsp" %>
         <%@include file="footer.jsp" %>
         <script>
 

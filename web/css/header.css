@@ -116,10 +116,13 @@ html {
     background-color: rgba(0, 0, 0, 0);
     min-width: 100px;
     height: 35px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #80957c;
-    text-decoration: none;
     cursor: pointer;
+    font-weight: bolder;
+}
+.header-container .button-container .signin-button a{
+    text-decoration: none;
 }
 .header-container .button-container .signin-button:hover {
     color: #617a55;
@@ -135,10 +138,11 @@ html {
     border-radius: 30px;
     min-width: 100px;
     height: 35px;
-    font-size: 1.6em;
+    font-size: 2em;
     color: white;
     border: 0;
     cursor: pointer;
+    font-weight: bolder;
 }
 .header-container .button-container .signup-button:hover {
     background-color: #468847;

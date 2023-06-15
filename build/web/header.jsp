@@ -93,9 +93,11 @@
                 <button class="signup-button">
                     Sign Up
                 </button>
+                <a href="account_jsp/signin.jsp" >
                 <button class="signin-button">
-                    <a href="account_jsp/signin.jsp" >Log In</a>
+                    Log In
                 </button>
+                </a>
             </div>
                         <!--<c:if test="${'Guest' == sessionScope.user.role}">-->
             <!--</c:if>-->

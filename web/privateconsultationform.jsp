@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <link rel="stylesheet" href="../css/reset.css" />
-        <link rel="stylesheet" href="css/ContactUs.css" />
+        <link rel="stylesheet" href="css/privateconsultationForm.css" />
     </head>
     <body>
         <section class="section-contactUs">
@@ -113,22 +113,37 @@
                                 <input type="text" placeholder="Your phone number" required />
                             </div>
                             <div class="row">
-                                <input
-                                    type="text"
-                                    placeholder="Contact request title"
-                                    required
-                                    />
+                                <select class="custom-select" onchange="submitForm()" name="filterChose" style="height: 5rem;font-size: 2rem">
+                                    <option hidden value="1" ${!filterChose ? "selected" : ""}>Other Trainer    </option>
+                                    <option value="1" ${filterChose eq "1" ? "selected" : ""}>Trainer</option>
+                                    <option value="2" ${filterChose eq "2" ? "selected" : ""}>Trainer</option>
+                                    <option value="3" ${filterChose eq "3" ? "selected" : ""}>Trainer</option>
+                                    <option value="4" ${filterChose eq "4" ? "selected" : ""}>Trainer</option>
+                                </select>
                             </div>
                             <div class="row" style="height: 15rem">
                                 <textarea
                                     name="description"
                                     rows="4"
                                     cols="40"
-                                    placeholder="Request message..."
+                                    placeholder="Request message"
                                     ></textarea>
                             </div>
-                        </div>
-                        <div class="button-container">
+                            <div class="radio-container">
+                                <div class="radio">
+                                    <input type="radio" style="width: 2rem; margin-right: 2rem">
+                                    <p>
+                                        I need help assistance through <b>Email</b>
+                                    </p>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" style="width: 2rem; margin-right: 2rem">
+                                    <p>
+                                        I need help assistance  <b>At Home</b>
+                                    </p>
+                                </div>
+                            </div>
+                                <div class="button-container" style="margin-top: 2rem">
                             <button>Submit form</button>
                         </div>
                     </form>
@@ -137,3 +152,4 @@
         </section>
     </body>
 </html>
+

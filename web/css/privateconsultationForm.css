@@ -166,4 +166,20 @@
     background-color: #617a55;
     color: white;
     padding: 1.6rem 4rem;
-}/*# sourceMappingURL=homepage.css.map */
+    
+}
+.section-contactUs .right .form-container .content .radio-container{
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+}
+.section-contactUs .right .form-container .content .radio-container .radio{
+    display: flex;
+    flex-direction: row;
+}
+.footer-container{
+    margin-top: 0rem
+}
+.section-contactUs{
+    margin: 5rem 5rem;
+}
