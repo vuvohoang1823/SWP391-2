@@ -56,7 +56,7 @@ html {
 .header-container .nav-container .navBar1 li:hover .nav-link {
     color: #4d6144;
 }
-.triangle{
+.header-container .nav-container .navBar1 .triangle{
     display:none;
     position: absolute;
     z-index: 1;
@@ -83,7 +83,7 @@ html {
 }
 .header-container .nav-container .navBar1 li .subnav {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 1.6rem;
     display: none;
     position: absolute;
@@ -107,7 +107,6 @@ html {
     cursor: pointer;
 }
 .header-container .button-container {
-    width: 25%;
     padding-right: 5%;
 }
 .header-container .button-container .signin-button {
@@ -148,45 +147,45 @@ html {
         right: 15px;
     }
 }
-
-/*.auth-section .triangle{
-    margin-right: 20rem;
-    width:0;
-    height: 0;
-    border-left: 1rem solid transparent;
-    border-right: 1rem solid transparent;
-    border-bottom: 1rem solid transparent
+.header-container .auth-section {
+    display: flex;
+    justify-content: center;
+    width: 25vw;
 }
-.auth-section .subnav{
-     display: none;
-    width:26rem;
-     z-index: 1;
-     position: absolute;
+.header-container .auth-section .user-button {
+    background-color: #617a55;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+}
+.header-container .auth-section .subnav{
+    width: 19.5rem;
+    z-index: 1;
     background-color: #fff;
     padding: 1rem 1rem;
     box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
-    border-radius: 1rem
+    border-radius: 10px;
 }
-.auth-section .sub{
-    display: none;
+.header-container .auth-section .triangle {
     position: absolute;
-    right: 3rem;
-    z-index: 1;
+    bottom: 91%;
+    right: 15%;
+    width:0;
+    height: 0;
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
 }
-.auth-section li:hover .sub{
-    display: block
-}
-.auth-section .subnav > li{
+.header-container .auth-section .subnav a li {
     list-style-type: none;
-    padding: 1.5rem 1.6rem;
+    padding: 1rem 1rem 1rem 1.5rem;
     width: 100%
 }
-.auth-section .subnav li a{
+.header-container .auth-section .subnav a{
     color: black;
     text-decoration: none;
     font-size: 2rem;
     font-weight: 700;
 }
-.auth-section .subnav > li:hover{
+.header-container .auth-section .subnav a:hover{
     background-color: #E9E6E6;
-}*/
+}

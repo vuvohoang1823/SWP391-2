@@ -83,7 +83,7 @@
                 <b class="review-count col-lg-9">based on 87 reviews</b>
             </div>
             <button>
-                <a href="#">
+                <a href="detail">
                     Purchase This Course
                 </a>
             </button>

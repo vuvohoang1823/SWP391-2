@@ -12,14 +12,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/reset.css" type="text/css">
         <link rel="stylesheet" href="css/homepage.css" type="text/css">
-        <jsp:useBean id="a" class="sample.dao.FeedbackDAO" scope="request"></jsp:useBean>
-        <jsp:useBean id="i" class="sample.dao.CourseDAO" scope="request"></jsp:useBean>
+        <jsp:useBean id="a" class="DAO.FeedbackDAO" scope="request"></jsp:useBean>
+        <jsp:useBean id="i" class="DAO.courseDAO" scope="request"></jsp:useBean>
             <title>JSP Page</title>
         </head>
         <body style="margin:0">
 
             <!--            header-->
         <%@ include file="header.jsp" %>
+
 
         <!--            body-->
         <div class="home-container">
@@ -35,115 +36,6 @@
                     </p>
                 </div>
             </section>
-            <!--            <section class="section-course">
-                            <div class="heading">
-                                <h2>OUR COURSE</h2>
-                                <div>
-                                    <h1>OUR BEST COURSE FOR YOUR BIRDS</h1>
-                                </div>
-                            </div>
-                            <div class="image-container">
-                                <div class="image-slider">
-            <c:forEach items="${i.courseList}" var="course">
-                <div
-                    style=" margin-left:  3%"
-                    class="image-wrapper"
-                    >
-                    <div>
-                        <img src="data:img/blogs/jpg;base64,${course.thumbnail}">
-                        <div class="desc">
-                            <h1 class="coursename-container">${course.name}</h1>
-                            <div class="desc-container">
-                                <div
-                                    style="
-                                    display: flex;
-                                    flex-direction:  column;
-                                    font-size:  90%;
-                                    padding-top: 1rem;
-                                    "
-                                    >
-                                    <div
-                                        style="
-                                        display: flex;
-                                        flex-direction:  row;
-                                        justify-content:  space-between;
-                                        "
-                                        >
-                                        <div style=" margin-left: 10% ">Service:</div>
-                                        <div style="
-                                             display: flex;
-                                             align-items:  center;
-                                             margin-right : 15%;
-                                             "
-                                             >
-                                            <b style=" margin-left:  5px" >
-                ${course.service}
-            </b>
-        </div>
-    </div>
-    <div
-        style="
-        display: flex;
-        flex-direction:  row;
-        justify-content:  space-between;
-        margin-top:  5%
-        "
-        >
-        <div style=" margin-left: 10% ">
-            Price:
-        </div>
-        <div
-            style="
-            display: flex;
-            align-items:  center;
-            margin-right : 15%;
-            "
-            >
-            <img src='./img/logo_black.png' alt="" style=" width: 25px" />
-            <b style=" margin-left:  5px" >
-                ${course.price}
-            </b>
-        </div>
-    </div>
-</div>
-<div
-    style="
-    display: flex;
-    justify-content:  space-around;
-    margin-top:  5%;
-    "
-    >
-    <p
-        style="
-        color: #617a55;
-        font-weight:  bolder;
-        margin-right:  10%;
-        "
-        >
-        Price tag
-    </p>
-    <button
-        style="
-        border: 0px;
-        border-radius:  20px;
-        background-color:  #617a55;
-        padding: 6px;
-        width: 100px;
-        "
-        ><a href='course.jsp' alt='' style="text-decoration: none;color: white;">Explore more</a>
-
-    </button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-            </c:forEach>
-
-        </div>
-    </div>
-</section>-->
             <%@ include file="Home_TopCourse.jsp" %>
 
             <section class="service-container">
@@ -165,7 +57,7 @@
                                 behaviour, husbandry, enrichment and more.
                             </div>
                             <div class="button-container">
-                                <button>LEARN MORE</button>
+                                <button><a href="birdcourse" style="text-decoration: none">LEARN MORE</a></button>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">
@@ -179,7 +71,8 @@
                                 and On Demand!
                             </div>
                             <div class="button-container">
-                                <button>LEARN MORE</button>
+                             <button><a href="workshop" style="text-decoration: none">LEARN MORE</a></button>
+
                             </div>
                         </div>
                     </div>
@@ -192,7 +85,7 @@
                                 and other animal related businesses.
                             </div>
                             <div class="button-container">
-                                <button>LEARN MORE</button>
+                          <button><a href="onlinecourse" style="text-decoration: none">LEARN MORE</a></button>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">
@@ -206,7 +99,7 @@
                                 enrichment and more!
                             </div>
                             <div class="button-container">
-                                <button>LEARN MORE</button>
+                      <button><a href="privateconsultation" style="text-decoration: none">LEARN MORE</a></button>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">
@@ -308,13 +201,13 @@
                 </div>
                 <div class="image-container">
                     <div class="image-slider">
-                        <c:forEach items="${a.feedback}" var="i">
+                        <c:forEach items="${a.allFeeedBack}" var="i">
                             <div
                                 style=" margin-left: 3%; box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.3);"
                                 class="image-wrapper"
                                 >
                                 <div>
-                                    <img src="data:image/png;base64,${i.picture}">
+                                    <img src="data:image/png;base64,${i.image}">
                                     <div class="desc">
                                         <h1>${i.fullname}</h1>
                                         <div class="desc-container">

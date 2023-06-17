@@ -18,7 +18,7 @@
 
     <body>
         <%@include file="header.jsp" %>
-        <div class="container-fluid">
+        <div class="body-container">
             <div class="row body-cst">
                 <div class="col-lg-7 body-content">
                     <p class="title">PRIVATE CONSULTANT</p>
@@ -68,7 +68,12 @@
                                                     and provide valuable insights to help you develop a strong foundation
                                                     for growth.
                                                 </p>
-                                                <button class="card-contact">Contact us to book</button>
+                                                <a href="formAppointment.jsp" >
+                                                    <button class="card-contact">
+                                                        Contact us to book
+                                                    </button>
+
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +104,13 @@
                                                     space to address and modify negative patterns, fostering personal growth
                                                     and empowering you to make lasting positive changes.
                                                 </p>
-                                                <button class="card-contact">Contact us to book</button>
+
+                                                <a href="formAppointment.jsp" >
+                                                    <button class="card-contact">
+                                                        Contact us to book
+                                                    </button>
+
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -130,7 +141,12 @@
                                                     techniques, and troubleshooting advice to help you achieve impressive
                                                     results.
                                                 </p>
-                                                <button class="card-contact">Contact us to book</button>
+                                                <a href="formAppointment.jsp" >
+                                                    <button class="card-contact">
+                                                        Contact us to book
+                                                    </button>
+
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -192,7 +208,6 @@
         <%@include file="Home_ContactUs.jsp" %>
         <%@include file="footer.jsp" %>
         <script>
-
             // Wait for the document to load
             document.addEventListener("DOMContentLoaded", function () {
                 // Get the carousel element

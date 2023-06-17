@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -20,10 +22,12 @@
 
         <link rel="stylesheet" type="text/css" href="css/workshop.css" />
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <jsp:useBean id="i" class="DAO.courseDAO" scope="request"></jsp:useBean>
 
 
-    </head>
-    <body>
+
+        </head>
+        <body>
         <%@ include file="header.jsp" %>
         <!-- end of header -->
         <div class="body-container">
@@ -133,48 +137,50 @@
             <section class="section-workshops">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="row no-gutters">
-                                    <div class="col-md-3">
-                                        <img
-                                            src="./img/woodpecker.png"
-                                            class="card-img"
-                                            alt="Product Image 1"
-                                            />
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="card-body">
-                                            <h5 class="card-title">
-                                                Whistle Training Workshop: Unlocking Vocal Talents
-                                            </h5>
-                                            <div class="desc-text">
-                                                This hands-on course is designed to help bird owners
-                                                develop a harmonious bond with their avian companions by
-                                                exploring the fascinating world of whistle training.
-                                                Whether you have a parrot, cockatiel, or canary, this
-                                                workshop offers a unique opportunity to tap into their
-                                                natural vocal abilities and unlock a whole new level of
-                                                communication.
-                                            </div>
-                                            <div class="card-text">
-                                                <b>Starting date:</b> May 25, 2023 <br />
-                                                <b>Time:</b> 2:00 PM - 4:00 PM <br />
-                                                <b>Location/Venue:</b> Central Community Center <br />
-                                                <b>Target Audience:</b> Bird owners of all experience
-                                                levels
-                                            </div>
-                                            <div class="extra-price">
-                                                <div class="button-container">
-                                                    <a href="workshopdetail.jsp"><button><b>More Information</b></button></a>
+                        <c:forEach items="${i.allCourseWorkshop}" var="workshop" >
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-3">
+                                            <img
+                                                src="data:images/jpg;base64,${workshop.image}"
+                                                class="card-img"
+                                                alt="Product Image 1"
+                                                />
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+                                                <h5 class="card-title">
+                                                    ${workshop.title}
+                                                </h5>
+                                                <div class="desc-text">
+                                                    This hands-on course is designed to help bird owners
+                                                    develop a harmonious bond with their avian companions by
+                                                    exploring the fascinating world of whistle training.
+                                                    Whether you have a parrot, cockatiel, or canary, this
+                                                    workshop offers a unique opportunity to tap into their
+                                                    natural vocal abilities and unlock a whole new level of
+                                                    communication.
                                                 </div>
-                                                <p>£120.00</p>
+                                                <div class="card-text">
+                                                    <b>Starting date:</b> May 25, 2023 <br />
+                                                    <b>Time:</b> 2:00 PM - 4:00 PM <br />
+                                                    <b>Location/Venue:</b> Central Community Center <br />
+                                                    <b>Target Audience:</b> Bird owners of all experience
+                                                    levels
+                                                </div>
+                                                <div class="extra-price">
+                                                    <div class="button-container">
+                                                        <a href="workshopdetail.jsp"><button><b>More Information</b></button></a>
+                                                    </div>
+                                                    <p>Â£${workshop.price}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                       </c:forEach>
                     </div>
                 </div>
             </section>

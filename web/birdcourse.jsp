@@ -18,6 +18,8 @@
             />
         <link rel="stylesheet" href="css/reset.css" type="text/css">
         <link rel="stylesheet" href="css/birdCourse.css" type="text/css">
+        <jsp:useBean id="i" class="DAO.courseDAO" scope="request"></jsp:useBean>
+
         <title>JSP Page</title>
     </head>
     <body>
@@ -112,24 +114,24 @@
             <section class="section-course">
                 <div class="container">
                     <div class="row">
+                <c:forEach items="${i.allCourseBirdCourse}" var="birdcourse">
                         <div class="col-md-4">
                             <div class="card">
                                 <img
-                                    src="  img/Untitled (1).png"
+                                     src="data:images/jpg;base64,${birdcourse.image}"
                                     class="card-img-top"
                                     alt="Product 1"
                                     />
                                 <div class="card-body">
                                     <div class="extra-price">
                                         <div class="button-container">
-                                            <button class="btn btn-primary">Enroll</button>
+                                            <a href="detail?cid=${birdcourse.courseID}""><button class="btn btn-primary">Enroll</button></a>
                                             <!--                                        <button class="btn btn-primary"><a href="bir">Enroll<a/></button>-->
                                         </div>
-                                        <p>£120.00</p>
+                                        <p>£${birdcourse.price}</p>
                                     </div>
                                     <h5 class="card-title">
-                                        Mastering Effective Communication: Unlocking the Power of
-                                        Connection
+                                        ${birdcourse.title}
                                     </h5>
                                     <div class="card-text">
                                         <div style="display: inline">
@@ -182,7 +184,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end of product -->
+                </c:forEach>
+<!--                         end of product 
                         <div class="col-md-4">
                             <div class="card">
                                 <img
@@ -252,7 +255,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end of product -->
+                         end of product 
                         <div class="col-md-4">
                             <div class="card">
                                 <img
@@ -322,7 +325,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end of product -->
+                         end of product 
                         <div class="col-md-4">
                             <div class="card">
                                 <img
@@ -392,7 +395,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end of product -->
+                         end of product 
                         <div class="col-md-4">
                             <div class="card">
                                 <img
@@ -462,7 +465,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- end of product -->
+                         end of product 
                         <div class="col-md-4">
                             <div class="card">
                                 <img
@@ -531,7 +534,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </section>

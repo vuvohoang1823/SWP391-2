@@ -22,6 +22,7 @@
         <!-- css -->
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/formList.css" />
+        <jsp:useBean id="f" class="DAO.AppointmentDAO" scope="request"></jsp:useBean>
     </head>
     <body>
         <!--            header-->
@@ -48,6 +49,7 @@
                 </div>
             </div>
         </div>
+         <c:forEach items="${f.appointList}" var="b" varStatus="counter" >
         <table
             class="w3-table-all w3-hoverable w3-card-4 table-form"
             style="width: 97.5%; margin: 0 auto"
@@ -61,33 +63,18 @@
                 </tr>
             </thead>
             <tr>
-                <td class="id">1</td>
+                <td class="id">${counter.count}</td>
                 <td class="title">Basic Consultation Request</td>
-                <td class="customer">Namvippro</td>
+                <td class="customer">${b.customer_fullname}</td>
                 <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus offline">Offline</div>
-                    <button class="viewStatus">View Detail</button>
+                    <div class="onlineStatus offline">${b.type}</div>
+                    <a href="MainController?action=view_form_detail&consultation_id=${b.consultation_id}"><button class="viewStatus">View Detail</button></a>
+                    
                 </td>
             </tr>
-            <tr>
-                <td class="id">2</td>
-                <td class="title">Basic Consultation Request</td>
-                <td class="customer">Namvippro</td>
-                <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus online">Online</div>
-                    <button class="viewStatus">View Detail</button>
-                </td>
-            </tr>
-            <tr>
-                <td class="id">3</td>
-                <td class="title">Basic Consultation Request</td>
-                <td class="customer">Namvippro</td>
-                <td class="type" style="display: flex; justify-content: space-around">
-                    <div class="onlineStatus online">Online</div>
-                    <button class="viewStatus">View Detail</button>
-                </td>
-            </tr>
+           
         </table>
+        </c:forEach>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
