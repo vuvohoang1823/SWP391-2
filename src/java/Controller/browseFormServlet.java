@@ -41,7 +41,7 @@ public class browseFormServlet extends HttpServlet {
             AppointmentDAO dao = new AppointmentDAO();
             dao.browseForm(status, consultation_id);
 
-            RequestDispatcher rd = request.getRequestDispatcher("FormList.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("ConsultationForm_Pending.jsp");
             rd.forward(request, response);
         } catch (Exception ex) {
             System.out.println(ex);

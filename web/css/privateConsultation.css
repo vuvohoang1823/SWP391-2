@@ -1,3 +1,7 @@
+html {
+    font-size: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,318 +9,208 @@
     text-decoration: none;
     list-style: none;
 }
+
 /*END OF HEADER*/
-.body-cst{
-    background-color: #b8c6c2;
-    padding-bottom: 75px;
+.body-container section .heading {
+    text-align: center;
 }
-.body-content{
-    margin-top: 4em;
-    padding-left: 3.125em;
-}
-.body-content .title{
-    color:#617A55;
-    font-weight: 700;
-    font-size: 30px;
-    margin:0
-}
-.body-content .subtitle{
-    font-weight: 800;
-    font-size: 60px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    line-height: 72.61px;
-}
-.body-content .content{
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    line-height: 24.2px;
-}
-.body-content .button{
-    margin-top: 50px;
-    background-color: #617A55;
-    border-radius: 50px;
-    border-color: #617A55;
-    outline: #617A55;
-    border-style: none;
-    padding: 13px 45px;
-    color: white;
-    font-size: 25px;
-    font-weight: 700;
-}
-.body-img{
-    margin-top: 2em;
+.body-container section .heading div {
+    margin-top: 2%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.body-img > img{
-    width: 80%;
-    height: 100%
-}
-.body-services{
-    margin-top: 70px;
-    font-weight: 700;
-    font-size: 60px;
-    text-align: center;
-}
-.carousel-content {
-    position: absolute;
-    width: 1000px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-.carousel-content .card{
-    background-color: transparent;
-    outline: none;
-}
-.carousel-background {
-    position: relative;
-}
-.carousel-background img {
-    width: 100%;
-    height: auto;
-    filter: brightness(0.5); /* Adjust the brightness value as needed */
-}
-.card-title{
-    text-align: center;
-    color: white;
-    font-weight: 800;
-    font-size: 80px;
-}
-.card-text{
-    margin-top: 30px;
-    color:white;
-    font-weight: 400;
-    font-size: 30;
-}
-.card-contact{
-    margin-top: 60px;
-    margin-left: 300px;
-    border-color: #617A55;
-    outline:#617A55;
-    background-color: #617A55;
-    border-style: none;
-    border-radius: 50px;
-    padding: 13px 36px;
-    font-weight: 700;
-    font-size: 30px;
-    color: white;
-}
-.card-contact:focus{
-    border-color: #617A55;
-    background-color: #617A55;
-}
-.body-testimonial{
-    margin-top: 60px;
-    font-weight: 700;
-    font-size: 30px;
-    color:#617A55;
-    text-align: center;
-}
-.body-tc{
-    text-align: center;
-    font-weight: 800;
-    font-size: 60px;
-}
-.client{
-    display:flex;
-    justify-content: space-evenly;
-}
-.client-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    padding: 44px 16px;
-    box-shadow: 0px 0px 10px 2px rgba(176, 176, 176, 0.47);
-
-}
-.client-card > img{
-    width:76.31px;
-    height: 76.31px;
-    border-radius: 100%;
-
-}
-.client-card .name{
-    font-weight: 700;
-    font-size: 30px;
-}
-.client-card .response{
-    font-weight: 400;
-    font-size: 17px;
-    margin-top: 30px;
-}
-
-.section-contactUs {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-}
-.section-contactUs * {
-    box-sizing: border-box;
-}
-.section-contactUs .left {
-    background-size: cover;
-    /*filter: brightness(50%);*/
-    color: white;
-    width: 50vw;
-}
-
-.section-contactUs .left .heading1 {
-    display: flex;
-    flex-direction: column;
-}
-.section-contactUs .left .heading1 hr{
-    align-self: center;
-    opacity: 100%;
-}
-.section-contactUs .left .heading1 h1 {
-    padding-top: 4.8rem;
-    align-self: center;
-    font-size: 5.6rem;
-}
-.section-contactUs .left .heading1 hr {
-    margin-top: 1.6rem;
-    width: 50%;
-}
-.section-contactUs .left .icons {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.8rem;
-}
-.section-contactUs .left .icons span {
-    padding: 0.8rem 0.8rem;
-}
-.section-contactUs .left .icons span svg {
-    width: 4.8rem;
-    height: 4.8rem;
-}
-.section-contactUs .left .content {
-    margin-top: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    line-height: 4rem;
-}
-.section-contactUs .left .content div {
-    font-size: 2.4rem;
-    align-self: center;
-}
-.section-contactUs .left .card {
-    width: 38.4rem;
-    margin: 8rem auto 2.4rem auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.section-contactUs .left .card .image-container {
-    padding: 1.6rem;
-}
-.section-contactUs .left .card .image-container img {
-    width: 100%;
-    height: 24rem;
-    border-radius: 4px 4px 0 0;
-}
-.section-contactUs .left .card .card-body {
-    border-radius: 1.6rem;
-    display: flex;
-    padding: 0 1.6rem 1.6rem 1.6rem;
-}
-.section-contactUs .left .card .card-body .text-field {
-    flex: 1;
-    padding: 8px;
-    height: 5.6rem;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+.body-container section .heading div h1 {
+    color: black;
+    font-weight: bolder;
+    font-size: 5rem;
+    font-weight: bolder;
     width: 70%;
 }
-.section-contactUs .left .card .card-body .button {
+.body-container section .heading h2 {
+    margin-top: 4%;
+    font-size: 2rem;
     font-weight: bold;
-    white-space: nowrap;
-    font-size: 1.6rem;
-    width: 30%;
-    padding: 8px 16px;
-    background-color: #f69c14;
-    color: #fff;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
+    color: #617a55;
 }
-.section-contactUs .right {
-    border-top: 2px solid #617255;
-    border-bottom: 2px solid #617255;
-    width: 50vw;
-    background-color: #b8c6c2;
-    padding: 4.8rem 4rem;
-}
-.section-contactUs .right .form-container {
-    border: 0.24rem solid white;
-    padding-bottom: 5.6rem;
-}
-.section-contactUs .right .form-container .heading1 {
-    padding: 3.2rem 0 1.6rem 0;
+.body-container .section-head {
+    height: 93vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    background-color: #b8c6c2;
 }
-.section-contactUs .right .form-container .heading1 .logo-container {
-    height: 8rem;
+.body-container .section-head .desc-container {
+    width: 50vw;
+    padding: 4rem 5rem 4rem 4rem;
+}
+.body-container .section-head .desc-container h2 {
+    height: 5%;
+    overflow: hidden;
+    color: #4d6144;
+    font-weight: bold;
+    font-size: 4rem;
+}
+.body-container .section-head .desc-container h1 {
+    height: 38%;
+    overflow: hidden;
+    color: black;
+    font-weight: bolder;
+    font-size: 8rem;
+}
+.body-container .section-head .desc-container p {
+    height: 40%;
+    overflow: hidden;
+    line-height: 5rem;
+    margin-top: 3%;
+    font-size: 3.3rem;
+}
+.body-container .section-head .desc-container .button-container {
+    padding-top: 3rem;
+    font-weight: bold;
+    font-size: 4rem;
+}
+.body-container .section-head .desc-container .button-container button {
+    border: 0px;
+    border-radius: 50px;
+    background-color: #617a55;
+    color: white;
+    padding: 1rem 1rem;
+    width: 50%;
+}
+.body-container .section-head .img-container {
+    height: 100%;
+    width: 50vw;
     display: flex;
     justify-content: center;
 }
-.section-contactUs .right .form-container .heading1 .logo-container .logo-image {
-    padding: 0 1.6rem;
+.body-container .section-head .img-container .image1 {
+    height: 100%;
+    padding: 4rem;
 }
-.section-contactUs .right .form-container .heading1 .logo-container .logo-image img {
-    width: 12rem;
+.body-container .section-head .img-container .image1 img {
+    border-radius: 20px;
+    height: 100%;
     -o-object-fit: contain;
     object-fit: contain;
     -o-object-position: center;
     object-position: center;
 }
-.section-contactUs .right .form-container .heading1 .logo-container .logo-text {
-    cursor: pointer;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 2.64rem;
+.body-container .section-services .heading {
+    padding-bottom: 5.2rem;
 }
-.section-contactUs .right .form-container .heading1 h1 {
-    padding-top: 2rem;
-    color: #617a55;
-    align-self: center;
-    font-size: 4.8rem;
+.body-container .section-services .carousel {
+    height: 70rem;
 }
-.section-contactUs .right .form-container .content {
-    padding: 0 15%;
+.body-container .section-services .carousel .carousel-indicators {
+    margin-bottom: 0;
 }
-.section-contactUs .right .form-container .content .row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.6rem;
+.body-container .section-services .carousel .carousel-indicators button {
+    margin: 0 0.5rem;
+    background-color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
 }
-.section-contactUs .right .form-container .content .row input,
-.section-contactUs .right .form-container .content .row textarea {
-    border: 0;
-    border-radius: 0.4rem;
-    padding: 1.44rem 1.2rem;
+.body-container .section-services .carousel .carousel-inner {
+    height: 100%;
+}
+.body-container .section-services .carousel .carousel-inner .carousel-item {
+    height: 100%;
+}
+.body-container .section-services .carousel .carousel-inner .carousel-item img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.body-container .section-services .carousel .carousel-inner .carousel-item .carousel-caption {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
 }
-.section-contactUs .right .form-container .button-container {
+.body-container .section-services .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: 8rem;
+}
+.body-container .section-services .carousel .carousel-inner .carousel-item .carousel-caption p {
+    text-align: start;
+    padding: 4rem 25rem;
+    font-size: 3rem;
+}
+.body-container .section-services .carousel .carousel-inner .carousel-item .carousel-caption .button-container {
+    width: 100vw;
+    position: absolute;
     display: flex;
     justify-content: center;
+    bottom: 10rem;
 }
-.section-contactUs .right .form-container .button-container button {
-    font-size: 1.6rem;
-    font-weight: bold;
+.body-container .section-services .carousel .carousel-inner .carousel-item .carousel-caption .button-container a button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: 0;
-    border-radius: 0.56rem;
-    background-color: #617a55;
+    border-radius: 50px;
+    width: 35rem;
+    height: 6rem;
+    background: #617a55;
     color: white;
-    padding: 1.6rem 4rem;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
 }
+.body-container .section-consultants .cards-container {
+    width: 100vw;
+    display: flex;
+    padding: 0 2rem;
+    justify-content: center;
+}
+.body-container .section-consultants .cards-container .card-container {
+    width: 22%;
+    height: 40rem;
+    position: relative;
+    margin: 2rem 2rem;
+    padding: 0;
+}
+.body-container .section-consultants .cards-container .card-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+.body-container .section-consultants .cards-container .card-container .desc-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.body-container .section-consultants .cards-container .card-container .desc-container .name {
+    padding-top: 10rem;
+    height: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.body-container .section-consultants .cards-container .card-container .desc-container .skills {
+    width: 50%;
+    height: 30%;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.body-container .section-consultants .cards-container .card-container .desc-container .button-container {
+    height: 40%;
+    font-size: 2rem;
+    height: 20%;
+}
+.body-container .section-consultants .cards-container .card-container .desc-container .button-container button {
+    border: 0;
+    color: white;
+    background: #f69c14;
+    height: 34px;
+    width: 167px;
+    border-radius: 20px;
+}/*# sourceMappingURL=style.css.map */

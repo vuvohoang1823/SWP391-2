@@ -31,22 +31,24 @@
     background-color: #dde6f1;
     transition: background-color 2s; }
 .home-container .section-head {
-    width: 100%;
+    height: 93vh;
     display: flex;
     justify-content: center;
     background-color: #b8c6c2;
     padding-bottom: 2%; }
 .home-container .section-head img {
-    width: 48%; }
+    object-fit: contain;
+    width: 50vw; }
 .home-container .section-head div {
     margin-right: 5%;
     margin-top: 5%; }
 .home-container .section-head div h1 {
     font-weight: bolder;
-    font-size: 40px; }
+    font-size: 8rem; }
 .home-container .section-head div p {
     margin-top: 7%;
-    font-size: 20px; }
+    line-height: 6rem;
+    font-size: 4rem; }
 .home-container .section-course {
     display: flex;
     flex-direction: column; }
