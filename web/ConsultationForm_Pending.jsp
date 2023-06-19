@@ -105,7 +105,6 @@
                         </td>
                     </tr>
                 </thead>
-                ${user.roleID eq "AD" ? "selected" : ""}
                 <c:forEach items="${f.appointList}" var="b" varStatus="counter" >
                     <tr>
                         <td class="id">${counter.count}</td>

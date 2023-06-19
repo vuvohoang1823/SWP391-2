@@ -31,7 +31,7 @@
                         valuable insights and support.
                     </p>
                     <div class="button-container">
-                        <button>Explore Workshops</button>
+                        <button>Explore Choices</button>
                     </div>
                 </div>
                 <div class="img-container">

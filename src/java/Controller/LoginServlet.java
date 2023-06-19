@@ -39,7 +39,6 @@ public class LoginServlet extends HttpServlet {
     private final String HOME_PAGE = "homepage.jsp";
     private final String ERROR = "error.jsp";
 
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -60,32 +59,37 @@ public class LoginServlet extends HttpServlet {
         try {
             UserDAO dao = new UserDAO();
             UserDTO user = dao.checkLogin(username, password);
-
             // lay user_id de tim ra customer_id roi luu vao session
             if (user != null) {
                 HttpSession session = request.getSession();
+
+                //get role to render correct header
+                session.setAttribute("role", user.getRole());
+                ////////////////////////////////////
+
                 //Phan quyen user dang nhap
                 if (user.getRole().equals("customer")) {
-
                     CustomerDAO customerDAO = new CustomerDAO();
                     CustomerDTO customer = customerDAO.getCustomerInfo(user.getUser_id());
                     session.setAttribute("LOGIN_USER", customer);
-                    url =HOME_PAGE;
+                    url = HOME_PAGE;
                 } else if (user.getRole().equals("trainer")) {
                     // lay user_id de tim ra trainer_id roi luu vao session
                     TrainerDAO trainerdao = new TrainerDAO();
                     Trainer trainer = trainerdao.getTrainerInfo(user.getUser_id());
                     session.setAttribute("LOGIN_USER", trainer);
-                    url ="demo_teaching_list.jsp";
+                    url = "demo_teaching_list.jsp";
                 } else if (user.getRole().equals("staff")) {
-                    url = "FormList.jsp";
+                    session.setAttribute("LOGIN_USER", user);
+                    //add thg staff de log out
+                    url = "ConsultationForm_Pending.jsp";
                 } else if (user.getRole().equals("admin")) {
                     url = "";
                 }
 
                 //store cookie dung de remember password
                 Cookie cookie = new Cookie(username, password);
-                cookie.setMaxAge(60*5);
+                cookie.setMaxAge(60 * 5);
                 response.addCookie(cookie);
             } else {
                 url = ERROR;

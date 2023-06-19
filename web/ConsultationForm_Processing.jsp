@@ -106,7 +106,6 @@
                         </td>
                     </tr>
                 </thead>
-                ${user.roleID eq "AD" ? "selected" : ""}
                 <c:forEach items="${f.appointList}" var="b" varStatus="counter" >
                     <tr>
                         <td class="id">${counter.count}</td>
@@ -127,7 +126,7 @@
                                             <li class="menu-name">Checkout to Order list</li>
                                             <li>
                                                 <div class="button-container">
-                                                    <button type="button" class="btn btn-primary">Checkout</button>
+                                                    <a href="orderlist.jsp"><button type="button" class="btn btn-primary">Checkout</button></a>
                                                     <button type="button" class="btn btn-outline-primary">Cancel</button>
                                                 </div>
                                             </li>
