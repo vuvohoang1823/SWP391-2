@@ -133,7 +133,7 @@
                                         </ul>
                                     </form>
                                 </div>
-                                <a href="MainController?action=view_form_detail&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
+                                <a href="ConsultationForm_FormDetail_Approved.jsp"><button class="viewDetail">View Detail</button></a>
                             </div>
                         </td>
                     </tr>

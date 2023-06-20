@@ -23,7 +23,7 @@
     </head>
     <body>
         <%@ include file="header.jsp" %>
-        <a href="ConsultationForm_Pending.jsp">
+        <a href="ConsultationForm_Processing.jsp">
             <div style="
                  position: absolute;
                  top: 10rem;
@@ -45,7 +45,7 @@
                         <span class="online">Online</span>
                     </div>
                 </div>
-                <form method="post">
+                <div>
                     <div class="form-customerDetails">
                         <div class="form-name">
                             <div class="name">Customer Details</div>
@@ -111,7 +111,7 @@
                                             type="text"
                                             class="form-control"
                                             id="formtitle"
-                                            placeholder="Form title"
+                                            placeholder="Request title"
                                             value="Basic Consultation Request"
                                             disabled
                                             />
@@ -127,69 +127,10 @@
                                                 id="trainername"
                                                 type="text"
                                                 class="form-control"
-                                                placeholder="None"
+                                                placeholder="Trainer name"
+                                                value="trainer1"
                                                 disabled
                                                 />
-                                            <!--only this gets submitted-->
-                                            <input
-                                                id="hiddenTrainerName"
-                                                type="hidden"
-                                                />
-                                            <!---------------------------->
-                                            <button
-                                                class="btn btn-primary"
-                                                type="button"
-                                                id="button-addon2"
-                                                data-bs-toggle="modal"
-                                                data-bs-target="#chooseTrainer"
-                                                >
-                                                Select Trainer
-                                            </button>
-                                            <!-- Modal -->
-                                            <div
-                                                class="modal fade"
-                                                id="chooseTrainer"
-                                                tabindex="-1"
-                                                data-bs-backdrop="static"
-                                                data-bs-keyboard="false"
-                                                >
-                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5">Trainers:</h1>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="trainer-list">
-                                                                <!--important: none needed for customers that didnt choose trainer (must change before submit form)-->
-                                                                <div class="trainer-item">
-                                                                    <input class="trainer-input" type="radio" name="selected-trainer" value="none" id="trainer-none" checked>
-                                                                    <label for="trainer-none">
-                                                                        None
-                                                                    </label>
-                                                                </div>
-                                                                <!--start of trainer -->
-                                                                <div class="trainer-item">
-                                                                    <img src="./img/armin.jpg" alt="Trainer Avatar" class="trainer-avatar">
-                                                                    <input class="trainer-input" type="radio" name="selected-trainer" value="trainer1" id="trainer1">
-                                                                    <label for="trainer1">
-                                                                        <span class="trainer-name">Name: ABC1</span>
-                                                                        <span> - </span>
-                                                                        <span class="trainer-skill">Skill: abc</span>
-                                                                        <span> - </span>
-                                                                        <span class="trainer-skill">Contact: abc</span>
-                                                                    </label>
-                                                                </div>
-                                                                <!--end of trainer-->
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary" id="saveTrainer" data-bs-dismiss="modal">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -212,49 +153,21 @@
                         </div>
                     </div>
                     <div class="forms-footer">
-                        <div>Form Status:</div>
+                        <div>Checkout this form?</div>
                         <div>
-                            <button type="submit" class="btn btn-primary">Approve</button>
+                            <a href="orderlist.jsp">
+                                <button type="button" class="btn btn-primary">Checkout</button>
+                            </a>
                         </div>
                         <div>
-                            <button type="submit" class="btn btn-secondary">Decline</button>
+                            <a href="ConsultationForm_Processing.jsp">
+                                <button type="button" class="btn btn-secondary">Cancel</button>
+                            </a>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <%@ include file="footer.jsp" %>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const saveButton = document.getElementById("saveTrainer");
-                const inputTrainerName = document.getElementById("trainername");
-                const hiddenTrainerName = document.getElementById("hiddenTrainerName");
-                const modal = new bootstrap.Modal(document.getElementById("chooseTrainer"));
-
-                saveButton.addEventListener("click", function () {
-                    const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
-                    if (selectedTrainer.value === "none") {
-                        inputTrainerName.value = "";
-                    } else {
-                        const trainerLabel = selectedTrainer.nextElementSibling;
-                        const trainerName = trainerLabel.querySelector(".trainer-name").textContent;
-                        inputTrainerName.value = trainerName.split(": ")[1];
-                    }
-                });
-
-                const form = document.querySelector("form");
-                form.addEventListener("submit", function (event) {
-                    const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
-                    if (inputTrainerName.disabled && inputTrainerName.value.trim() === "") {
-                        event.preventDefault();
-                        // Display an error message or take any other necessary action
-                        alert("Please select a trainer.");
-                    }
-                    if (inputTrainerName.value !== "") {
-                        hiddenTrainerName.value = selectedTrainer.value;
-                    }
-                });
-            });
-        </script>
     </body>
 </html>

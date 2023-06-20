@@ -37,26 +37,25 @@ public class viewFormDetailServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String consultation_id = request.getParameter("consultation_id");
-        
-        try  {
+
+        try {
             AppointmentDAO appointmentDAO = new AppointmentDAO();
             AppointmentDTO appointment_detail = null;
-            
+
             if (!consultation_id.isEmpty()) {
                 System.out.println("hereeee");
                 appointment_detail = appointmentDAO.getAppointDetail(consultation_id);
             }
-            
-            HttpSession session =  request.getSession(true);
+
+            HttpSession session = request.getSession(true);
             session.setAttribute("appointment_detail", appointment_detail);
-            
-            RequestDispatcher rd = request.getRequestDispatcher("formdetail_demo.jsp");
+
+            RequestDispatcher rd = request.getRequestDispatcher("ConsultationForm_FormDetail.jsp");
             rd.forward(request, response);
-            
-            
+
         } catch (Exception ex) {
             System.out.println(ex);
-        } 
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

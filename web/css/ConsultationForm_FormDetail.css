@@ -78,6 +78,31 @@
 .forms-container .form-formDetails .form-body textarea {
     font-size: 2rem;
 }
+.forms-container .form-formDetails .form-body .input-group .modal .modal-header .modal-title{
+    font-size: 2rem !important;
+}
+.forms-container .form-formDetails .form-body .input-group .modal .modal-body .trainer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.forms-container .form-formDetails .form-body .input-group .modal .modal-body .trainer-item .trainer-input {
+    margin-right: 1rem;
+}
+.forms-container .form-formDetails .form-body .input-group .modal .modal-body .trainer-item .trainer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.forms-container .form-formDetails .form-body .input-group .modal .modal-body .trainer-item .trainer-name {
+    font-weight: bold;
+}
+
+.forms-container .form-formDetails .form-body .input-group .modal .modal-body .trainer-item .trainer-skill {
+    color: gray;
+}
 .forms-container .forms-footer {
     display: flex;
     justify-content: center;

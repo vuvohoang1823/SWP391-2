@@ -101,7 +101,7 @@
 
                         <h1>CONTACT FORM</h1>
                     </div>
-                    <form action="">
+                    <form action="" method="POST" id="myForm">
                         <div class="content">
                             <div class="row">
                                 <input type="text" placeholder="Full name" required />
@@ -110,46 +110,190 @@
                                 <input type="email" placeholder="Your email address" required />
                             </div>
                             <div class="row">
-                                <input type="text" placeholder="Your phone number" required />
+                                <input type="text" placeholder="Your address" required />
                             </div>
                             <div class="row">
-                                <select class="custom-select" onchange="submitForm()" name="filterChose" style="height: 5rem;font-size: 2rem">
-                                    <option hidden value="1" ${!filterChose ? "selected" : ""}>Other Trainer    </option>
-                                    <option value="1" ${filterChose eq "1" ? "selected" : ""}>Trainer</option>
-                                    <option value="2" ${filterChose eq "2" ? "selected" : ""}>Trainer</option>
-                                    <option value="3" ${filterChose eq "3" ? "selected" : ""}>Trainer</option>
-                                    <option value="4" ${filterChose eq "4" ? "selected" : ""}>Trainer</option>
-                                </select>
+                                <div class="input-group">
+                                    <input
+                                        id="trainername"
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="None"
+                                        disabled
+                                        />
+                                    <!--only this gets submitted-->
+                                    <input
+                                        id="hiddenTrainerName"
+                                        type="hidden"
+                                        />
+                                    <!---------------------------->
+                                    <button
+                                        class="btn btn-primary"
+                                        type="button"
+                                        id="button-addon2"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#chooseTrainer"
+                                        >
+                                        Select Trainer
+                                    </button>
+                                    <!-- Modal -->
+                                    <div
+                                        class="modal fade"
+                                        id="chooseTrainer"
+                                        tabindex="-1"
+                                        data-bs-backdrop="static"
+                                        data-bs-keyboard="false"
+                                        >
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5">Trainers:</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="trainer-list">
+                                                        <!--important: none needed for customers that didnt choose trainer (must change before submit form)-->
+                                                        <div class="trainer-item">
+                                                            <input class="trainer-input" type="radio" name="selected-trainer" value="none" id="trainer-none" checked>
+                                                            <label for="trainer-none">
+                                                                None
+                                                            </label>
+                                                        </div>
+                                                        <!--start of trainer -->
+                                                        <div class="trainer-item">
+                                                            <img src="./img/armin.jpg" alt="Trainer Avatar" class="trainer-avatar">
+                                                            <input class="trainer-input" type="radio" name="selected-trainer" value="trainer1" id="trainer1">
+                                                            <label for="trainer1">
+                                                                <span class="trainer-name">Name: ABC1</span>
+                                                                <span> - </span>
+                                                                <span class="trainer-skill">Skill: abc</span>
+                                                                <span> - </span>
+                                                                <span class="trainer-skill">Contact: abc</span>
+                                                            </label>
+                                                        </div>
+                                                        <!--end of trainer-->
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary" id="saveTrainer" data-bs-dismiss="modal">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="date"
+                                       value="2023-01-1"
+                                       min="2023-01-01" max="2023-12-31" required>
                             </div>
                             <div class="row" style="height: 15rem">
-                                <textarea
-                                    name="description"
-                                    rows="4"
-                                    cols="40"
-                                    placeholder="Request message"
-                                    ></textarea>
+                                <textarea name="description" rows="4" cols="40" placeholder="Request message"></textarea>
                             </div>
                             <div class="radio-container">
                                 <div class="radio">
-                                    <input type="radio" style="width: 2rem; margin-right: 2rem">
+                                    <input type="radio" name="type" style="width: 2rem; margin-right: 2rem" required>
                                     <p>
-                                        I need help assistance through <b>Email</b>
+                                        Online
                                     </p>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" style="width: 2rem; margin-right: 2rem">
+                                    <input type="radio" name="type" style="width: 2rem; margin-right: 2rem" required>
                                     <p>
-                                        I need help assistance  <b>At Home</b>
+                                        Offline
                                     </p>
                                 </div>
                             </div>
-                            <div class="button-container" style="margin-top: 2rem">
-                                <button>Submit form</button>
+                            <div class="button-container" style="margin-top: 2rem;">
+                                <button type="submit" class="btn btn-primary" onclick="validateAndSubmit(event)">
+                                    Submit form
+                                </button>
+
+                                <!-- Modal -->
+                                <div
+                                    class="modal fade"
+                                    id="formToStaff-modal"
+                                    tabindex="-1"
+                                    data-bs-backdrop="static"
+                                    data-bs-keyboard="false"
+                                    >
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
+                                                    Submit successfully
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="submitOnClose(event)"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Submit form successfully. Reload in 5s...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="submitOnClose(event)">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
                     </form>
                 </div>
             </div>
         </section>
+        <!--        chose trainer-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const saveButton = document.getElementById("saveTrainer");
+                const inputTrainerName = document.getElementById("trainername");
+                const hiddenTrainerName = document.getElementById("hiddenTrainerName");
+                const modal = new bootstrap.Modal(document.getElementById("chooseTrainer"));
+
+                saveButton.addEventListener("click", function () {
+                    const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
+                    if (selectedTrainer.value === "none") {
+                        inputTrainerName.value = "";
+                    } else {
+                        const trainerLabel = selectedTrainer.nextElementSibling;
+                        const trainerName = trainerLabel.querySelector(".trainer-name").textContent;
+                        inputTrainerName.value = trainerName.split(": ")[1];
+                    }
+                });
+            });
+        </script>
+        <!--        submit and validate form-->
+        <script>
+            function submitOnClose(event) {
+                document.getElementById("myForm").submit();
+            }
+            function validateAndSubmit(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const inputTrainerName = document.getElementById("trainername");
+                const form = document.getElementById("myForm");
+                if (form.checkValidity()) {
+                    if (inputTrainerName.disabled && inputTrainerName.value.trim() === "") {
+                        event.preventDefault();
+                        // Display an error message or take any other necessary action
+                        alert("Please select a trainer.");
+                    } else {
+                        // Form is valid, show the modal
+                        showSuccessModal();
+
+                        setTimeout(function () {
+                            form.submit(); // Submit the form after 5 seconds if it's valid
+                        }, 5000);
+                    }
+                } else {
+                    form.reportValidity(); // Display validation error messages
+                }
+            }
+            function showSuccessModal() {
+                const modal = document.getElementById("formToStaff-modal");
+                const bsModal = new bootstrap.Modal(modal);
+                bsModal.show();
+            }
+        </script>
     </body>
 </html>
 

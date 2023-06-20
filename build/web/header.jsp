@@ -98,9 +98,11 @@
                                 <button class="signup-button">
                                     Sign Up
                                 </button>
-                                <button class="signin-button">
-                                    <a href="signin.jsp" >Log In</a>
-                                </button>
+                                <a href="signin.jsp" >
+                                    <button class="signin-button">
+                                        Log In
+                                    </button>
+                                </a>
                             </div>
                         </c:when>
                         <c:otherwise>
@@ -192,9 +194,11 @@
                                 <button class="signup-button">
                                     Sign Up
                                 </button>
-                                <button class="signin-button">
-                                    <a href="signin.jsp" >Log In</a>
-                                </button>
+                                <a href="signin.jsp" >
+                                    <button class="signin-button">
+                                        Log In
+                                    </button>
+                                </a>
                             </div>
                         </c:when>
                         <c:otherwise>
@@ -290,9 +294,11 @@
                                 <button class="signup-button">
                                     Sign Up
                                 </button>
-                                <button class="signin-button">
-                                    <a href="signin.jsp" >Log In</a>
-                                </button>
+                                <a href="signin.jsp" >
+                                    <button class="signin-button">
+                                        Log In
+                                    </button>
+                                </a>
                             </div>
                         </c:when>
                         <c:otherwise>

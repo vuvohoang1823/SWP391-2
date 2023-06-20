@@ -1,3 +1,6 @@
+html {
+    font-size: 10px;
+}
 .section-contactUs {
     box-sizing: border-box;
     display: flex;
@@ -96,7 +99,7 @@
 }
 .section-contactUs .right {
     border: 2px solid #617255;
-/*    border-bottom: 2px solid #617255;*/
+    /*    border-bottom: 2px solid #617255;*/
     width: 50vw;
     background-color: #b8c6c2;
     padding: 4.8rem 4rem;
@@ -166,16 +169,53 @@
     background-color: #617a55;
     color: white;
     padding: 1.6rem 4rem;
-    
+
 }
 .section-contactUs .right .form-container .content .radio-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     font-size: 2rem;
 }
 .section-contactUs .right .form-container .content .radio-container .radio{
     display: flex;
     flex-direction: row;
+}
+.section-contactUs .right .form-container .content .input-group {
+    padding: 0;
+    width: 100%;
+}
+.section-contactUs .right .form-container .content .input-group button {
+    font-size: 1.5rem;
+}
+.section-contactUs .right .form-container .content .input-group input {
+    font-size: 2rem;
+    width: auto;
+}
+.section-contactUs .right .form-container .content .input-group .modal .modal-header .modal-title{
+    font-size: 2rem !important;
+}
+.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-input {
+    margin-right: 1rem;
+}
+.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-name {
+    font-weight: bold;
+}
+
+.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-skill {
+    color: gray;
 }
 .footer-container{
     margin-top: 0rem
