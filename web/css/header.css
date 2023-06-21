@@ -158,7 +158,7 @@ html {
     font-size: 1.5rem;
 }
 .header-container .auth-section .subnav{
-    width: 19.5rem;
+    width: 29rem;
     z-index: 1;
     background-color: #fff;
     padding: 1rem 1rem;
@@ -168,7 +168,7 @@ html {
 .header-container .auth-section .triangle {
     position: absolute;
     bottom: 91%;
-    right: 15%;
+    right: 50%;
     width:0;
     height: 0;
     border-left: 1.6rem solid transparent;

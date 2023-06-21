@@ -162,7 +162,7 @@ html {
     justify-content: center;
 }
 .section-contactUs .right .form-container .button-container button {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: bold;
     border: 0;
     border-radius: 0.56rem;
@@ -186,14 +186,14 @@ html {
     width: 100%;
 }
 .section-contactUs .right .form-container .content .input-group button {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .section-contactUs .right .form-container .content .input-group input {
     font-size: 2rem;
     width: auto;
 }
 .section-contactUs .right .form-container .content .input-group .modal .modal-header .modal-title{
-    font-size: 2rem !important;
+    font-size: 3rem !important;
 }
 .section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item {
     display: flex;

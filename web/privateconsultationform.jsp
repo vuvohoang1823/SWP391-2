@@ -133,6 +133,7 @@
                                         id="button-addon2"
                                         data-bs-toggle="modal"
                                         data-bs-target="#chooseTrainer"
+                                        style="font-size: 2rem; border: 0; background-color: #617a55;"
                                         >
                                         Select Trainer
                                     </button>
@@ -147,12 +148,12 @@
                                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-5">Trainers:</h1>
+                                                    <h1 class="modal-title fs-5">Trainers</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="trainer-list">
-                                                        <!--important: none needed for customers that didnt choose trainer (must change before submit form)-->
+                                                        <!--important: none needed for customers that dont choose trainer-->
                                                         <div class="trainer-item">
                                                             <input class="trainer-input" type="radio" name="selected-trainer" value="none" id="trainer-none" checked>
                                                             <label for="trainer-none">
@@ -246,13 +247,14 @@
             document.addEventListener("DOMContentLoaded", function () {
                 const saveButton = document.getElementById("saveTrainer");
                 const inputTrainerName = document.getElementById("trainername");
-                const hiddenTrainerName = document.getElementById("hiddenTrainerName");
                 const modal = new bootstrap.Modal(document.getElementById("chooseTrainer"));
 
                 saveButton.addEventListener("click", function () {
                     const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
                     if (selectedTrainer.value === "none") {
+//                      change this to set in the database
                         inputTrainerName.value = "";
+                        ////////////////////////////////
                     } else {
                         const trainerLabel = selectedTrainer.nextElementSibling;
                         const trainerName = trainerLabel.querySelector(".trainer-name").textContent;
@@ -272,18 +274,15 @@
                 const inputTrainerName = document.getElementById("trainername");
                 const form = document.getElementById("myForm");
                 if (form.checkValidity()) {
-                    if (inputTrainerName.disabled && inputTrainerName.value.trim() === "") {
-                        event.preventDefault();
-                        // Display an error message or take any other necessary action
-                        alert("Please select a trainer.");
-                    } else {
-                        // Form is valid, show the modal
-                        showSuccessModal();
+                    // Form is valid, show the modal
+                    showSuccessModal();
 
-                        setTimeout(function () {
-                            form.submit(); // Submit the form after 5 seconds if it's valid
-                        }, 5000);
-                    }
+                    setTimeout(function () {
+                        const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
+                        const hiddenTrainerName = document.getElementById("hiddenTrainerName");
+                        hiddenTrainerName.value = selectedTrainer.value;
+                        form.submit(); // Submit the form after 5 seconds if it's valid
+                    }, 5000);
                 } else {
                     form.reportValidity(); // Display validation error messages
                 }

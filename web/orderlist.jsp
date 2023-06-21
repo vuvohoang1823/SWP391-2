@@ -109,7 +109,7 @@
                     <td>£120.00</td>
                     <td>Namvippro</td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #617A55;width: 10rem;font-size: 2rem">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #617A55;width: 10rem;font-size: 2rem;">
                             Edit
                         </button>
 

@@ -78,7 +78,7 @@ public class LoginServlet extends HttpServlet {
                     TrainerDAO trainerdao = new TrainerDAO();
                     Trainer trainer = trainerdao.getTrainerInfo(user.getUser_id());
                     session.setAttribute("LOGIN_USER", trainer);
-                    url = "demo_teaching_list.jsp";
+                    url = "Trainer_PrivateConsultation.jsp";
                 } else if (user.getRole().equals("staff")) {
                     session.setAttribute("LOGIN_USER", user);
                     //add thg staff de log out

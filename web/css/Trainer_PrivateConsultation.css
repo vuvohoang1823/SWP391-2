@@ -2,12 +2,15 @@
     background-color: #b8c6c2;
     text-align: center;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 6rem;
     color: #617a55;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 5rem;
     margin-bottom: 1.5rem;
 }
-
+.form-body .head{
+    padding: 2rem;
+}
 .forms-container {
     border-radius: 10px;
     background-color: white;

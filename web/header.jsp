@@ -134,56 +134,17 @@
                         <ul class="navBar1" style="list-style: none ; font-size:20px">
                             <li>
                                 <a href="homepage.jsp"  class="nav-link">
-                                    Home
+                                    Workshops
                                 </a>
                             </li>
                             <li>
                                 <a href="about_us_main.jsp"  class="nav-link">
-                                    About Us
+                                    Bird Course
                                 </a>
                             </li>
                             <li>
-                                <div
-                                    class="nav-link"
-                                    style=" display: flex; align-items: center"
-                                    >
-                                    Services
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="triangle"></div>
-                                <ul class="subnav" style='list-style: none' >
-                                    <li>
-                                        <a href="workshop.jsp"  class="nav-link">
-                                            Workshops
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="private_consultation.jsp"  class="nav-link">
-                                            Private Consultant
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="online_course.jsp"  class="nav-link">
-                                            Online Course
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="birdcourse.jsp"  class="nav-link">
-                                            Bird Course
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="blog.jsp"  class="nav-link">
-                                    Blog
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.jsp"  class="nav-link">
-                                    Contact
+                                <a href="Trainer_PrivateConsultation.jsp"  class="nav-link">
+                                    Private Consultant
                                 </a>
                             </li>
                         </ul>
@@ -191,9 +152,6 @@
                     <c:choose>
                         <c:when test="${empty user}">
                             <div class="button-container" style="width: 25vw">
-                                <button class="signup-button">
-                                    Sign Up
-                                </button>
                                 <a href="signin.jsp" >
                                     <button class="signin-button">
                                         Log In
@@ -215,6 +173,7 @@
                                 <div class="dropdown-menu" style="background-color: rgba(0,0,0,0); border: 0;">
                                     <div class="triangle"></div>
                                     <ul class="subnav">
+                                        <a class="dropdown-item" href="Trainer_PrivateConsultation.jsp"><li>View Assigned Services</li></a>
                                         <a class="dropdown-item" href="birdcourselist.jsp"><li>View Profile</li></a>
                                         <a class="dropdown-item" href="LogoutController" style="text-decoration: none">     <li>Logout</li></a>
                                     </ul>
@@ -291,9 +250,6 @@
                     <c:choose>
                         <c:when test="${empty user}">
                             <div class="button-container" style="width: 25vw">
-                                <button class="signup-button">
-                                    Sign Up
-                                </button>
                                 <a href="signin.jsp" >
                                     <button class="signin-button">
                                         Log In
@@ -315,7 +271,6 @@
                                 <div class="dropdown-menu" style="background-color: rgba(0,0,0,0); border: 0;">
                                     <div class="triangle"></div>
                                     <ul class="subnav">
-                                        <a class="dropdown-item" href="birdcourselist.jsp"><li>View Profile</li></a>
                                         <a class="dropdown-item" href="LogoutController" style="text-decoration: none">     <li>Logout</li></a>
                                     </ul>
                                 </div>
