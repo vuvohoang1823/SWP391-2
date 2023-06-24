@@ -21,15 +21,17 @@
         <div class="body-container">
             <section class="section-head">
                 <div class="desc-container">
-                    <h2>PRIVATE CONSULTANT</h2>
-                    <h1>Expert Guidance for Personal and Professional Success</h1>
-                    <p>
-                        Our Private Consultant UI offers personalized and tailored guidance
-                        to help you achieve your personal and professional goals. Whether
-                        you're seeking career advice, business strategy, or personal
-                        development, our experienced consultants are here to provide
-                        valuable insights and support.
-                    </p>
+                    <div style="height: 83%; overflow-y: hidden">
+                        <h2>PRIVATE CONSULTANT</h2>
+                        <h1>Expert Guidance for Personal and Professional Success</h1>
+                        <p>
+                            Our Private Consultant UI offers personalized and tailored guidance
+                            to help you achieve your personal and professional goals. Whether
+                            you're seeking career advice, business strategy, or personal
+                            development, our experienced consultants are here to provide
+                            valuable insights and support.
+                        </p>
+                    </div>
                     <div class="button-container">
                         <button>Explore Choices</button>
                     </div>

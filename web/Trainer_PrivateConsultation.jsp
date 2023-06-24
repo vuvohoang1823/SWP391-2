@@ -18,7 +18,7 @@
         <section class="form-head">
             <div class="heading">Private Consultation</div>
         </section>
-        <section class="form-body">
+        <section class="form-body" style="height: 95rem">
             <div class="head">
                 <h2>
                     Trainer: ABC1
@@ -47,7 +47,7 @@
                                     <!--                            start of form-->
                                     <form>
                                         <!--must be complete to open payment-->
-                                        <input id="checkComplete" value="uncomplete" hidden>
+                                        <input id="checkComplete" value="complete" hidden>
                                         <!-------------------------------------------------->
                                         <div class="form-customerDetails">
                                             <div class="form-name">

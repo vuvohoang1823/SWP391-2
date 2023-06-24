@@ -186,8 +186,10 @@
                             </div>
                             <div class="row">
                                 <input type="date"
-                                       value="2023-01-1"
-                                       min="2023-01-01" max="2023-12-31" required>
+                                       value=""
+                                       min="2023-01-01" max="2023-12-31"
+                                       placeholder="Start date"
+                                       required>
                             </div>
                             <div class="row" style="height: 15rem">
                                 <textarea name="description" rows="4" cols="40" placeholder="Request message"></textarea>
@@ -206,7 +208,9 @@
                                     </p>
                                 </div>
                             </div>
+
                             <div class="button-container" style="margin-top: 2rem;">
+                                <input type="text" id="currentDate" value="" hidden/>
                                 <button type="submit" class="btn btn-primary" onclick="validateAndSubmit(event)">
                                     Submit form
                                 </button>
@@ -242,6 +246,17 @@
                 </div>
             </div>
         </section>
+        <!--        get current time-->
+        <script>
+            // Get the current date
+            var currentDate = new Date();
+
+            // Format the date as YYYY-MM-DD
+            var formattedDate = currentDate.toISOString().slice(0, 10);
+
+            // Set the formatted date as the input's value
+            document.getElementById('currentDate').value = formattedDate;
+        </script>
         <!--        chose trainer-->
         <script>
             document.addEventListener("DOMContentLoaded", function () {

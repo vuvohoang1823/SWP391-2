@@ -42,22 +42,16 @@ html {
     padding: 4rem 5rem 4rem 4rem;
 }
 .body-container .section-head .desc-container h2 {
-    height: 5%;
-    overflow: hidden;
     color: #4d6144;
     font-weight: bold;
     font-size: 4rem;
 }
 .body-container .section-head .desc-container h1 {
-    height: 38%;
-    overflow: hidden;
     color: black;
     font-weight: bolder;
     font-size: 8rem;
 }
 .body-container .section-head .desc-container p {
-    height: 40%;
-    overflow: hidden;
     line-height: 5rem;
     margin-top: 3%;
     font-size: 3.3rem;
