@@ -1,15 +1,13 @@
 /*# sourceMappingURL=formList.css.map */
 .heading {
-    background-color: #b8c6c2;
-    text-align: center;
+    background-color: white;
     font-weight: bold;
-    font-size: 6rem;
-    color: #617a55;
-    padding-bottom: 3rem;
-    padding-top: 5rem;
+    font-size: 5rem;
+    /*    fix if not 145px*/
+    padding: 4.75rem 0 4.75rem 3rem;
 }
 .form-head .navbar {
-    background-color: #e2e8e7;
+    background-color: #617A554D;
     box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.212);
     margin-bottom: 2rem;
 }
@@ -21,25 +19,24 @@
 }
 .form-head .navbar .navbar-nav .nav-item .nav-link {
     color: black;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
 }
-.form-head .navbar .navbar-nav .active {
-    text-decoration: underline;
+.form-head .navbar .navbar-nav .active b{
+    color: #617A55;
 }
 
 .form-body .navbar {
     padding: 0 2.5rem;
-    margin-bottom: 2rem;
 }
 .form-body .navbar .navbar-brand {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .form-body .navbar form {
     width: 100%;
     display: flex;
-    font-size: 2.5rem;
+    font-size: 2rem;
     flex-direction: row;
 }
 .form-body .navbar form .search-container {
@@ -52,7 +49,7 @@
 }
 .form-body .navbar form .navbar-nav .nav-item .nav-link {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 .form-body .navbar form .search-container .input-group {
@@ -69,7 +66,7 @@
 
 
 .form-body .table-form {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 .form-body .table-form thead tr{
     background: #E2E8E7;
@@ -79,6 +76,7 @@
     vertical-align: middle;
 }
 .form-body .table-form tbody tr td {
+    font-size: 2rem;
     vertical-align: middle;
 }
 .form-body .table-form .id {
@@ -103,10 +101,10 @@
     padding: 1rem 2rem;
 }
 .form-body .table-form .type .online {
-    background: #ef7b6b;
+    background: #8EAC50;
 }
 .form-body .table-form .type .offline {
-    background: #f69c14;
+    background: #FA5943;
 }
 .form-body .table-form .type .viewDetail {
     border-radius: 10px;
