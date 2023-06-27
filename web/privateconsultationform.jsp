@@ -114,6 +114,7 @@
                             </div>
                             <div class="row">
                                 <div class="input-group">
+                                    <!--not submited-->
                                     <input
                                         id="trainername"
                                         type="text"
@@ -121,12 +122,7 @@
                                         placeholder="None"
                                         disabled
                                         />
-                                    <!--only this gets submitted-->
-                                    <input
-                                        id="hiddenTrainerName"
-                                        type="hidden"
-                                        />
-                                    <!---------------------------->
+                                    <!---------------->
                                     <button
                                         class="btn btn-primary"
                                         type="button"
@@ -184,33 +180,100 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--choose date and time-->
                             <div class="row">
-                                <input type="date"
-                                       value=""
-                                       min="2023-01-01" max="2023-12-31"
-                                       placeholder="Start date"
-                                       required>
+                                <label for="chooseDate" style="margin-bottom: 1rem;">
+                                    <span>Select start date and time:</span>
+                                    <span class="info-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                        </svg>
+                                        <div class="info-box">
+                                            We accept forms starting from today until next month.
+                                        </div>
+                                    </span>
+                                </label>
+                                <div class="date-info p-0 d-flex justify-content-between">
+                                    <select name="Time_start">
+                                        <option value="7:00">
+                                            7:00 - 9:00
+                                        </option>
+                                        <option value="14:00">
+                                            14:00 - 16:00
+                                        </option>
+                                        <option value="19:00">
+                                            19:00 - 21:00
+                                        </option>
+                                    </select>
+                                    <input id="chooseDate"
+                                           type="date"
+                                           value=""
+                                           min=""
+                                           max=""
+                                           required
+                                           style="width: 60%"
+                                           >
+                                </div>
                             </div>
+                            <!--------------->
+                            <!--request message-->
                             <div class="row" style="height: 15rem">
                                 <textarea name="description" rows="4" cols="40" placeholder="Request message"></textarea>
                             </div>
+                            <!------------------->
+                            <!--price-->
+                            <div class="row">
+                                <label for="consultPrice" style="margin-bottom: 1rem;">
+                                    <span>Price:</span>
+                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                        </svg>
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-1" id="exampleModalLabel">Modal title</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </label>
+                                <input id="consultPrice" value="" disabled>
+                            </div>
+                            <!--------->
                             <div class="radio-container">
                                 <div class="radio">
-                                    <input type="radio" name="type" style="width: 2rem; margin-right: 2rem" required>
-                                    <p>
-                                        Online
-                                    </p>
+                                    <input id="consultTypeOnline" value="online" type="radio" name="type" style="width: 2rem; margin-right: 2rem" checked required>
+                                    <label for="consultTypeOnline">Online</label>
                                 </div>
                                 <div class="radio">
-                                    <input type="radio" name="type" style="width: 2rem; margin-right: 2rem" required>
-                                    <p>
-                                        Offline
-                                    </p>
+                                    <input id="consultTypeOffline" value="offline" type="radio" name="type" style="width: 2rem; margin-right: 2rem" required>
+                                    <label for="consultTypeOffline">Offline</label>
                                 </div>
                             </div>
 
                             <div class="button-container" style="margin-top: 2rem;">
+                                <!--submit trainer-->
+                                <input
+                                    id="hiddenTrainerName"
+                                    type="hidden"
+                                    />
+                                <!--submit current date-->
                                 <input type="text" id="currentDate" value="" hidden/>
+                                <!----------------------->
                                 <button type="submit" class="btn btn-primary" onclick="validateAndSubmit(event)">
                                     Submit form
                                 </button>
@@ -246,16 +309,39 @@
                 </div>
             </div>
         </section>
-        <!--        get current time-->
+        <script>
+            var consultPriceInput = document.getElementById('consultPrice');
+            var consultTypeOnline = document.getElementById('consultTypeOnline');
+            var consultTypeOffline = document.getElementById('consultTypeOffline');
+
+            function updateConsultPrice() {
+                if (consultTypeOnline.checked) {
+                    consultPriceInput.value = "$123";
+                } else if (consultTypeOffline.checked) {
+                    consultPriceInput.value = "$321";
+                }
+            }
+
+            // Initial update based on the default selected option
+            updateConsultPrice();
+
+            // Update price when radio button is clicked
+            consultTypeOnline.addEventListener('click', updateConsultPrice);
+            consultTypeOffline.addEventListener('click', updateConsultPrice);
+        </script>
+        <!--        get time-->
         <script>
             // Get the current date
             var currentDate = new Date();
+            var formattedCurrentDate = currentDate.toISOString().split('T')[0];
+            document.getElementById('chooseDate').min = formattedCurrentDate;
+            document.getElementById('currentDate').value = formattedCurrentDate;
 
-            // Format the date as YYYY-MM-DD
-            var formattedDate = currentDate.toISOString().slice(0, 10);
-
-            // Set the formatted date as the input's value
-            document.getElementById('currentDate').value = formattedDate;
+            // not over 30 days
+            var maxDate = new Date();
+            maxDate.setDate(currentDate.getDate() + 30);
+            var formattedMaxDate = maxDate.toISOString().split('T')[0];
+            document.getElementById('chooseDate').max = formattedMaxDate;
         </script>
         <!--        chose trainer-->
         <script>

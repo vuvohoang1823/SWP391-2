@@ -150,6 +150,29 @@ html {
     justify-content: center;
     margin-bottom: 1.6rem;
 }
+.section-contactUs .right .form-container .content .row .info-icon {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.section-contactUs .right .form-container .content .row .info-icon:hover .info-box {
+    display: block;
+}
+.section-contactUs .right .form-container .content .row .info-box {
+    z-index: 2;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    display: none;
+    position: absolute;
+    bottom: 2.5rem;
+    left: -7rem;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .section-contactUs .right .form-container .content .row input,
 .section-contactUs .right .form-container .content .row textarea {
     border: 0;
