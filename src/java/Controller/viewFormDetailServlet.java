@@ -50,7 +50,7 @@ public class viewFormDetailServlet extends HttpServlet {
             HttpSession session = request.getSession(true);
             session.setAttribute("appointment_detail", appointment_detail);
 
-            RequestDispatcher rd = request.getRequestDispatcher("ConsultationForm_FormDetail.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("Staff_ConsultationForm_FormDetail.jsp");
             rd.forward(request, response);
 
         } catch (Exception ex) {

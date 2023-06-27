@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
         <!-- css -->
         <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/ConsultationForm_Pending.css" />
+        <link rel="stylesheet" href="css/Staff_ConsultationForm_List.css" />
         <jsp:useBean id="f" class="DAO.AppointmentDAO" scope="request"></jsp:useBean>
         </head>
         <body>
@@ -60,13 +60,13 @@
                                 <div class="" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ConsultationForm_Pending.jsp"><b>Bird Course</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Bird Course</b></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="ConsultationForm_Processing.jsp"><b>Private Consultant</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Private Consultant</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ConsultationForm_Processing.jsp"><b>Contact Us</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Contact Us</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -83,13 +83,13 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="ConsultationForm_Pending.jsp"><b>Pending</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Pending</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ConsultationForm_Processing.jsp"><b>Processing</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Processing.jsp"><b>Processing</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="ConsultationForm_Completed.jsp"><b>Completed</b></a>
+                                            <a class="nav-link" href="Staff_ConsultationForm_Completed.jsp"><b>Completed</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -113,9 +113,8 @@
                                     </div>
                                 </div>
                             </form>
-
                         </nav>
-                        <div class="d-flex justify-content-center" style="font-size: 1.5rem; padding: 2rem 0;">
+                        <div class="d-flex justify-content-center" style="font-size: 1.5rem; padding: 3rem 0;">
                             Currently showing 2 pending form(s)
                         </div>
                         <table
@@ -146,9 +145,11 @@
                                     <td class="customer">8:20 P.M - 22/06/2023</td>
                                     <td class="customer">N/A</td>
                                     <td class="customer">22/06/2023</td>
-                                    <td class="type">
-                                        <div class="onlineStatus ${b.type == 'online' ? 'online' : 'offline'}">${b.type}</div>
-                                        <a href="MainController?action=view_form_detail&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
+                                    <td>
+                                        <div class="type">
+                                            <div class="onlineStatus ${b.type == 'online' ? 'online' : 'offline'}">${b.type}</div>
+                                            <a href="MainController?action=view_form_detail&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
+                                        </div>
                                     </td>
                                 </tr>
                             </c:forEach>

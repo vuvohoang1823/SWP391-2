@@ -82,7 +82,7 @@ public class LoginServlet extends HttpServlet {
                 } else if (user.getRole().equals("staff")) {
                     session.setAttribute("LOGIN_USER", user);
                     //add thg staff de log out
-                    url = "ConsultationForm_Pending.jsp";
+                    url = "Staff_ConsultationForm_Pending.jsp";
                 } else if (user.getRole().equals("admin")) {
                     url = "";
                 }

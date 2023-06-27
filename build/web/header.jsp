@@ -156,17 +156,17 @@
 
             <c:when test="${role eq 'staff'}">
                 <div
-                    class="bg-white col-auto col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar"
+                    class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar"
                     >
                     <a
-                        href=""
+                        href="#"
                         class="d-flex text-decoration-none align-items-center text-white nav-logo logo-container"
                         >
                         <span class="d-block d-sm-none w-auto">
                             <img src=./img/logo_white.png alt="page logo" style="width:
                                  5rem;"/>
                         </span>
-                        <span class="fs-4 ms-5 d-none d-sm-inline">
+                        <span class="fs-4 m-auto d-none d-sm-inline">
                             <div class="d-flex p-3">
                                 <div class="logo-image">
                                     <img src=./img/logo_white.png alt="page logo" />
@@ -186,8 +186,12 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6px;">
-                                        <i class="fs-2 fa fa-table-columns"></i>
+                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 19V7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M20 7H1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.976C1 2.05476 2.11336 1 7.308 1H13.692C18.8866 1 20 2.05476 20 6.976V13.024C20 17.9452 18.8866 19 13.692 19H7.308C2.11336 19 1 17.9452 1 13.024V6.976Z" stroke="black" stroke-width="2"/>
+                                        </svg>
                                         <span class="fs-2 ms-3 d-none d-sm-inline">Dashboard</span>
                                     </div>
                                 </a>
@@ -197,7 +201,7 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6px;">
+                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
                                         <svg
                                             width="19"
                                             height="19"
@@ -222,7 +226,7 @@
                                     href="ConsultationForm_Pending.jsp"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6px;">
+                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
                                         <svg
                                             width="19"
                                             height="19"
@@ -253,8 +257,13 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6px;">
-                                        <i class="fs-2 fa fa-table-list"></i>
+                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                        <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 10H13" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M1 5.22222C1 3.23185 1 2.23666 1.6224 1.61833C2.24479 1 3.24653 1 5.25 1H13.75C15.7534 1 16.7552 1 17.3776 1.61833C18 2.23666 18 3.23185 18 5.22222V13.6667C18 16.6522 18 18.145 17.0664 19.0725C16.1328 20 14.6302 20 11.625 20H7.375C4.36979 20 2.8672 20 1.9336 19.0725C1 18.145 1 16.6522 1 13.6667V5.22222Z" stroke="#33363F" stroke-width="2"/>
+                                        <path d="M13 17V20M6 17V20" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M6 6H13" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
                                         <span class="fs-2 ms-3 d-none d-sm-inline">Services</span>
                                     </div>
                                 </a>
@@ -264,7 +273,7 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6px;">
+                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
                                         <svg
                                             width="20"
                                             height="22"

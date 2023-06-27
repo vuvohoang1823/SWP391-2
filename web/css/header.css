@@ -188,15 +188,16 @@ html {
 }
 .sidebar .logo-container {
     background-color: #323232;
-    padding: 2.5rem 0;
+    height: 116px;
 }
 .sidebar .logo-container .logo-image img {
-    height: 100%;
-    width: 7.5rem;
+    width: 75px;
+    height: 47px;
     object-fit: contain;
     object-position: center;
 }
 .sidebar .logo-container .logo-text {
+    font-weight: 700;
     font-size: 1.5rem;
 }
 .sidebar .nav-pills li a {
@@ -250,4 +251,7 @@ html {
 }
 .sidebar .auth-section .subnav a:hover {
     background-color: #e9e6e6;
+}
+.sidebar .auth-section .subnav a:hover svg path {
+    fill: #617A55 !important;
 }
