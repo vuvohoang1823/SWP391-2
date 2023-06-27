@@ -19,7 +19,7 @@
             />
         <!-- css -->
         <link rel="stylesheet" href="css/reset.css" />
-        <link rel="stylesheet" href="css/Staff_ConsultationForm_FormDetail.css" />
+        <link rel="stylesheet" href="css/Staff_OrderList_Consult_CompletedDetail.css" />
     </head>
     <body>
         <div class="container-fluid">
@@ -50,10 +50,10 @@
                                 fill="black"
                                 />
                             </svg>
-                            <span style="padding-left: 2rem">Form List</span>
+                            <span style="padding-left: 2rem">Order List</span>
                         </div>
                         <div class="navbar navbar-expand-lg navbar-light">
-                            <a href="Staff_ConsultationForm_Processing.jsp">
+                            <a href="Staff_OrderList_Consult_Completed.jsp">
                                 <div style="
                                      position: absolute;
                                      top: 35%;
@@ -68,13 +68,13 @@
                                 <div class="" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Bird Course</b></a>
+                                            <a class="nav-link" href="#"><b>Bird Course</b></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Private Consultant</b></a>
+                                            <a class="nav-link" href="Staff_OrderList_Consult_Completed"><b>Private Consultant</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Contact Us</b></a>
+                                            <a class="nav-link" href="#"><b>Contact Us</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -229,6 +229,9 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="forms-footer">
+                                    <button type="submit" class="btn approve">Checkout form</button>
                                 </div>
                             </form>
                         </div>

@@ -88,9 +88,6 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="Staff_ConsultationForm_Processing.jsp"><b>Processing</b></a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Completed.jsp"><b>Completed</b></a>
-                                        </li>
                                     </ul>
                                 </div>
                                 <div class="search-container">

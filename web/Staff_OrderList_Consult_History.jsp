@@ -52,20 +52,20 @@
                                 fill="black"
                                 />
                             </svg>
-                            <span style="padding-left: 2rem">Form List</span>
+                            <span style="padding-left: 2rem">Order List</span>
                         </div>
                         <div class="navbar navbar-expand-lg navbar-light">
                             <div class="container-fluid">
                                 <div class="" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Bird Course</b></a>
+                                            <a class="nav-link" href="#"><b>Bird Course</b></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Private Consultant</b></a>
+                                            <a class="nav-link" href="Staff_OrderList_Consult_Completed.jsp"><b>Private Consultant</b></a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Contact Us</b></a>
+                                            <a class="nav-link" href="#"><b>Contact Us</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -82,13 +82,10 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav mr-auto">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Pending</b></a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Processing.jsp"><b>Processing</b></a>
+                                            <a class="nav-link" href="Staff_OrderList_Consult_Completed.jsp"><b>Completed</b></a>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="Staff_ConsultationForm_Completed.jsp"><b>Completed</b></a>
+                                            <a class="nav-link" href="Staff_OrderList_Consult_History.jsp"><b>History</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -147,7 +144,7 @@
                                     <td>
                                         <div class="type">
                                             <div class="onlineStatus ${b.type == 'online' ? 'online' : 'offline'}">${b.type}</div>
-                                            <a href="Staff_ConsultationForm_FormDetail_Completed.jsp"><button class="viewDetail">View Detail</button></a>
+                                            <a href="Staff_OrderList_Consult_HistoryDetail.jsp"><button class="viewDetail">View Detail</button></a>
                                         </div>
                                     </td>
                                 </tr>
