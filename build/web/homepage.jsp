@@ -25,8 +25,10 @@
         <!--            body-->
         <div class="home-container">
             <section class="section-head">
-                <img src="img/image 7.png" alt="" />
-                <div>
+                <div class="image-container">
+                    <img src="img/image 7.png" alt="" />
+                </div>
+                <div class="content">
                     <h1>READY TO EXPLORE THE BEAUTY OF WONDERFUL WORLD</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -57,7 +59,7 @@
                                 behaviour, husbandry, enrichment and more.
                             </div>
                             <div class="button-container">
-                                <button><a href="birdcourse" style="text-decoration: none">LEARN MORE</a></button>
+                                <a href="birdcourse" style="text-decoration: none"><button>LEARN MORE</button></a>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">
@@ -71,8 +73,7 @@
                                 and On Demand!
                             </div>
                             <div class="button-container">
-                             <button><a href="workshop" style="text-decoration: none">LEARN MORE</a></button>
-
+                                <a href="workshop" style="text-decoration: none"><button>LEARN MORE</button></a>
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,7 @@
                                 and other animal related businesses.
                             </div>
                             <div class="button-container">
-                          <button><a href="onlinecourse" style="text-decoration: none">LEARN MORE</a></button>
+                                <a href="onlinecourse" style="text-decoration: none"><button>LEARN MORE</button></a>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">
@@ -99,7 +100,7 @@
                                 enrichment and more!
                             </div>
                             <div class="button-container">
-                      <button><a href="privateconsultation" style="text-decoration: none">LEARN MORE</a></button>
+                                <a href="privateconsultation" style="text-decoration: none"><button>LEARN MORE</button></a>
                             </div>
                         </div>
                         <div class="col-lg-3 image-container">

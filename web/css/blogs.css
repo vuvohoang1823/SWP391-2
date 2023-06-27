@@ -42,7 +42,9 @@ section .heading h2 {
     font-weight: bold;
     color: #617a55;
 }
-
+/*.blogs-header {
+    height: 87vh;
+}*/
 .blogs-header .carousel-indicators {
     right: inherit;
 }

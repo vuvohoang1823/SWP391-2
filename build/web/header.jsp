@@ -25,47 +25,57 @@
         <c:set var="role" value="${sessionScope.role}" />
         <c:choose>
             <c:when test="${role eq 'customer' || empty role}">
-                <div class="container-fluid">
+                <div class="container-fluid customer">
                     <div class="row header">
                         <div class="col-lg-3 logo-section">
-                            <img src="img/icon.jpg" alt="">
+                            <img src="./img/icon.jpg" alt="">
                             <p>BIRD <br /> TRAINING <br /> CENTER</p>
                         </div>
                         <div class="col-lg-6 menu-section">
                             <ul class="menu-content">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
+                                <li><a href="homepage.jsp">Home</a></li>
+                                <li><a href="about_us.jsp">About us</a></li>
                                 <li>
                                     <a href="#" class="subnav-toggle">
                                         Service
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                        <path
-                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                         </svg>
                                     </a>
                                     <div class="triangle"></div>
                                     <ul class="subnav">
-                                        <li class="subnav-content"><a href="#">Workshop</a></li>
-                                        <li class="subnav-content"><a href="#">Private Consultant</a></li>
-                                        <li class="subnav-content"><a href="#">Online Course</a></li>
-                                        <li class="subnav-content"><a href="#">Bird Course</a></li>
+                                        <li class="subnav-content"><a href="workshop.jsp">Workshops</a></li>
+                                        <li class="subnav-content"><a href="private_consultation.jsp">Private Consultant</a></li>
+                                        <li class="subnav-content"><a href="online_course.jsp">Online Course</a></li>
+                                        <li class="subnav-content"><a href="birdcourse.jsp">Bird Course</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="blogs.jsp">Blog</a></li>
+                                <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </div>
                         <c:choose>
                             <c:when test="${empty user}">
-                                <div class="col-lg-3 auth-section">
-                                    <button class="login"><a href="">Login</a></button>
-                                    <button class="signup"><a href="">Sign up</a></button>
+                                <div class="col-lg-3 button-container">
+                                    <button class="signup-button">
+                                        Sign Up
+                                    </button>
+                                    <a href="signin.jsp" >
+                                        <button class="signin-button">
+                                            Log In
+                                        </button>
+                                    </a>
                                 </div>
                             </c:when>
                             <c:otherwise>
                                 <c:set var="fullname" value="${user.fullName}"></c:set>
-                                    <div class="dropdown auth-section">
+                                    <div class="col-lg-3 dropdown auth-section d-flex align-items-center justify-content-center">
+                                        <div style="
+                                             font-weight: 700;
+                                             font-size: 1.5rem;
+                                             color: #617a55;
+                                             padding-right: 2rem;
+                                             " >Welcome</div>
                                         <button class="btn btn-secondary dropdown-toggle user-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span><svg width="16" height="16" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -75,8 +85,8 @@
                                             ${fullname}
                                     </button>
                                     <div class="dropdown-menu" style="background-color: rgba(0,0,0,0); border: 0;">
-                                        <div class="triangle"></div>
                                         <ul class="subnav">
+                                            <a class="dropdown-item" href="birdcourselist.jsp"><li>View Booked Services</li></a>
                                             <a class="dropdown-item" href="birdcourselist.jsp"><li>View Profile</li></a>
                                             <a class="dropdown-item" href="LogoutController" style="text-decoration: none">     <li>Logout</li></a>
                                         </ul>
@@ -178,7 +188,7 @@
                                     >
                                     <div class="d-flex align-items-center" style="margin-top: 6px;">
                                         <i class="fs-2 fa fa-table-columns"></i>
-                                        <span class="fs-1 ms-3 d-none d-sm-inline">Dashboard</span>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Dashboard</span>
                                     </div>
                                 </a>
                             </li>
@@ -203,7 +213,7 @@
                                             />
                                         </svg>
 
-                                        <span class="fs-1 ms-3 d-none d-sm-inline">Order list</span>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Order list</span>
                                     </div>
                                 </a>
                             </li>
@@ -234,7 +244,7 @@
                                             />
                                         </svg>
 
-                                        <span class="fs-1 ms-3 d-none d-sm-inline">Form list</span>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Form list</span>
                                     </div>
                                 </a>
                             </li>
@@ -245,7 +255,7 @@
                                     >
                                     <div class="d-flex align-items-center" style="margin-top: 6px;">
                                         <i class="fs-2 fa fa-table-list"></i>
-                                        <span class="fs-1 ms-3 d-none d-sm-inline">Services</span>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Services</span>
                                     </div>
                                 </a>
                             </li>
@@ -268,7 +278,7 @@
                                             />
                                         </svg>
 
-                                        <span class="fs-1 ms-3 d-none d-sm-inline">Blogs</span>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Blogs</span>
                                     </div>
                                 </a>
                             </li>

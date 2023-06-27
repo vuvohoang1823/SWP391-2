@@ -176,6 +176,10 @@
                                                         <a href="workshopdetail.jsp"><button><b>More Information</b></button></a>
                                                     </div>
                                                     <p>£${workshop.price}</p>
+                                                    <div>
+                                                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">Close registration</div>
+                                                        <div style="font-weight: 700; font-size: 2.5rem">12/07/2023</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

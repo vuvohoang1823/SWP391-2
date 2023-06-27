@@ -4,7 +4,7 @@
     font-weight: bold;
     font-size: 5rem;
     /*    fix if not 145px*/
-    padding: 4.75rem 0 4.75rem 3rem;
+    padding: 3.5rem 0 3.5rem 3rem;
 }
 .form-head .navbar {
     background-color: #617A554D;
@@ -19,7 +19,7 @@
 }
 .form-head .navbar .navbar-nav .nav-item .nav-link {
     color: black;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 .form-head .navbar .navbar-nav .active b{
@@ -76,7 +76,7 @@
     vertical-align: middle;
 }
 .form-body .table-form tbody tr td {
-    font-size: 2rem;
+    font-size: 1.3rem;
     vertical-align: middle;
 }
 .form-body .table-form .id {

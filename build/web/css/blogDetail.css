@@ -43,7 +43,8 @@ html {
     color: #617a55;
 }
 .body-container .section-head {
-    height: 100vh;
+    position: relative;
+    height: 87vh;
     width: 100%;
     display: flex;
     justify-content: center;

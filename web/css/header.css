@@ -4,33 +4,32 @@ html {
 }
 
 /*customer*/
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #DDE6F1;
+.customer {
+    height: 13vh;
 }
-/*HEADER*/
-.header{
+.customer .header{
     padding: 1.6rem 0;
-    background-color: #617a554d
+    background-color: #627b564d;
+
 }
-.logo-section{
+.customer .logo-section{
     display: flex;
     align-items: center;
 }
-.logo-section img{
+.customer .logo-section img{
     width: 10.2rem;
     height: 6.4rem;
     margin-left: 4.1rem;
 }
-.logo-section p{
+.customer .logo-section p{
     margin-bottom: 0;
     margin-left: 1rem;
     font-size: 2rem;
     font-weight: 800;
 }
-.memu-section{
+.customer .memu-section{
 }
-.menu-section .menu-content{
+.customer .menu-section .menu-content{
     padding-left: 0;
     margin-bottom: 0;
     margin-top: 2.2rem;
@@ -38,99 +37,148 @@ body {
     justify-content: center;
     align-items: center;
 }
-.menu-content > li{
+.customer .menu-content > li{
     list-style-type: none;
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: 2rem;
 }
-.menu-content li a{
+.customer .menu-content li a{
     color: #000000;
     text-decoration: none;
 }
-.menu-content li a img{
+.customer .menu-content li a img{
     width: 2.1rem;
     height: 1.8rem
 }
-.menu-content > li:nth-child(2) a{
-    color: #617A55
-}
-.menu-content > li:not(:nth-child(1)){
+.customer .menu-content > li:not(:nth-child(1)){
     padding-left: 6rem
 }
-.triangle{
+.customer .menu-content .triangle{
     display:none;
     position: absolute;
     z-index: 2;
-    top: 6rem;
-    margin-left: 8.2rem;
+    top: 6.6rem;
+    margin-left: 7rem;
     width:0;
     height: 0;
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
     border-bottom: 1rem solid white;
 }
-.menu-content .subnav{
+.customer .menu-content .subnav{
     display: none;
     z-index: 1;
     position: absolute;
-    top: 6.9rem;
+    top: 7.5rem;
     background-color: #fff;
     padding: 1rem 1rem;
     box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
     border-radius: 1rem
 }
-.menu-content li:hover .subnav, .menu-content li:hover .triangle{
+.customer .menu-content li:hover .subnav, .menu-content li:hover .triangle{
     display: block
 }
-.subnav > li{
+.customer .menu-content .subnav > li{
     list-style-type: none;
     padding: 1.5rem 1.6rem;
     width: 100%
 }
-.subnav > li:hover{
+.customer .menu-content .subnav > li:hover{
     background-color: #E9E6E6;
 }
-.auth-section{
+/*buttons*/
+.customer .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.customer .button-container .signin-button {
+    padding-right: 2rem;
+    float: right;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    min-width: 100px;
+    height: 35px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #80957c;
+    text-decoration: none;
+    cursor: pointer;
+}
+.customer .button-container .signin-button:hover {
+    color: #617a55;
+}
+@media screen and (max-width: 500px) {
+    .customer .button-container .signin-button {
+        right: 15px;
+    }
+}
+.customer .button-container .signup-button {
+    width: 186px;
+    height: 62px;
+    flex-shrink: 0;
+    float: right;
+    background-color: #617a55;
+    border-radius: 50px;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+.customer .button-container .signup-button:hover {
+    background-color: #468847;
+}
+@media screen and (max-width: 500px) {
+    .header-container .button-container .signup-button {
+        right: 15px;
+    }
+}
+/*welcome*/
+.customer .customer .auth-section {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-.auth-section .login{
-    border-style: none;
-    background-color: transparent;
+.customer .auth-section .user-button {
+    background-color: #617a55;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.customer .auth-section .subnav{
+    width: 28rem;
+    z-index: 1;
+    background-color: white;
+    padding: 1rem 1rem;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.customer .auth-section .triangle {
+    z-index: 4;
+    position: absolute;
+    bottom: 91%;
+    right: 50%;
+    width:0;
+    height: 0;
+    border-left: 1.6rem solid transparent;
+    border-right: 1.6rem solid transparent;
+    border-bottom: 1.6rem solid white;
+}
+.customer .auth-section .subnav a li {
+    list-style-type: none;
+    padding: 1rem 1rem 1rem 1.5rem;
+    width: 100%
+}
+.customer .auth-section .subnav a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
     font-weight: 700;
-    font-size: 2.5rem;
-    color:#617A55;
-    outline: none;
 }
-.login a{
-    color:#617A55;
-}
-.auth-section .login:hover{
-    opacity: 0.8;
-}
-.auth-section .signup{
-    border-radius: 5rem;
-    padding: 1.6rem 4.7rem;
-    margin-left: 2rem;
-    font-weight: 700;
-    color: white;
-    font-size: 2.5rem;
-    border-color: #617A55;
-    background-color: #617A55;
-    border-style: none;
-    outline: #617A55;
-}
-.auth-section .signup:focus{
-    border-color: #617A55;
-    background-color: #617A55;
-}
-.auth-section .signup:hover{
-    opacity: 0.8;
-}
-.signup a{
-    color: white;
+.customer .auth-section .subnav a:hover{
+    background-color: #E9E6E6;
 }
 
 /*staff*/
@@ -144,15 +192,15 @@ body {
 }
 .sidebar .logo-container .logo-image img {
     height: 100%;
-    width: 10rem;
+    width: 7.5rem;
     object-fit: contain;
     object-position: center;
 }
 .sidebar .logo-container .logo-text {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 .sidebar .nav-pills li a {
-    padding-left: 22%;
+    padding-left: 23%;
     height: 5rem;
     display: flex;
     font-weight: bold;

@@ -115,7 +115,7 @@
                             </form>
 
                         </nav>
-                        <div class="d-flex justify-content-center" style="font-size: 2rem; padding: 2rem 0;">
+                        <div class="d-flex justify-content-center" style="font-size: 1.5rem; padding: 2rem 0;">
                             Currently showing 2 pending form(s)
                         </div>
                         <table
