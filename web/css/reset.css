@@ -102,6 +102,10 @@ video {
     vertical-align: baseline;
 }
 
+html {
+    overflow: initial !important;
+}
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,

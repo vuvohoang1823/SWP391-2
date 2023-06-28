@@ -128,6 +128,19 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="mb-5">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="email"
+                                                    placeholder="Email"
+                                                    value="abc"
+                                                    disabled
+                                                    />
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="mb-3">
                                                 <label for="address" class="form-label">Address</label>
                                                 <input

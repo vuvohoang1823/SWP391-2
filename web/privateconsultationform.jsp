@@ -12,6 +12,7 @@
         <title>JSP Page</title>
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/privateconsultationForm.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
         <section class="section-contactUs">
@@ -129,7 +130,7 @@
                                         id="button-addon2"
                                         data-bs-toggle="modal"
                                         data-bs-target="#chooseTrainer"
-                                        style="font-size: 2rem; border: 0; background-color: #617a55;"
+                                        style="font-size: 1.5rem; border: 0; background-color: #617a55; border-radius: 0 4px 4px 0"
                                         >
                                         Select Trainer
                                     </button>
@@ -219,7 +220,7 @@
                             <!--------------->
                             <!--request message-->
                             <div class="row" style="height: 15rem">
-                                <textarea name="description" rows="4" cols="40" placeholder="Request message"></textarea>
+                                <textarea name="description" rows="4" cols="40" placeholder="Enter request message (optional)"></textarea>
                             </div>
                             <!------------------->
                             <!--price-->
@@ -235,14 +236,39 @@
 
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-1" id="exampleModalLabel">Modal title</h1>
+                                                    <h1 class="modal-title fs-1" id="exampleModalLabel">Price table</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    ...
+                                                    <div class="w3-container">
+                                                        <p class="mb-3">The price will be updated automatically according to this table.</p>
+                                                        <table class="w3-table-all w3-card-4">
+                                                            <tr>
+                                                                <th>Type</th>
+                                                                <th>Description</th>
+                                                                <th>7h - 9h</th>
+                                                                <th>2h - 4h</th>
+                                                                <th>19h - 21h</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Offline</td>
+                                                                <td>In-person sessions</td>
+                                                                <td>200.000</td>
+                                                                <td>200.000</td>
+                                                                <td>200.000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Online</td>
+                                                                <td>Remote/online sessions</td>
+                                                                <td>150.000</td>
+                                                                <td>150.000</td>
+                                                                <td>150.000</td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal">Close</button>
@@ -251,7 +277,7 @@
                                         </div>
                                     </div>
                                 </label>
-                                <input id="consultPrice" value="" disabled>
+                                <input id="consultPrice" value="" class="bg-white" disabled>
                             </div>
                             <!--------->
                             <div class="radio-container">
@@ -265,7 +291,7 @@
                                 </div>
                             </div>
 
-                            <div class="button-container" style="margin-top: 2rem;">
+                            <div class="row button-container" style="margin-top: 2rem;">
                                 <!--submit trainer-->
                                 <input
                                     id="hiddenTrainerName"
@@ -274,41 +300,82 @@
                                 <!--submit current date-->
                                 <input type="text" id="currentDate" value="" hidden/>
                                 <!----------------------->
-                                <button type="submit" class="btn btn-primary" onclick="validateAndSubmit(event)">
+                                <button type="button" class="btn btn-primary w-100" onclick="validateForm(event)">
                                     Submit form
                                 </button>
-
-                                <!-- Modal -->
-                                <div
-                                    class="modal fade"
-                                    id="formToStaff-modal"
-                                    tabindex="-1"
-                                    data-bs-backdrop="static"
-                                    data-bs-keyboard="false"
-                                    >
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
-                                                    Submit successfully
-                                                </h1>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="submitOnClose(event)"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Submit form successfully. Reload in 5s...
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="submitOnClose(event)">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
+                    <!-- Modal -->
+                    <div
+                        class="modal fade"
+                        id="formToStaff-modal"
+                        tabindex="-1"
+                        data-bs-backdrop="static"
+                        data-bs-keyboard="false"
+                        >
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
+                                        Submit successfully
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="submitOnClose(event)"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Submit form successfully. Reload in 5s...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal" onclick="submitOnClose(event)">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Confirm Modal -->
+                    <div
+                        class="modal fade"
+                        id="confirm-modal"
+                        >
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
+                                        Confirm form
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="w3-container">
+                                        <p class="mb-3">The price will be updated automatically according to this table.</p>
+                                        <span>Full name</span>
+                                        <span>Email</span>
+                                        <span>Trainer</span>
+                                        <span>Address</span>
+                                        <span>Phone number</span>
+                                        <span>Consult type</span>
+                                        <span>Date</span>
+                                        <span>Time</span>
+                                        <span>Note</span>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal" onclick="submitForm(event)"
+                                            style="font-size: 2rem;
+                                            font-weight: bold;
+                                            border: 0;
+                                            border-radius: 0.56rem;
+                                            background-color: #617a55;
+                                            color: white;
+                                            padding: 1.6rem 4rem;"
+                                            >Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        <!--        get price-->
         <script>
             var consultPriceInput = document.getElementById('consultPrice');
             var consultTypeOnline = document.getElementById('consultTypeOnline');
@@ -316,9 +383,9 @@
 
             function updateConsultPrice() {
                 if (consultTypeOnline.checked) {
-                    consultPriceInput.value = "$123";
+                    consultPriceInput.value = "200.000";
                 } else if (consultTypeOffline.checked) {
-                    consultPriceInput.value = "$321";
+                    consultPriceInput.value = "150.000";
                 }
             }
 
@@ -366,32 +433,53 @@
         </script>
         <!--        submit and validate form-->
         <script>
-            function submitOnClose(event) {
-                document.getElementById("myForm").submit();
-            }
-            function validateAndSubmit(event) {
+            const form = document.getElementById("myForm");
+            function validateForm(event) {
                 event.preventDefault(); // Prevent the default form submission
 
                 const inputTrainerName = document.getElementById("trainername");
-                const form = document.getElementById("myForm");
                 if (form.checkValidity()) {
-                    // Form is valid, show the modal
-                    showSuccessModal();
+                    const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
+                    const hiddenTrainerName = document.getElementById("hiddenTrainerName");
+                    hiddenTrainerName.value = selectedTrainer.value;
 
-                    setTimeout(function () {
-                        const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
-                        const hiddenTrainerName = document.getElementById("hiddenTrainerName");
-                        hiddenTrainerName.value = selectedTrainer.value;
-                        form.submit(); // Submit the form after 5 seconds if it's valid
-                    }, 5000);
+                    showConfirmModal();
                 } else {
                     form.reportValidity(); // Display validation error messages
                 }
+            }
+            function showConfirmModal() {
+                const modal = document.getElementById("confirm-modal");
+                const bsModal = new bootstrap.Modal(modal);
+                bsModal.show();
+            }
+            function showInputData() {
+                // Get the form input values
+                var fullName = document.querySelector('input[type="text"][placeholder="Full name"]').value;
+                var email = document.querySelector('input[type="email"][placeholder="Your email address"]').value;
+                var address = document.querySelector('input[type="text"][placeholder="Your address"]').value;
+                var trainerName = document.getElementById('trainername').value;
+                var startDate = document.getElementById('chooseDate').value;
+                var startTime = document.querySelector('select[name="Time_start"]').value;
+                var description = document.querySelector('textarea[name="description"]').value;
+                var price = document.getElementById('consultPrice').value;
+                var consultationType = document.querySelector('input[name="type"]:checked').value;
+            }
+            function submitForm() {
+                // Form is valid, show the modal
+                showSuccessModal();
+
+                setTimeout(function () {
+                    form.submit(); // Submit the form after 5 seconds
+                }, 5000);
             }
             function showSuccessModal() {
                 const modal = document.getElementById("formToStaff-modal");
                 const bsModal = new bootstrap.Modal(modal);
                 bsModal.show();
+            }
+            function submitOnClose(event) {
+                form.submit();
             }
         </script>
     </body>
