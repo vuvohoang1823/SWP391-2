@@ -313,6 +313,8 @@
                                     />
                                 <!--submit current date-->
                                 <input type="text" id="currentDate" value="" hidden/>
+                                <!--submit current date-->
+                                <input type="text" id="priceSubmit" value="" hidden/>
                                 <!----------------------->
                                 <button type="button" class="btn btn-primary w-100" onclick="validateForm(event)">
                                     Submit form
@@ -535,6 +537,9 @@
                     const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
                     const hiddenTrainerName = document.getElementById("hiddenTrainerName");
                     hiddenTrainerName.value = selectedTrainer.value;
+
+                    const priceSubmit = document.getElementById("priceSubmit");
+                    priceSubmit.value = consultPriceInput.value;
 
                     showConfirmModal();
                 } else {
