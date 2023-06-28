@@ -180,6 +180,19 @@ html {
     padding: 1.44rem 1.2rem;
     width: 100%;
 }
+.section-contactUs .textarea-container {
+    position: relative;
+    display: inline-block;
+}
+
+.section-contactUs .character-count {
+    text-align: right;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+    font-size: 12px;
+    color: gray;
+}
 .section-contactUs .right .form-container .button-container {
     display: flex;
     justify-content: center;
@@ -218,27 +231,28 @@ html {
 .section-contactUs .right .form-container .content .input-group .modal .modal-header .modal-title{
     font-size: 3rem !important;
 }
-.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item {
+.section-contactUs .trainer-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-input {
+.section-contactUs .trainer-item .trainer-input {
     margin-right: 1rem;
 }
-.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.section-contactUs .trainer-item .trainer-avatar {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+    /*border-radius: 50%;*/
     margin-right: 10px;
 }
 
-.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-name {
+.section-contactUs .trainer-item .trainer-name {
     font-weight: bold;
 }
 
-.section-contactUs .right .form-container .content .input-group .modal .modal-body .trainer-item .trainer-skill {
-    color: gray;
+.section-contactUs .trainer-item .trainer-skill {
+    /*    color: gray;*/
 }
 .footer-container{
     margin-top: 0rem

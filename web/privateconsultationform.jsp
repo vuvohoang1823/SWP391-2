@@ -104,15 +104,24 @@
                     </div>
                     <form action="" method="POST" id="myForm">
                         <div class="content">
+                            <!---Chinh name nho chinh ca dong 479-488 ---->
+                            <!--                            name-->
                             <div class="row">
-                                <input type="text" placeholder="Full name" required />
+                                <input type="text" name="fullname" placeholder="Full name" required />
                             </div>
+                            <!--                            email-->
                             <div class="row">
-                                <input type="email" placeholder="Your email address" required />
+                                <input type="email" name="email" placeholder="Your email address" required />
                             </div>
+                            <!--                            phone-->
                             <div class="row">
-                                <input type="text" placeholder="Your address" required />
+                                <input type="tel" name="phone" placeholder="Your phone number (10 digits)" pattern="[0-9]{10}" required />
                             </div>
+                            <!--                            address-->
+                            <div class="row">
+                                <input type="text" name="address" placeholder="Your address" required />
+                            </div>
+                            <!--                            trainer-->
                             <div class="row">
                                 <div class="input-group">
                                     <!--not submited-->
@@ -160,7 +169,7 @@
                                                         <!--start of trainer -->
                                                         <div class="trainer-item">
                                                             <img src="./img/armin.jpg" alt="Trainer Avatar" class="trainer-avatar">
-                                                            <input class="trainer-input" type="radio" name="selected-trainer" value="trainer1" id="trainer1">
+                                                            <input class="trainer-input" style="margin-left: 1.5rem" type="radio" name="selected-trainer" value="trainer1" id="trainer1">
                                                             <label for="trainer1">
                                                                 <span class="trainer-name">Name: ABC1</span>
                                                                 <span> - </span>
@@ -173,8 +182,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary" id="saveTrainer" data-bs-dismiss="modal">Save changes</button>
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="border-radius: 0.56rem;">Close</button>
+                                                    <button type="button" class="btn btn-primary" id="saveTrainer" data-bs-dismiss="modal" style="font-size: 2rem;
+                                                            border: 0;
+                                                            border-radius: 0.56rem;
+                                                            background-color: #617a55;
+                                                            color: white;">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +209,7 @@
                                     </span>
                                 </label>
                                 <div class="date-info p-0 d-flex justify-content-between">
-                                    <select name="Time_start">
+                                    <select name="Time_start" style="text-align: center">
                                         <option value="7:00">
                                             7:00 - 9:00
                                         </option>
@@ -219,8 +232,9 @@
                             </div>
                             <!--------------->
                             <!--request message-->
-                            <div class="row" style="height: 15rem">
-                                <textarea name="description" rows="4" cols="40" placeholder="Enter request message (optional)"></textarea>
+                            <div class="row textarea-container" style="height: 15rem">
+                                <textarea name="note" rows="4" cols="40" placeholder="Enter request message (optional)" oninput="limitTextareaCharacters(this, 100)"></textarea>
+                                <span class="character-count" id="counter"></span>
                             </div>
                             <!------------------->
                             <!--price-->
@@ -306,7 +320,99 @@
                             </div>
                         </div>
                     </form>
-                    <!-- Modal -->
+                    <!-- Confirm Modal -->
+                    <div
+                        class="modal fade"
+                        id="confirm-modal"
+                        >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
+                                        Confirm form
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="confirm-modal">
+                                        <p class="fs-1 mb-3">Please confirm the information below.</p>
+                                        <div class="p-3" style="background: #b8c6c2">
+                                            <div class="row mb-5">
+                                                <div class="col-md-6 col-lg-6">
+                                                    <label class="fs-1" style="font-weight: 700;" for="fullname">Full name:</label>
+                                                    <div class="fs-2" id="fullname"></div>
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <label class="fs-1" style="font-weight: 700;" for="phone">Phone number:</label>
+                                                    <div class="fs-2" id="phone"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-lg-12">
+                                                    <label class="fs-1" style="font-weight: 700;" for="email">Email:</label>
+                                                    <div class="fs-2" id="email"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-lg-12">
+                                                    <label class="fs-1" style="font-weight: 700;" for="address">Address:</label>
+                                                    <div class="fs-2" id="address"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-lg-12">
+                                                    <label class="fs-1 mb-3" style="font-weight: 700;" for="trainer">Trainer:</label>
+                                                    <div class="fs-2 trainer-item" id="trainer" class="trainer-item">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-lg-6">
+                                                    <label class="fs-1" style="font-weight: 700;" for="consultType">Consult type:</label>
+                                                    <div class="fs-2" id="consultType"></div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <label class="fs-1" style="font-weight: 700;" for="time">Time:</label>
+                                                            <div class="fs-2" style="white-space: nowrap" id="time"></div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <label class="fs-1" style="font-weight: 700;" for="date">Date:</label>
+                                                            <div class="fs-2" style="white-space: nowrap" id="date"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-lg-12">
+                                                    <label class="fs-1" style="font-weight: 700;" for="note">Note:</label>
+                                                    <div class="fs-2" id="note"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5 p">
+                                                <div class="mr-auto col-lg-6">
+                                                    <label class="fs-1" style="font-weight: 700;" for="price">Price:</label>
+                                                    <div class="fs-1" id="price"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal" style="border-radius: 0.56rem;">Cancel</button>
+                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal" onclick="submitForm(event)"
+                                            style="font-size: 2rem;
+                                            border: 0;
+                                            border-radius: 0.56rem;
+                                            background-color: #617a55;
+                                            color: white;"
+                                            >Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Success Modal -->
                     <div
                         class="modal fade"
                         id="formToStaff-modal"
@@ -331,50 +437,17 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Confirm Modal -->
-                    <div
-                        class="modal fade"
-                        id="confirm-modal"
-                        >
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 3rem !important; display: inline-block;">
-                                        Confirm form
-                                    </h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="w3-container">
-                                        <p class="mb-3">The price will be updated automatically according to this table.</p>
-                                        <span>Full name</span>
-                                        <span>Email</span>
-                                        <span>Trainer</span>
-                                        <span>Address</span>
-                                        <span>Phone number</span>
-                                        <span>Consult type</span>
-                                        <span>Date</span>
-                                        <span>Time</span>
-                                        <span>Note</span>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary fs-2" data-bs-dismiss="modal" onclick="submitForm(event)"
-                                            style="font-size: 2rem;
-                                            font-weight: bold;
-                                            border: 0;
-                                            border-radius: 0.56rem;
-                                            background-color: #617a55;
-                                            color: white;
-                                            padding: 1.6rem 4rem;"
-                                            >Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+        <!--        limit text for textarea-->
+        <script>
+            function limitTextareaCharacters(textarea, maxLength) {
+                textarea.value = textarea.value.slice(0, maxLength);
+                var remainingChars = maxLength - textarea.value.length;
+                document.getElementById('counter').textContent = remainingChars + '/' + maxLength;
+            }
+        </script>
         <!--        get price-->
         <script>
             var consultPriceInput = document.getElementById('consultPrice');
@@ -420,7 +493,7 @@
                 saveButton.addEventListener("click", function () {
                     const selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
                     if (selectedTrainer.value === "none") {
-//                      change this to set in the database
+                        //                      change this to set in the database
                         inputTrainerName.value = "";
                         ////////////////////////////////
                     } else {
@@ -430,6 +503,26 @@
                     }
                 });
             });
+        </script>
+        <!--        update trainer for confirm modal-->
+        <script>
+            function updateTrainerDetails() {
+                var selectedTrainer = document.querySelector('input[name="selected-trainer"]:checked');
+                if (selectedTrainer) {
+                    var trainerItem = selectedTrainer.parentElement;
+                    var trainerDetails = document.getElementById('trainer');
+
+                    // Copy the HTML content of trainerItem
+                    var clonedItem = trainerItem.cloneNode(true);
+
+                    // Remove the input element from the cloned content
+                    var inputElement = clonedItem.querySelector('.trainer-input');
+                    inputElement.parentNode.removeChild(inputElement);
+
+                    // Update the content of trainerDetails
+                    trainerDetails.innerHTML = clonedItem.innerHTML;
+                }
+            }
         </script>
         <!--        submit and validate form-->
         <script>
@@ -449,21 +542,34 @@
                 }
             }
             function showConfirmModal() {
+                setConfirmData();
                 const modal = document.getElementById("confirm-modal");
                 const bsModal = new bootstrap.Modal(modal);
                 bsModal.show();
             }
-            function showInputData() {
+            function setConfirmData() {
                 // Get the form input values
-                var fullName = document.querySelector('input[type="text"][placeholder="Full name"]').value;
-                var email = document.querySelector('input[type="email"][placeholder="Your email address"]').value;
-                var address = document.querySelector('input[type="text"][placeholder="Your address"]').value;
-                var trainerName = document.getElementById('trainername').value;
+                var fullName = document.querySelector('input[name="fullname"]').value;
+                var email = document.querySelector('input[name="email"]').value;
+                var phoneNumber = document.querySelector('input[name="phone"]').value;
+                var address = document.querySelector('input[name="address"]').value;
                 var startDate = document.getElementById('chooseDate').value;
                 var startTime = document.querySelector('select[name="Time_start"]').value;
-                var description = document.querySelector('textarea[name="description"]').value;
+                var note = document.querySelector('textarea[name="note"]').value;
                 var price = document.getElementById('consultPrice').value;
                 var consultationType = document.querySelector('input[name="type"]:checked').value;
+
+                // Set the values in the respective divs
+                document.getElementById("fullname").textContent = fullName;
+                document.getElementById("email").textContent = email;
+                document.getElementById("address").textContent = address;
+                document.getElementById("phone").textContent = phoneNumber;
+                updateTrainerDetails(); //set trainer data
+                document.getElementById("consultType").textContent = consultationType;
+                document.getElementById("date").textContent = startDate;
+                document.getElementById("time").textContent = startTime;
+                document.getElementById("price").textContent = price;
+                document.getElementById("note").textContent = note;
             }
             function submitForm() {
                 // Form is valid, show the modal
@@ -478,7 +584,7 @@
                 const bsModal = new bootstrap.Modal(modal);
                 bsModal.show();
             }
-            function submitOnClose(event) {
+            function submitOnClose() {
                 form.submit();
             }
         </script>
