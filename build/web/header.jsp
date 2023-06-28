@@ -100,63 +100,8 @@
 
 
             <c:when test="${role eq 'trainer'}">
-                <div class="nav-container" style="width: 50vw">
-                    <ul class="navBar1" style="list-style: none ; font-size:20px">
-                        <li>
-                            <a href="homepage.jsp"  class="nav-link">
-                                Workshops
-                            </a>
-                        </li>
-                        <li>
-                            <a href="about_us_main.jsp"  class="nav-link">
-                                Bird Course
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Trainer_PrivateConsultation.jsp"  class="nav-link">
-                                Private Consultant
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <c:choose>
-                    <c:when test="${empty user}">
-                        <div class="button-container" style="width: 25vw">
-                            <a href="signin.jsp" >
-                                <button class="signin-button">
-                                    Log In
-                                </button>
-                            </a>
-                        </div>
-                    </c:when>
-                    <c:otherwise>
-                        <c:set var="fullname" value="${user.fullName}"></c:set>
-                            <div class="dropdown auth-section">
-                                <button class="btn btn-secondary dropdown-toggle user-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <span><svg width="16" height="16" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M9.5 0.00173437C8.6944 -0.017608 7.89308 0.125002 7.14317 0.421175C6.39327 0.717349 5.70993 1.1611 5.13335 1.72634C4.55677 2.29157 4.09859 2.96687 3.78576 3.71251C3.47294 4.45815 3.31179 5.25908 3.31179 6.06817C3.31179 6.87726 3.47294 7.67819 3.78576 8.42383C4.09859 9.16947 4.55677 9.84476 5.13335 10.41C5.70993 10.9752 6.39327 11.419 7.14317 11.7152C7.89308 12.0113 8.6944 12.1539 9.5 12.1346C10.3056 12.1539 11.1069 12.0113 11.8568 11.7152C12.6067 11.419 13.2901 10.9752 13.8667 10.41C14.4432 9.84476 14.9014 9.16947 15.2142 8.42383C15.5271 7.67819 15.6882 6.87726 15.6882 6.06817C15.6882 5.25908 15.5271 4.45815 15.2142 3.71251C14.9014 2.96687 14.4432 2.29157 13.8667 1.72634C13.2901 1.1611 12.6067 0.717349 11.8568 0.421175C11.1069 0.125002 10.3056 -0.017608 9.5 0.00173437ZM6.04545 15.5997C4.4421 15.5997 2.90442 16.2392 1.77067 17.3775C0.63693 18.5158 0 20.0597 0 21.6696V26H19V21.6696C19 20.0597 18.3631 18.5158 17.2293 17.3775C16.0956 16.2392 14.5579 15.5997 12.9545 15.5997H6.04545Z"
-                                            fill="white" />
-                                        </svg></span>
-                                    ${fullname}
-                            </button>
-                            <div class="dropdown-menu" style="background-color: rgba(0,0,0,0); border: 0;">
-                                <div class="triangle"></div>
-                                <ul class="subnav">
-                                    <a class="dropdown-item" href="Trainer_PrivateConsultation.jsp"><li>View Assigned Services</li></a>
-                                    <a class="dropdown-item" href="birdcourselist.jsp"><li>View Profile</li></a>
-                                    <a class="dropdown-item" href="LogoutController" style="text-decoration: none">     <li>Logout</li></a>
-                                </ul>
-                            </div>
-                        </div>
-                    </c:otherwise>
-                </c:choose>
-            </c:when>
-
-
-            <c:when test="${role eq 'staff'}">
                 <div
-                    class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar"
+                    class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar-trainer"
                     >
                     <a
                         href="#"
@@ -186,7 +131,97 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></svg>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Workshops</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="nav-item py-2 py-sm-4">
+                                <a
+                                    href="Staff_ConsultationForm_Pending.jsp"
+                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    >
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M456 0c-48.6 0-88 39.4-88 88v29.2L12.5 390.6c-14 10.8-16.6 30.9-5.9 44.9s30.9 16.6 44.9 5.9L126.1 384H259.2l46.6 113.1c5 12.3 19.1 18.1 31.3 13.1s18.1-19.1 13.1-31.3L311.1 384H352c1.1 0 2.1 0 3.2 0l46.6 113.2c5 12.3 19.1 18.1 31.3 13.1s18.1-19.1 13.1-31.3l-42-102C484.9 354.1 544 280 544 192V128v-8l80.5-20.1c8.6-2.1 13.8-10.8 11.6-19.4C629 52 603.4 32 574 32H523.9C507.7 12.5 483.3 0 456 0zm0 64a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Bird Course</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item py-2 py-sm-4">
+                                <a
+                                    href="Staff_OrderList_Consult_Completed.jsp"
+                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    >
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="2rem" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M112 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm40 304V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V256.9L59.4 304.5c-9.1 15.1-28.8 20-43.9 10.9s-20-28.8-10.9-43.9l58.3-97c17.4-28.9 48.6-46.6 82.3-46.6h29.7c33.7 0 64.9 17.7 82.3 46.6l44.9 74.7c-16.1 17.6-28.6 38.5-36.6 61.5c-1.9-1.8-3.5-3.9-4.9-6.3L232 256.9V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V352H152zM432 224a144 144 0 1 1 0 288 144 144 0 1 1 0-288zm0 240a24 24 0 1 0 0-48 24 24 0 1 0 0 48zM368 321.6V328c0 8.8 7.2 16 16 16s16-7.2 16-16v-6.4c0-5.3 4.3-9.6 9.6-9.6h40.5c7.7 0 13.9 6.2 13.9 13.9c0 5.2-2.9 9.9-7.4 12.3l-32 16.8c-5.3 2.8-8.6 8.2-8.6 14.2V384c0 8.8 7.2 16 16 16s16-7.2 16-16v-5.1l23.5-12.3c15.1-7.9 24.5-23.6 24.5-40.6c0-25.4-20.6-45.9-45.9-45.9H409.6c-23 0-41.6 18.6-41.6 41.6z"/></svg>
+                                        <span class="fs-2 ms-3 d-none d-sm-inline">Consultation</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <c:choose>
+                        <c:when test="${empty user}">
+                            <c:redirect url="signin.jsp" />
+                        </c:when>
+                        <c:otherwise>
+                            <c:set var="fullname" value="${user.fullName}"></c:set>
+                                <div class="dropdown auth-section mt-auto mb-5 w-100">
+                                    <button class="btn btn-secondary dropdown-toggle user-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span><svg width="16" height="16" viewBox="0 0 19 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.5 0.00173437C8.6944 -0.017608 7.89308 0.125002 7.14317 0.421175C6.39327 0.717349 5.70993 1.1611 5.13335 1.72634C4.55677 2.29157 4.09859 2.96687 3.78576 3.71251C3.47294 4.45815 3.31179 5.25908 3.31179 6.06817C3.31179 6.87726 3.47294 7.67819 3.78576 8.42383C4.09859 9.16947 4.55677 9.84476 5.13335 10.41C5.70993 10.9752 6.39327 11.419 7.14317 11.7152C7.89308 12.0113 8.6944 12.1539 9.5 12.1346C10.3056 12.1539 11.1069 12.0113 11.8568 11.7152C12.6067 11.419 13.2901 10.9752 13.8667 10.41C14.4432 9.84476 14.9014 9.16947 15.2142 8.42383C15.5271 7.67819 15.6882 6.87726 15.6882 6.06817C15.6882 5.25908 15.5271 4.45815 15.2142 3.71251C14.9014 2.96687 14.4432 2.29157 13.8667 1.72634C13.2901 1.1611 12.6067 0.717349 11.8568 0.421175C11.1069 0.125002 10.3056 -0.017608 9.5 0.00173437ZM6.04545 15.5997C4.4421 15.5997 2.90442 16.2392 1.77067 17.3775C0.63693 18.5158 0 20.0597 0 21.6696V26H19V21.6696C19 20.0597 18.3631 18.5158 17.2293 17.3775C16.0956 16.2392 14.5579 15.5997 12.9545 15.5997H6.04545Z"
+                                                fill="white" />
+                                            </svg></span>
+                                        ${fullname}
+                                </button>
+                                <div class="dropdown-menu" style="background-color: rgba(0,0,0,0); border: 0;">
+                                    <ul class="subnav">
+                                        <a class="dropdown-item" href="LogoutController" style="text-decoration: none">     <li>Logout</li></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+            </c:when>
+
+
+            <c:when test="${role eq 'staff'}">
+                <div
+                    class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar-staff"
+                    >
+                    <a
+                        href="#"
+                        class="d-flex text-decoration-none align-items-center text-white nav-logo logo-container"
+                        >
+                        <span class="d-block d-sm-none w-auto">
+                            <img src=./img/logo_white.png alt="page logo" style="width:
+                                 5rem;"/>
+                        </span>
+                        <span class="fs-4 m-auto d-none d-sm-inline">
+                            <div class="d-flex p-3">
+                                <div class="logo-image">
+                                    <img src=./img/logo_white.png alt="page logo" />
+                                </div>
+                                <div class="logo-text">
+                                    <p style="margin: 0">BIRD</p>
+                                    <p style="margin: 0">TRADING</p>
+                                    <p style="margin: 0">CENTER</p>
+                                </div>
+                            </div>
+                        </span>
+                    </a>
+                    <div class="bg-white p-2">
+                        <ul class="nav nav-pills flex-column mt-4">
+                            <li class="nav-item py-2 py-sm-4">
+                                <a
+                                    href="#"
+                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    >
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7 19V7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M20 7H1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -202,7 +237,7 @@
                                     href="Staff_ConsultationForm_Pending.jsp"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg
                                             width="19"
                                             height="19"
@@ -233,7 +268,7 @@
                                     href="Staff_OrderList_Consult_Completed.jsp"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg
                                             width="19"
                                             height="19"
@@ -258,7 +293,7 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 10H13" stroke="#33363F" stroke-width="2" stroke-linecap="round"/>
                                         <path d="M1 5.22222C1 3.23185 1 2.23666 1.6224 1.61833C2.24479 1 3.24653 1 5.25 1H13.75C15.7534 1 16.7552 1 17.3776 1.61833C18 2.23666 18 3.23185 18 5.22222V13.6667C18 16.6522 18 18.145 17.0664 19.0725C16.1328 20 14.6302 20 11.625 20H7.375C4.36979 20 2.8672 20 1.9336 19.0725C1 18.145 1 16.6522 1 13.6667V5.22222Z" stroke="#33363F" stroke-width="2"/>
@@ -274,7 +309,7 @@
                                     href="#"
                                     class="d-flex justify-content-center d-sm-block nav-link text-black"
                                     >
-                                    <div class="d-flex align-items-center" style="margin-top: 6%;">
+                                    <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg
                                             width="20"
                                             height="22"
