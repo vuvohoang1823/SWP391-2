@@ -29,7 +29,7 @@
                 <div class="row flex-nowrap">
                     <!--            header-->
                 <%@ include file="header.jsp" %>
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg
@@ -134,9 +134,9 @@
                                 </tr>
                             </thead>
                             <c:forEach items="${f.appointmentFormProcessing}" var="b" varStatus="counter" >
-                               <c:set var="trainer" value="${b.request_trainer_id}"></c:set>
-                                <tr>
-                                    <td class="id">${counter.count}</td>
+                                <c:set var="trainer" value="${b.request_trainer_id}"></c:set>
+                                    <tr>
+                                        <td class="id">${counter.count}</td>
                                     <td class="title">Basic Consultation Request</td>
                                     <td class="customer">${b.customer_fullname}</td>
                                     <td class="customer">${b.duration} - ${b.date}</td>
@@ -145,7 +145,7 @@
                                     <td>
                                         <div class="type">
                                             <div class="onlineStatus ${b.type == 'online' ? 'online' : 'offline'}">${b.type}</div>
-                                           <a href="MainController?action=view_Form_Processing&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
+                                            <a href="MainController?action=view_Form_Processing&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
                                         </div>
                                     </td>
                                 </tr>

@@ -7,12 +7,12 @@
     display: flex;
     justify-content: center; }
 .home-container section .heading div h1 {
-    font-size: 40px;
+    font-size: 6rem;
     font-weight: bolder;
     width: 70%; }
 .home-container section .heading h2 {
     margin-top: 4%;
-    font-size: 20px;
+    font-size: 3rem;
     font-weight: bold;
     color: #617a55; }
 .home-container button:hover {
@@ -31,24 +31,32 @@
     background-color: #dde6f1;
     transition: background-color 2s; }
 .home-container .section-head {
-    height: 93vh;
+    height: 87vh;
     display: flex;
     justify-content: center;
     background-color: #b8c6c2;
     padding-bottom: 2%; }
-.home-container .section-head img {
+.home-container .section-head .image-container {
+    margin-left: 5%;
+    width: 50vw;
+}
+.home-container .section-head .image-container img {
     object-fit: contain;
-    width: 50vw; }
-.home-container .section-head div {
-    margin-right: 5%;
+    width: 584px;
+}
+.home-container .section-head .image-container {
     margin-top: 5%; }
+.home-container .section-head .content {
+    margin-top: 7%;
+}
 .home-container .section-head div h1 {
     font-weight: bolder;
     font-size: 6rem; }
 .home-container .section-head div p {
+    padding-right: 15rem;
     margin-top: 7%;
-    line-height: 6rem;
-    font-size: 2.9rem; }
+    line-height: 3rem;
+    font-size: 2rem; }
 .home-container .section-course {
     display: flex;
     flex-direction: column; }
@@ -219,10 +227,10 @@
     object-position: center; }
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc h1 {
     margin-top: 7%;
-    font-size: 3.2rem;
+    font-size: 3rem;
 }
 .home-container .section-testimonial .image-container .image-slider .image-wrapper .desc .desc-container {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin-top: 10%;
     display: flex;
     justify-content: center; }
@@ -236,13 +244,13 @@
     justify-content: center;
     text-align: center; }
 .home-container .section-foot .desc-container div {
-    font-size: 1.6rem;
+    font-size: 3rem;
     width: 50%; }
 .home-container .section-foot .button-container {
     display: flex;
     justify-content: center; }
 .home-container .section-foot .button-container button {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     margin-top: 2%;
     margin-bottom: 5%;
     border: 0px;
@@ -250,4 +258,4 @@
     background-color: #617a55;
     color: white;
     padding: 6px;
-    width: 100px; }
+    width: 186px; }

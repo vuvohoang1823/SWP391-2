@@ -33,7 +33,7 @@ html {
     color: #617a55;
 }
 .body-container .section-head {
-    height: 93vh;
+    height: 87vh;
     display: flex;
     justify-content: center;
     background-color: #b8c6c2;
@@ -43,30 +43,27 @@ html {
     padding: 4rem 5rem 4rem 4rem;
 }
 .body-container .section-head .desc-container h2 {
-    height: 5%;
     overflow: hidden;
     color: #4d6144;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .body-container .section-head .desc-container h1 {
-    height: 38%;
     overflow: hidden;
     color: black;
     font-weight: bolder;
-    font-size: 8rem;
+    font-size: 6rem;
 }
 .body-container .section-head .desc-container p {
-    height: 40%;
     overflow: hidden;
-    line-height: 5rem;
+    line-height: 2.5rem;
     margin-top: 3%;
-    font-size: 3.3rem;
+    font-size: 2rem;
 }
 .body-container .section-head .desc-container .button-container {
     padding-top: 3rem;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 .body-container .section-head .desc-container .button-container button {
     border: 0px;
@@ -75,6 +72,7 @@ html {
     color: white;
     padding: 1rem 1rem;
     width: 50%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .body-container .section-head .img-container {
     height: 100%;
@@ -202,7 +200,6 @@ html {
     line-height: 2rem;
 }
 .body-container .section-consultants .cards-container .card-container .desc-container .button-container {
-    height: 40%;
     font-size: 2rem;
     height: 20%;
 }

@@ -106,14 +106,14 @@ section .heading h2 {
     justify-content: center;
 }
 .birdCourse-container .section-course .foot-button button {
-    width: 90%;
+    width: 405px;
     border: 0;
     border-radius: 30px;
     color: white;
     background-color: #617a55;
     padding: 1.12rem 1.12rem;
-    font-weight: bold;
-    font-size: 2.4rem;
+    font-weight: 700;
+    font-size: 3rem;
 }
 
 .onlineCourse-container .section-course {
@@ -197,14 +197,14 @@ section .heading h2 {
     justify-content: center;
 }
 .onlineCourse-container .section-course .foot-button button {
-    width: 90%;
+    width: 405px;
     border: 0;
     border-radius: 30px;
     color: white;
     background-color: #617a55;
     padding: 1.12rem 1.12rem;
-    font-weight: bold;
-    font-size: 2.4rem;
+    font-weight: 700;
+    font-size: 3rem;
 }
 
 .workshops-container .section-workshops .row {
@@ -216,7 +216,9 @@ section .heading h2 {
     padding: 3%;
 }
 .workshops-container .section-workshops .row .card .card-img {
-    border-radius: 7%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
 }
 .workshops-container .section-workshops .row .card .card-body {
     position: relative;
@@ -272,12 +274,12 @@ section .heading h2 {
     justify-content: center;
 }
 .workshops-container .section-workshops .foot-button button {
-    width: 90%;
+    width: 405px;
     border: 0;
     border-radius: 30px;
     color: white;
     background-color: #617a55;
     padding: 1.12rem 1.12rem;
-    font-weight: bold;
-    font-size: 2.4rem;
+    font-weight: 700;
+    font-size: 3rem;
 }/*# sourceMappingURL=body.css.map */

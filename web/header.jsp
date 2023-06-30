@@ -57,9 +57,11 @@
                         <c:choose>
                             <c:when test="${empty user}">
                                 <div class="col-lg-3 button-container">
-                                    <button class="signup-button">
-                                        Sign Up
-                                    </button>
+                                    <a href="signUp.jsp" >
+                                        <button class="signup-button">
+                                            Sign Up
+                                        </button>
+                                    </a>
                                     <a href="signin.jsp" >
                                         <button class="signin-button">
                                             Log In
@@ -102,6 +104,7 @@
             <c:when test="${role eq 'trainer'}">
                 <div
                     class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar-trainer"
+                    style="width: 13%"
                     >
                     <a
                         href="#"
@@ -192,6 +195,7 @@
             <c:when test="${role eq 'staff'}">
                 <div
                     class="bg-white col-2 col-md-4 col-lg-2 min-vh-100 d-flex flex-column p-0 sidebar-staff"
+                    style="width: 13%"
                     >
                     <a
                         href="#"
@@ -219,7 +223,7 @@
                             <li class="nav-item py-2 py-sm-4">
                                 <a
                                     href="#"
-                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    class="d-flex d-sm-flex nav-link text-black"
                                     >
                                     <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,7 +239,7 @@
                             <li class="nav-item py-2 py-sm-4">
                                 <a
                                     href="Staff_ConsultationForm_Pending.jsp"
-                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    class="d-flex d-sm-flex nav-link text-black"
                                     >
                                     <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg
@@ -266,7 +270,7 @@
                             <li class="nav-item py-2 py-sm-4">
                                 <a
                                     href="Staff_OrderList_Consult_Completed.jsp"
-                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    class="d-flex d-sm-flex nav-link text-black"
                                     >
                                     <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg
@@ -291,7 +295,7 @@
                             <li class="nav-item py-2 py-sm-4">
                                 <a
                                     href="#"
-                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    class="d-flex d-sm-flex nav-link text-black"
                                     >
                                     <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -307,7 +311,7 @@
                             <li class="nav-item py-2 py-sm-4 mask">
                                 <a
                                     href="#"
-                                    class="d-flex justify-content-center d-sm-block nav-link text-black"
+                                    class="d-flex d-sm-flex nav-link text-black"
                                     >
                                     <div class="d-flex align-items-center" style="margin: 3% 0;">
                                         <svg

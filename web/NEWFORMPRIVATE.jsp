@@ -115,8 +115,7 @@
                                     <p style="margin: 0">CENTER</p>
                                 </div>
                             </div>
-
-                            <h1>CONTACT FORM</h1>
+                            <h1>CONSULTATION FORM</h1>
                         </div>
                         <form action="formappointmentservlet" method="POST" id="myForm">
                             <div class="content">
@@ -188,7 +187,7 @@
                                                                 <input class="trainer-input" type="radio" name="selected-trainer" value="${s.trainerID}" id="trainer1">
                                                                 <label for="trainer">
                                                                     <span class="trainer-name">Name: ${s.fullName}</span><br/>
-                                                                    <span> - </span> 
+                                                                    <span> - </span>
                                                                     <span class="trainer-skill">Skill: ${s.skill_name}</span><br/>.
                                                                     <span> - </span>
                                                                     <span class="trainer-skill">Contact: ${s.contact}</span>
@@ -221,20 +220,20 @@
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
                                         </svg>
                                         <div class="info-box">
-                                            We accept forms starting from today until next month.
+                                            We accept forms starting from 3 days from today until next month.
                                         </div>
                                     </span>
                                 </label>
                                 <div class="date-info p-0 d-flex justify-content-between">
                                     <select name="Time_start" style="text-align: center">
                                         <option value="7:00:00">
-                                            7:00 - 9:00
+                                            7:00
                                         </option>
                                         <option value="14:00:00">
-                                            14:00 - 16:00
+                                            14:00
                                         </option>
                                         <option value="19:00:00">
-                                            19:00 - 21:00
+                                            19:00
                                         </option>
                                     </select>
                                     <input id="chooseDate"
@@ -281,23 +280,19 @@
                                                             <tr>
                                                                 <th>Type</th>
                                                                 <th>Description</th>
-                                                                <th>7h - 9h</th>
-                                                                <th>2h - 4h</th>
-                                                                <th>19h - 21h</th>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Offline</td>
-                                                                <td>In-person sessions</td>
-                                                                <td>200.000</td>
-                                                                <td>200.000</td>
-                                                                <td>200.000</td>
+                                                                <th>Price/hour</th>
                                                             </tr>
                                                             <tr>
                                                                 <td>Online</td>
                                                                 <td>Remote/online sessions</td>
-                                                                <td>150.000</td>
-                                                                <td>150.000</td>
-                                                                <td>150.000</td>
+                                                                <!-- change this -->
+                                                                <td id="onlinePrice">150.000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Offline</td>
+                                                                <td>In-person sessions</td>
+                                                                <!-- change this -->
+                                                                <td id="offlinePrice">200.000</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -309,7 +304,7 @@
                                         </div>
                                     </div>
                                 </label>
-                                <input id="consultPrice" name="price" value="" class="bg-white" >
+                                <input id="consultPrice" value="" class="bg-white" disabled>
                             </div>
                             <!--------->
                             <div class="radio-container">
@@ -329,9 +324,10 @@
                                     id="hiddenTrainerName"
                                     type="hidden"
                                     />
-                              <input type="hidden" name="DateSubmitt" id="DateSubmitInput">
-
-
+                                <!--submit current date-->
+                                <input type="text" name="DateSubmitt" id="currentDate" value="" hidden=""/>
+                                <!--submit price-->
+                                <input type="text" name="price" id="priceSubmit" value="" hidden/>
                                 <!----------------------->
                                 <button  name="action" type="button"  value="Submit Form"  class="btn btn-primary w-100" onclick="validateForm(event)">
                                     Submit form
@@ -472,12 +468,15 @@
             var consultPriceInput = document.getElementById('consultPrice');
             var consultTypeOnline = document.getElementById('consultTypeOnline');
             var consultTypeOffline = document.getElementById('consultTypeOffline');
+            var priceOnline = document.getElementById('onlinePrice').textContent;
+            var priceOffline = document.getElementById('offlinePrice').textContent;
+
 
             function updateConsultPrice() {
                 if (consultTypeOnline.checked) {
-                    consultPriceInput.value = "200.000";
+                    consultPriceInput.value = priceOnline;
                 } else if (consultTypeOffline.checked) {
-                    consultPriceInput.value = "150.000";
+                    consultPriceInput.value = priceOffline;
                 }
             }
 
@@ -493,8 +492,13 @@
             // Get the current date
             var currentDate = new Date();
             var formattedCurrentDate = currentDate.toISOString().split('T')[0];
-            document.getElementById('chooseDate').min = formattedCurrentDate;
             document.getElementById('currentDate').value = formattedCurrentDate;
+
+            // min 3 days from now
+            var minDate = new Date();
+            minDate.setDate(currentDate.getDate() + 3);
+            var formattedMinDate = minDate.toISOString().split('T')[0];
+            document.getElementById('chooseDate').min = formattedMinDate;
 
             // not over 30 days
             var maxDate = new Date();
@@ -502,12 +506,6 @@
             var formattedMaxDate = maxDate.toISOString().split('T')[0];
             document.getElementById('chooseDate').max = formattedMaxDate;
 
-            // Add an event listener to update the hidden field with the formatted dateSubmit value
-            document.getElementById('myForm').addEventListener('submit', function (event) {
-                var dateSubmitValue = document.getElementById('chooseDate').value;
-                document.getElementById('chooseDate').setAttribute('name', 'startdate');
-                document.getElementById('chooseDate').value = dateSubmitValue;
-            });
         </script>
         <!--        chose trainer-->
         <script>
@@ -562,6 +560,9 @@
                     const hiddenTrainerName = document.getElementById("hiddenTrainerName");
                     hiddenTrainerName.value = selectedTrainer.value;
 
+                    const priceSubmit = document.getElementById("priceSubmit");
+                    priceSubmit.value = consultPriceInput.value;
+
                     showConfirmModal();
                 } else {
                     form.reportValidity(); // Display validation error messages
@@ -613,11 +614,6 @@
             function submitOnClose() {
                 form.submit();
             }
-
-        </script>
-        <script>
-            var currentDate = new Date().toISOString().split("T")[0];
-            document.getElementById("DateSubmitInput").value = currentDate;
         </script>
     </body>
 </html>

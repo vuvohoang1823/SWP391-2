@@ -29,7 +29,7 @@
                     <!--            header-->
                 <%@ include file="header.jsp" %>
 
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg

@@ -28,7 +28,7 @@
                 <%@ include file="header.jsp" %>
                 <jsp:useBean id="f" class="DAO.FormApppointmentDAO"></jsp:useBean>
                 <jsp:useBean id="t" class="DAO.TrainerDAO" ></jsp:useBean>
-                    <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                    <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                         <section class="form-head">
                             <div class="heading d-flex align-items-center">
                                 <svg

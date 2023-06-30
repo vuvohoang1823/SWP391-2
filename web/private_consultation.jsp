@@ -16,23 +16,25 @@
         <link rel="stylesheet" href="css/reset.css" type="text/css">
         <link rel="stylesheet" href="css/privateConsultation.css" type="text/css">
         <jsp:useBean id="t" class="DAO.TrainerDAO" scope="request"></jsp:useBean>
-        <title>Document</title>
-    </head>
+            <title>Document</title>
+        </head>
 
-    <body>
+        <body>
         <%@include file="header.jsp" %>
         <div class="body-container">
             <section class="section-head">
                 <div class="desc-container">
-                    <h2>PRIVATE CONSULTANT</h2>
-                    <h1>Expert Guidance for Personal and Professional Success</h1>
-                    <p>
-                        Our Private Consultant UI offers personalized and tailored guidance
-                        to help you achieve your personal and professional goals. Whether
-                        you're seeking career advice, business strategy, or personal
-                        development, our experienced consultants are here to provide
-                        valuable insights and support.
-                    </p>
+                    <div style="height: 83%; overflow-y: hidden">
+                        <h2>PRIVATE CONSULTANT</h2>
+                        <h1>Expert Guidance for Personal and Professional Success</h1>
+                        <p>
+                            Our Private Consultant UI offers personalized and tailored guidance
+                            to help you achieve your personal and professional goals. Whether
+                            you're seeking career advice, business strategy, or personal
+                            development, our experienced consultants are here to provide
+                            valuable insights and support.
+                        </p>
+                    </div>
                     <div class="button-container">
                         <button>Explore Choices</button>
                     </div>
@@ -178,22 +180,20 @@
                         <h1>Expert Guidance for Bird Training Success</h1>
                     </div>
                 </div>
-                
                 <div class="cards-container row">
                     <c:forEach var="trainer" items="${t.trainerLIST}">
-                        
-                    <div class="card-container">
-                        <img  src="data:images/jpg;base64,${trainer.img}" alt="" />
-                        <div class="desc-container">
-                            <div class="name">${trainer.fullName}</div>
-                            <div class="skills">${trainer.skill_name}</div>
-                            <div class="button-container">
-                                <a href="">
-                                    <button>Book now</button>
-                                </a>
+                        <div class="card-container">
+                            <img  src="data:images/jpg;base64,${trainer.img}" alt="" />
+                            <div class="desc-container">
+                                <div class="name">${trainer.fullName}</div>
+                                <div class="skills">${trainer.skill_name}</div>
+                                <div class="button-container">
+                                    <a href="">
+                                        <button>Book now</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </c:forEach>
                     <!-- card end -->
                 </div>

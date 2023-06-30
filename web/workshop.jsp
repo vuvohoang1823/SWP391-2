@@ -33,15 +33,18 @@
         <div class="body-container">
             <section class="section-head">
                 <div class="desc-container">
-                    <h2>WORKSHOPS</h2>
-                    <h1>Hands-on Learning to Unleash Your Bird's Potential"</h1>
-                    <p>
-                        Our Bird Training Workshops offer an immersive and interactive
-                        experience for bird owners who are eager to take their training
-                        skills to the next level. Led by our expert trainers, these
-                        workshops provide a unique opportunity to learn and practice
-                        advanced techniques in a supportive and engaging environment.
-                    </p>
+                    <div style="height: 83%; overflow-y: hidden">
+                        <h2>WORKSHOPS</h2>
+                        <h1>Hands-on Learning to Unleash Your Bird's Potential"</h1>
+                        <p>
+                            Our Bird Training Workshops offer an immersive and interactive
+                            experience for bird owners who are eager to take their training
+                            skills to the next level. Led by our expert trainers, these
+                            workshops provide a unique opportunity to learn and practice
+                            advanced techniques in a supportive and engaging environment.
+                        </p>
+                    </div>
+
                     <div class="button-container">
                         <button>Explore Workshops</button>
                     </div>
@@ -166,9 +169,9 @@
                                                 <div class="extra-price">
                                                     <div class="button-container">
                                                         <a href="MainController?action=view_workshop_detail&courseID=${workshop.courseID}">
-                                                            <button>More Information</button> 
+                                                            <button>More Information</button>
                                                         </a>
-                                                        
+
                                                     </div>
                                                     <p>£${workshop.price}</p>
                                                 </div>
@@ -177,7 +180,7 @@
                                     </div>
                                 </div>
                             </div>
-                       </c:forEach>
+                        </c:forEach>
                     </div>
                 </div>
             </section>

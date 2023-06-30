@@ -29,7 +29,7 @@
                 <div class="row flex-nowrap">
                     <!--            header-->
                 <%@ include file="header.jsp" %>
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg
@@ -145,8 +145,8 @@
                                     <td class="customer">${b.dateSubmit}</td>
                                     <td>
                                         <div class="type">
-                                            <div class="onlineStatus ${b.type == 'online' ? 'online' : 'offline'}">${b.type}</div>
-                                             <a href="MainController?action=view_form_completetd&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
+                                            <div class="onlineStatus ${b.type eq 'online' ? 'online' : 'offline'}">${b.type}</div>
+                                            <a href="MainController?action=view_form_completetd&consultation_id=${b.consultation_id}"><button class="viewDetail">View Detail</button></a>
                                         </div>
                                     </td>
                                 </tr>

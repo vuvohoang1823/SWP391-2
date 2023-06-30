@@ -29,7 +29,7 @@
                     <!--            header-->
                 <%@ include file="header.jsp" %>
 
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg
@@ -133,19 +133,19 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                                              <div class="row">
-                                            <div class="mb-5">
-                                                <label for="email" class="form-label">Email</label>
-                                                <input
-                                                    type="text"
-                                                    class="form-control"
-                                                    id="email"
-                                                    placeholder="Email"
-                                                    value="${detail.gmail}"
-                                                    disabled
-                                                    />
+                                            <div class="row">
+                                                <div class="mb-5">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input
+                                                        type="text"
+                                                        class="form-control"
+                                                        id="email"
+                                                        placeholder="Email"
+                                                        value="${detail.gmail}"
+                                                        disabled
+                                                        />
+                                                </div>
                                             </div>
-                                        </div>
                                             <div class="row">
                                                 <div class="mb-3">
                                                     <label for="address" class="form-label">Address</label>
@@ -257,22 +257,22 @@
             </div>
         </div>
         <script>
-                     var duration = '${detail.duration}'; // Assuming the format is HH:mm:ss
+            var duration = '${detail.duration}'; // Assuming the format is HH:mm:ss
 
-                     var durationParts = duration.split(":");
-                     var hours = parseInt(durationParts[0], 10);
-                     var minutes = parseInt(durationParts[1], 10);
-                     var seconds = parseInt(durationParts[2], 10);
+            var durationParts = duration.split(":");
+            var hours = parseInt(durationParts[0], 10);
+            var minutes = parseInt(durationParts[1], 10);
+            var seconds = parseInt(durationParts[2], 10);
 
-                     hours += 2;
+            hours += 2;
 
-                     if (hours > 23) {
-                         hours -= 24;
-                     }
+            if (hours > 23) {
+                hours -= 24;
+            }
 
-                     var soonDuration = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
+            var soonDuration = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
 
-                     document.getElementById("formtitle").value = '${detail.date} - from ' + duration + ' to ' + soonDuration;
+            document.getElementById("formtitle").value = '${detail.date} - from ' + duration + ' to ' + soonDuration;
         </script>
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

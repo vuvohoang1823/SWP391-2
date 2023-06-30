@@ -25,16 +25,18 @@
         <div class="body-container">
             <section class="section-head">
                 <div class="desc-container">
-                    <h2>ONLINE COURSE</h2>
-                    <h1>Unlock Your Potential as a Skilled and Inspiring Trainer</h1>
-                    <p>
-                        Our online course on becoming a trainer is designed to empower
-                        individuals like you to embark on a journey of professional growth
-                        and fulfillment. Whether you aspire to train in corporate settings,
-                        educational institutions, or any other field, this comprehensive
-                        course will equip you with the essential skills and knowledge to
-                        excel as a trainer.
-                    </p>
+                    <div style="height: 83%; overflow-y: hidden">
+                        <h2>ONLINE COURSE</h2>
+                        <h1>Unlock Your Potential as a Skilled and Inspiring Trainer</h1>
+                        <p>
+                            Our online course on becoming a trainer is designed to empower
+                            individuals like you to embark on a journey of professional growth
+                            and fulfillment. Whether you aspire to train in corporate settings,
+                            educational institutions, or any other field, this comprehensive
+                            course will equip you with the essential skills and knowledge to
+                            excel as a trainer.
+                        </p>
+                    </div>
                     <div class="button-container">
                         <button>Explore Course</button>
                     </div>
@@ -101,7 +103,7 @@
                                                 <div class="button-container">
                                                     <button class="btn btn-primary">
                                                         <a href="MainController?action=view_online_course_detail&courseID=${onlinetraining.courseID}" style="text-decoration: none;color: white">Enroll</a>
-                                                    
+
                                                     </button>
                                                 </div>
                                                 <p>£${onlinetraining.price}</p>
@@ -231,7 +233,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                         end of product 
+                                                         end of product
                                                         <div class="col-md-4">
                                                             <div class="card">
                                                                 <img
@@ -301,7 +303,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                         end of product 
+                                                         end of product
                                                     </div>
                                                 </div>
                                             </div>
