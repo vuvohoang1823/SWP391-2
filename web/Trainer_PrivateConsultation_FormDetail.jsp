@@ -47,7 +47,7 @@
                     <!--            header-->
                 <%@ include file="header.jsp" %>
 
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg
@@ -73,7 +73,7 @@
                             <span style="padding-left: 2rem">Private Consultation</span>
                         </div>
                         <div class="navbar navbar-expand-lg navbar-light">
-                            <a href="Trainer_PrivateConsultation.jsp">
+                            <a href="Trainer_PrivateConsultation_List.jsp">
                                 <div style="
                                      position: absolute;
                                      top: 35%;
@@ -98,199 +98,334 @@
                     </section>
                     <section class="form-body container-fluid">
                         <div class="row">
-                            <div class="col-lg-12 fs-1 fw-bold mb-3">
+                            <div class="col-lg-12 fs-1 fw-bold" style="margin: 0 0 2rem 2rem">
                                 Trainer: ${sessionScope.LOGIN_USER.fullName}
                             </div>
                             <hr>
                         </div>
                     </section>
-                            
-                   <c:set var="trainerId" value="<%=trainerID%>"></c:set>
-                   <c:set var="detail" value="${sessionScope.Appointment_Detail_ByTrainer}"></c:set>
+
+                    <c:set var="trainerId" value="<%=trainerID%>"></c:set>
+                    <c:set var="detail" value="${sessionScope.Appointment_Detail_ByTrainer}"></c:set>
                     <c:if test="${not empty sessionScope.Appointment_Detail_ByTrainer}">
-                       
-                            <div class="container-fluid" style="padding: 0 2.5%">
-                                <div class="forms-container">
-                                    <div class="forms-header">
-                                        <div class="left-side"><b>Form Details</b></div>
-                                        <div class="right-side">
-                                            <span>Submitted: <b>${detail.dateSubmit}</b></span>
-                                        <span><b>ID : #${detail.consultation_id}</b></span>
-                                        <span class="online">Type : ${detail.type}</span>
-                                    </div>
-                                </div>
-                                <form method="post" action="MainController">
-                                    <div class="form-customerDetails">
-                                        <div class="form-name">
-                                            <div class="name">Customer Information</div>
-                                        </div>
-                                        <div class="form-body">
-                                            <div class="row">
-                                                <div class="col-lg-7">
-                                                    <div class="mb-5">
-                                                        <label for="fullname" class="form-label">Full name</label>
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="fullname"
-                                                            placeholder="Full name"
-                                                            value="${detail.fullname}"
-                                                            disabled
-                                                            />
+
+                        <!--must be complete to open payment-->
+                        <!--<input id="checkComplete" value="${tracking.trackingcourse}" hidden>-->
+                        <input id="checkComplete" value="none" hidden>
+                        <!-------------------------------------------------->
+
+                        <div class="container-fluid" style="padding: 2.5%">
+                            <div class="forms-container">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <div class="forms-header">
+                                                    <div class="left-side"><b>Form Detail</b></div>
+                                                    <div class="right-side">
+                                                        <span>Submitted: <b>${detail.dateSubmit}</b></span>
+                                                        <span><b>ID : #${detail.consultation_id}</b></span>
+                                                        <span class="online">Type : ${detail.type}</span>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-5">
-                                                    <div class="mb-5">
-                                                        <label for="phonenumber" class="form-label"
-                                                               >Phone number</label
-                                                        >
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="phonenumber"
-                                                            placeholder="Phone number"
-                                                            value="${detail.contact}"
-                                                            disabled
-                                                            />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="mb-5">
-                                                    <label for="email" class="form-label">Email</label>
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="email"
-                                                        placeholder="Email"
-                                                        value="${detail.gmail}"
-                                                        disabled
-                                                        />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="mb-3">
-                                                    <label for="address" class="form-label">Address</label>
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="address"
-                                                        placeholder="Address"
-                                                        value="${detail.address}"
-                                                        disabled
-                                                        />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-formDetails">
-                                        <div class="form-name">
-                                            <div class="name">Request Information</div>
-                                        </div>
-                                        <div class="form-body">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="mb-5">
-                                                        <label for="formtitle" class="form-label"
-                                                               >Date & Time request</label
-                                                        >
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="formtitle"
-                                                            placeholder="Form title"
-                                                            value="${detail.date} - from ${detail.duration} to [SOON]"                                       
-                                                            disabled
-                                                            />
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="mb-5">
-                                                        <label for="formtitle" class="form-label"
-                                                               >Total price</label
-                                                        >
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="formtitle"
-                                                            placeholder="Form title"
-                                                            value="$${detail.amount}"
-                                                            disabled
-                                                            />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <div class="mb-5">
-                                                        <label for="formtitle" class="form-label"
-                                                               >Request title</label
-                                                        >
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="formtitle"
-                                                            placeholder="Form title"
-                                                            value="Basic Consultation Request"
-                                                            disabled
-                                                            />
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="mb-3">
-                                                        <label for="trainername" class="form-label"
-                                                               >Trainer requested</label
-                                                        >
-                                                        <div class="input-group">
-                                                            <input
-                                                                id="trainername"
-                                                                type="text"
-                                                                class="form-control"
-                                                                placeholder="Trainer name"
-                                                                value=" ${sessionScope.LOGIN_USER.fullName}"
-                                                                disabled
-                                                                />
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show">
+                                            <div class="accordion-body">
+                                                <!--                            start of form-->
+                                                <form  method="post" action="MainController" id="myForm">
+                                                    <div class="form-customerDetails">
+                                                        <div class="form-name">
+                                                            <div class="name">Customer Details</div>
+                                                        </div>
+                                                        <div class="form-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-7">
+                                                                    <div class="mb-3">
+                                                                        <label for="fullname" class="form-label">Full name</label>
+                                                                        <input
+                                                                            type="text"
+                                                                            class="form-control"
+                                                                            id="fullname"
+                                                                            placeholder="Full name"
+                                                                            value="${detail.fullname}"
+                                                                            disabled
+                                                                            />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-5">
+                                                                    <div class="mb-3">
+                                                                        <label for="phonenumber" class="form-label"
+                                                                               >Phone number</label
+                                                                        >
+                                                                        <input
+                                                                            type="text"
+                                                                            class="form-control"
+                                                                            id="phonenumber"
+                                                                            placeholder="Phone number"
+                                                                            value="${detail.contact}"
+                                                                            disabled
+                                                                            />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="mb-5">
+                                                                    <label for="email" class="form-label">Email</label>
+                                                                    <input
+                                                                        type="text"
+                                                                        class="form-control"
+                                                                        id="email"
+                                                                        placeholder="Email"
+                                                                        value="${detail.gmail}"
+                                                                        disabled
+                                                                        />
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="mb-3">
+                                                                    <label for="address" class="form-label">Address</label>
+                                                                    <input
+                                                                        type="text"
+                                                                        class="form-control"
+                                                                        id="address"
+                                                                        placeholder="Address"
+                                                                        value="${detail.address}"
+                                                                        disabled
+                                                                        />
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                    <div class="form-formDetails">
+                                                        <div class="form-name">
+                                                            <div class="name">Request Information</div>
+                                                        </div>
+                                                        <div class="form-body">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <div class="mb-5">
+                                                                        <label for="formtitle" class="form-label"
+                                                                               >Date & Time request</label
+                                                                        >
+                                                                        <input
+                                                                            type="text"
+                                                                            class="form-control"
+                                                                            id="formtitle"
+                                                                            placeholder="Form title"
+                                                                            value="${detail.date} - from ${detail.duration} to [SOON]"
+                                                                            disabled
+                                                                            />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6">
+                                                                    <div class="mb-5">
+                                                                        <label for="formtitle" class="form-label"
+                                                                               >Total price</label
+                                                                        >
+                                                                        <input
+                                                                            type="text"
+                                                                            class="form-control"
+                                                                            id="formtitle"
+                                                                            placeholder="Form title"
+                                                                            value="$${detail.amount}"
+                                                                            disabled
+                                                                            />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="mb-3">
+                                                                    <label for="customernotes" class="form-label"
+                                                                           >Customer's note</label
+                                                                    >
+                                                                    <textarea
+                                                                        class="form-control"
+                                                                        id="customernotes"
+                                                                        placeholder="Notes"
+                                                                        style="height: 100px"
+                                                                        disabled
+                                                                        >${detail.note}
+                                                                    </textarea>
+                                                                </div>
+                                                            </div>
+                                                            <!-- take trainer id--->
+                                                            <input type="hidden" name="TrainerCode" value="${trainerId}" />
+                                                            <!-- take trainer id--->
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="forms-footer m-auto">
+                                                        <!-- Button trigger modal -->
+                                                        <button id="completeButton" type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmComplete">
+                                                            Complete
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="modal fade" id="confirmComplete" tabindex="-1" aria-labelledby="confirmCompleteLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5">Complete</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Mark this consultation as complete?
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit" name="action" value="updateby"  class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="row">
-                                                <div class="mb-3">
-                                                    <label for="customernotes" class="form-label"
-                                                           >Customer's note</label
-                                                    >
-                                                    <textarea
-                                                        class="form-control"
-                                                        id="customernotes"
-                                                        placeholder="Notes"
-                                                        style="height: 100px"
-                                                        disabled
-                                                        >${detail.note}
-                                                    </textarea>
-                                                </div>
-                                            </div>
-                                            <!-- take trainer id--->
-                                            <input type="hidden" name="TrainerCode" value="${trainerId}" />
-                                            <!-- take trainer id--->
                                         </div>
                                     </div>
-                                    <div class="forms-footer">
-                                        <div>
-                                            <button type="submit"  name="action" value="updateby" class="btn approve">Complete</button>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button id="payment-accordionButton" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                                <div class="forms-header">
+                                                    <div class="left-side"><b>Payment Checklist</b></div>
+                                                </div>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse">
+                                            <div class="accordion-body">
+                                                <form method="post" action="updateAmount">
+                                                    <input type="hidden" name="consultationId" value=" ${tracking.consultation_id}" />
+
+                                                    <div class="form-paymentChecklist">
+                                                        <div class="form-name">
+                                                            <div class="name">Payment Details</div>
+                                                        </div>
+                                                        <div class="row payment-form mb-5">
+                                                            <div class="d-flex col-lg-2 justify-content-center align-items-center">Calculate payment:</div>
+                                                            <div class="input-group w-auto">
+                                                                <input
+                                                                    id="trainername"
+                                                                    type="text"
+                                                                    name="number"
+                                                                    class="form-control"
+                                                                    placeholder="Enter number of hours"
+                                                                    />
+                                                                <!---------------->
+                                                                <button
+                                                                    class="btn btn-primary"
+                                                                    type="button"
+                                                                    id="button-addon2"
+                                                                    style="font-size: 1.5rem; border: 0; background-color: #617a55; border-radius: 0 4px 4px 0"
+                                                                    onclick="calculate()"
+                                                                    >
+                                                                    Calculate
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="info mb-5">
+                                                            <h1 id="result"></h1>
+                                                            <input type="hidden" name="price" id="hiddenPrice">
+                                                            <div>
+                                                                <b>Trainer name: </b>  ${sessionScope.LOGIN_USER.fullName}
+                                                            </div>
+                                                            <div>
+                                                                <b>Trainer ID: </b> ${trainerId}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="forms-footer">
+                                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmPayment">
+                                                            Confirm
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal fade" id="confirmPayment" tabindex="-1" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5">Complete</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Confirm payment?
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="submit"  name="amount" value="yes" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
+                                <!--                                            change end-->
                             </div>
                         </div>
                     </c:if>
                 </div>
             </div>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-            crossorigin="anonymous"
-        ></script>
+        <!--        calculate-->
+        <script>
+            function calculate() {
+//                sua lai theo online offline cua form tren dau trang
+                var mode = document.querySelector('input[name="type"]:checked').value;
+                ///////////////////////////////////////////////////////
+                var number = document.querySelector('input[name="number"]').value;
+
+                if (number.trim() !== "") {
+                    var result = 0;
+
+                    if (mode === "online") {
+                        result = parseFloat(number) * 100;
+                    } else if (mode === "offline") {
+                        result = parseFloat(number) * 150;
+                    }
+
+                    document.getElementById("result").innerHTML = "<div class='info'><h1>Result: " + result + "</h1></div>";
+
+                    document.getElementById("hiddenPrice").value = result;
+
+                }
+            }
+        </script>
+        <!--check complete-->
+        <script>
+            var checkCompleteValue = document.getElementById("checkComplete").value;
+            var completeButton = document.getElementById("completeButton");
+            var paymentAccordionButton = document.getElementById("payment-accordionButton");
+            function completeForm() {
+                document.getElementById("checkComplete").value = "complete";
+                document.getElementById("myForm").submit();
+            }
+            if (checkCompleteValue !== "complete") {
+                // Set show for accordion one
+                document.getElementById("collapseOne").classList.add("show");
+
+                // Remove show for accordion two
+                document.getElementById("collapseTwo").classList.remove("show");
+
+                //disable accordion 2
+                paymentAccordionButton.disabled = true;
+                paymentAccordionButton.removeAttribute("data-bs-toggle");
+                paymentAccordionButton.removeAttribute("data-bs-target");
+                paymentAccordionButton.classList.remove("collapsed");
+                paymentAccordionButton.style.backgroundColor = "gray";
+                paymentAccordionButton.querySelector(".left-side").style.color = "#e2e8e7";
+            } else {
+                // Set show for accordion two
+                document.getElementById("collapseTwo").classList.add("show");
+
+                // Remove show for accordion one
+                document.getElementById("collapseOne").classList.remove("show");
+
+                //remove complete button for accordion 1
+                completeButton.style.display = "none";
+            }
+        </script>
         <!--                    end -->
         <script>
             var checkCompleteValue = document.getElementById("checkComplete").value;
@@ -326,6 +461,11 @@
             var soonDuration = hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0");
 
             document.getElementById("formtitle").value = '${detail.date} - from ' + duration + ' to ' + soonDuration;
-        </script>  
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

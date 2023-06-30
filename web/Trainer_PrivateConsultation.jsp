@@ -177,10 +177,10 @@
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    
+
                                     <form method="post" action="updateAmount">
-                                         <input type="hidden" name="consultationId" value=" ${tracking.consultation_id}" />
-                                      
+                                        <input type="hidden" name="consultationId" value=" ${tracking.consultation_id}" />
+
                                         <div class="form-paymentChecklist">
                                             <div class="form-name">
                                                 <div class="name">Payment Details</div>
@@ -204,11 +204,11 @@
                                                 <input type="text" name="number" placeholder="Number">
                                                 <input type="button" value="Calculate" onclick="calculate()">
                                             </div>
-                                            
+
 
                                             <div class="info">
-                                              <h1 id="result"></h1> 
-                                               <input type="hidden" name="price" id="hiddenPrice">
+                                                <h1 id="result"></h1>
+                                                <input type="hidden" name="price" id="hiddenPrice">
                                                 <div>
                                                     <b>Trainer name: </b>  ${sessionScope.LOGIN_USER.fullName}
                                                 </div>
@@ -241,8 +241,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                                
-                                   
+
+
                                 </div>
                             </div>
                         </div>
@@ -252,28 +252,29 @@
             <!--                    end -->
         </section>
         <%@ include file="footer.jsp" %>
-  <script>
-    function calculate() {
-        var mode = document.querySelector('input[name="type"]:checked').value;
-        var number = document.querySelector('input[name="number"]').value;
+        <!--        calculate-->
+        <script>
+            function calculate() {
+                var mode = document.querySelector('input[name="type"]:checked').value;
+                var number = document.querySelector('input[name="number"]').value;
 
-        if (number.trim() !== "") {
-            var result = 0;
+                if (number.trim() !== "") {
+                    var result = 0;
 
-            if (mode === "online") {
-                result = parseFloat(number) * 100;
-            } else if (mode === "offline") {
-                result = parseFloat(number) * 150;
+                    if (mode === "online") {
+                        result = parseFloat(number) * 100;
+                    } else if (mode === "offline") {
+                        result = parseFloat(number) * 150;
+                    }
+
+                    document.getElementById("result").innerHTML = "<div class='info'><h1>Result: " + result + "</h1></div>";
+
+                    document.getElementById("hiddenPrice").value = result;
+
+                }
             }
-
-            document.getElementById("result").innerHTML = "<div class='info'><h1>Result: " + result + "</h1></div>";
-           
-             document.getElementById("hiddenPrice").value = result;
-
-        }
-    }
-</script>
-
+        </script>
+        <!--check complete-->
         <script>
             var checkCompleteValue = document.getElementById("checkComplete").value;
             var completeButton = document.getElementById("completeButton");

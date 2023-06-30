@@ -47,7 +47,7 @@
                     <!--            header-->
                 <%@ include file="header.jsp" %>
 
-                <div class="col-md-8 col-lg-10 min-vh-100 p-0">
+                <div class="col-md-8 col-lg-10 min-vh-100 p-0" style="flex-grow: 1; width: unset">
                     <section class="form-head">
                         <div class="heading d-flex align-items-center">
                             <svg
@@ -86,21 +86,8 @@
                     </section>
                     <section class="form-body">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <!--                            <div class="navbar-brand">Form status:</div>
-                                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                                            <span class="navbar-toggler-icon"></span>
-                                                        </button>-->
                             <form class="form-inline my-2 my-lg-0">
-                                <!--                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                                                    <ul class="navbar-nav mr-auto">
-                                                                        <li class="nav-item active">
-                                                                            <a class="nav-link" href="Staff_ConsultationForm_Pending.jsp"><b>Pending</b></a>
-                                                                        </li>
-                                                                        <li class="nav-item">
-                                                                            <a class="nav-link" href="Staff_ConsultationForm_Processing.jsp"><b>Processing</b></a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>-->
+
                                 <div class="search-container m-auto">
                                     <div style="white-space: nowrap; padding-right: 2rem;">Search by ID</div>
                                     <div class="input-group">
@@ -146,8 +133,8 @@
                                     </td>
                                 </tr>
                             </thead>
-                             <c:set var="trainerId" value="<%=trainerID%>"></c:set>
-                             <c:forEach items="${f.getAppointmentListBYTrainerID(trainerId)}" var="b" varStatus="counter" >
+                            <c:set var="trainerId" value="<%=trainerID%>"></c:set>
+                            <c:forEach items="${f.getAppointmentListBYTrainerID(trainerId)}" var="b" varStatus="counter" >
                                 <tr>
                                     <td class="id">${counter.count}</td>
                                     <td class="title">Basic Consultation Request</td>
